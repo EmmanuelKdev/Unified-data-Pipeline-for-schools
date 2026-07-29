@@ -1,0 +1,1215 @@
+record_id,student_id,incident_date,incident_type,severity,disciplinary_action,merit_demerit_points
+BEH000022,STU00022,2025-01-29,Disruptive Behavior  ,Medium,Detention,-3
+BEH000520,stu00465,2025-07-02,Skipping Class,Medium,Parent Notification,-3
+BEH001113,STU00966,2023-12-19,Dress Code Violation,Low,Written Warning,-1
+BEH000206,STU00181,2024-11-05,Cheating/Academic Dishonesty,High  ,Parent Conference,-5
+BEH000926,STU00809,2025-09-05,Skipping Class,Medium,Detention,-3
+BEH000882,STU00772,2024-02-06,Skipping Class,Medium,Detention,-3
+BEH000663,STU00585,2025-04-23,Disruptive Behavior,Medium,Detention,-3
+BEH000998,STU00873,2025-07-26,Dress Code Violation,Low,Verbal Warning,-1
+BEH001086,943,,Dress Code Violation,Low,Verbal Warning,-1
+BEH000864,S0755,,Tardiness,Low,Verbal Warning,-1
+BEH000075,STU00068,2024-07-28,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000202,STU00179,09-Apr-2024,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000876,STU00765,2024-01-19,Skipping Class,Medium,Detention,-3
+BEH000560,STU00499,2025-09-09,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000224,STU00192,2024-09-04,Tardiness,Low,Verbal Warning,-1
+BEH000586,STU00516,2024-12-24,Bullying,High,Parent Conference,-5
+BEH001021,STU00890,2024-08-17,Fighting,High,Parent Conference,-5
+BEH000896,STU00785,2023-10-22,Fighting,High,Suspension - 1 Day,-5
+BEH000545,STU-00489,11-Jul-2024,Skipping Class,Medium,Parent Notification,-3
+BEH000213,STU00186,2025-12-01,cheating/academic dishonesty,,Suspension - 3 Days,-5
+BEH000744,STU01077,12/5/2024,Disruptive Behavior,Medium,Detention,
+BEH000488,STU00437,2025-04-22,Property Damage,High,Suspension - 1 Day,-5
+BEH000496,STU00446,,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000421,380,2025-12-01,Property Damage,High,Suspension - 3 Days,-5
+BEH000539,STU00483,2025-03-18,Dress Code Violation,Low,Verbal Warning,-1
+BEH000751,STU00666,2025-02-17,Skipping Class,Medium,Detention,-3
+BEH001162,STU00999,2024-06-12,Fighting,High,Suspension - 3 Days,-5
+BEH000359,STU00319,"August 03, 2024",DISRUPTIVE BEHAVIOR,Medium,Detention,-3
+BEH000827,STU00724,45868,Dress Code Violation,Low,Verbal Warning,-1
+BEH000099,STU00092,2024-01-23,Fighting  ,High,Suspension - 3 Days,-5
+BEH001077,STU00934,2025-03-25,Skipping Class,Medium,Parent Notification,-3
+BEH000480,STU00431,2024-09-01,Dress Code Violation,Low,Verbal Warning,-1
+BEH000729,STU00648,2024-04-10,Disruptive Behavior,Medium,Detention,-3
+BEH000909,S0793,2025-07-19,Property Damage,High,Suspension - 1 Day,-5
+BEH000235,STU00203,4/7/2025,Positive Recognition,,Merit Award,2
+BEH000920,STU00806,20/1/2024,,High,Suspension - 1 Day,-5
+BEH000076,STU-00068,2024-08-11,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000735,STU00655,2025-01-04,Tardiness,Low,Verbal Warning,-1
+BEH000643,STU00569,2024-08-24,Tardiness,Low,Written Warning,-1
+BEH000414,STU00372,2024-12-26,Dress Code Violation,Low,Written Warning,-1
+BEH000696,STU00621,2025-12-01,Tardiness,,Verbal Warning,-1
+BEH000465,STU00421,2024-11-28,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000270,STU-00232,2025-01-14,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000269,STU00232,2025-03-24,Disruptive Behavior,Medium,Detention,-3
+BEH000086,STU00077,2025-10-14,Tardiness,Low,  Written Warning,-1
+BEH000916,STU00801,2025-11-07,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000402,STU00366,2024-03-03,Bullying,High,Suspension - 3 Days,-5
+BEH000940,STU00821,2025-05-17,Tardiness,Low,Written Warning,-1
+BEH000871,STU00759,2024-03-09,Disruptive Behavior,Medium,Detention,-3
+BEH000495,STU00445,2024-12-06,Property Damage,High,Parent Conference,-5
+BEH000458,STU00413,2024-03-27,Skipping Class,Medium,Detention,-3
+BEH000082,STU00073,2024-11-22,Tardiness,Low,Written Warning,-1
+BEH000160,STU00149,01-Mar-2025,Bullying,High,Suspension  -  1  Day,
+BEH000802,STU00701,2025-09-21,Cheating/Academic Dishonesty,High,,-5
+BEH000288,S0248,27-Nov-2024,Property Damage,High,Suspension - 1 Day,-5
+BEH000088,STU00080,2024-07-19,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000144,STU00133,2025-08-28,Dress Code Violation,Low,Verbal Warning,-1
+BEH000038,STU00033,2024-06-21,Fighting,High,Suspension - 1 Day,-5
+BEH000441,STU00403,2023-10-16,Property Damage,High,Suspension - 3 Days,-5
+BEH000684,STU00608,2023-09-24,Tardiness,Low  ,Verbal Warning,-1
+BEH000031,STU00027,28/8/2023,Property Damage,High,Parent Conference,-5
+BEH000519,STU00464,15-Dec-2024,Property Damage,High,Suspension - 3 Days,-5
+BEH000131,STU00117,2025-09-16,Bullying,High,Suspension - 3 Days,-5
+BEH000214,STU00186,2024-05-15,Cheating/Academic Dishonesty,High,  Suspension - 3 Days,-5
+BEH000481,STU00431,2024-03-23,Fighting,High,Suspension - 1 Day,-5
+BEH000458,STU00413,2024-03-27,Skipping Class,Medium,Detention,-3
+BEH000411,S0370,2025-03-24,Bullying  ,High,Parent Conference,-5
+BEH001029,STU00898,2025-07-31,Bullying,High,Suspension - 3 Days,-5
+BEH000273,STU00235,45915,Positive Recognition,Positive,Certificate of Recognition,2
+BEH001094,STU00949,2024-12-30,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000951,STU00833,2024-08-05,Tardiness,Low,Written Warning,
+BEH000437,STU00399,45265,Bullying,High,Parent Conference,-5
+BEH000190,STU00172,2024-02-29,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000372,STU00333,2024-02-05,Property Damage,High,Suspension - 1 Day,-5
+BEH000382,STU00346,1/22/2025,Tardiness,Low,Written Warning,-1
+BEH000182,STU00164,2025-06-20,Bullying,High,Suspension - 3 Days,-5
+BEH000448,STU00406,2025-08-12,Skipping Class,Medium,Detention,-3
+BEH000218,STU00189,2025-02-07,Fighting,High,Suspension - 1 Day  ,-5
+,STU00477,2023-09-30,positive recognition,Positive,Certificate of Recognition,2
+BEH000774,STU00681,2/9/2025,Fighting,,Parent Conference,-5
+BEH000525,STU00474,2025-02-19,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000657,STU00581,2025-06-01,Bullying,High,Suspension - 1 Day,-5
+BEH000583,STU00513,2025-03-07,Property Damage,High,Suspension - 1 Day,-5
+BEH000056,STU00053,2023-08-21,Property Damage,High,Suspension - 3 Days,-5
+BEH000380,STU00345,2023-09-28,Property Damage,High,Parent Conference,-5
+BEH000303,STU00263,2023-10-25,Property Damage,High,Suspension - 3 Days,-5
+BEH001147,STU00988,2023-10-30,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000826,STU00723,2023-11-20,Skipping Class,Medium,DETENTION,-3
+BEH000238,STU00206,2025-04-03,Tardiness,Low,Written Warning,-1
+BEH000861,STU00751,22-Sep-2023,Positive Recognition,Positive,Certificate of Recognition,2
+BEH001004,STU00878,2025-11-03,Positive Recognition,Positive,Merit Award,2
+BEH000393,STU00356,2023-11-18,Bullying,High  ,Suspension - 3 Days,-5
+BEH000193,STU173,03-Oct-2024,Tardiness,Low,Written Warning,-1
+BEH000690,STU00614,2024-10-11,Tardiness,Low,Written Warning,-1
+BEH000311,STU00269,2025-10-30,Dress Code Violation,Low,Written Warning,-1
+BEH001067,STU00928,2023-08-18,Fighting,High,Parent Conference,-5
+,STU01395,2024-10-08,Bullying,High,Suspension - 3 Days,-5
+,STU00145,"August 12, 2024",Tardiness,,Verbal Warning,-1
+BEH000611,STU00538,2024-11-11,Positive Recognition,Positive,Merit Award,2
+BEH000996,STU00872,7/4/2025,,Medium,Detention,-3
+BEH000691,STU00615,,property damage,High,Suspension - 1 Day,-5
+BEH000209,STU00184,2024-03-10,Tardiness,Low,Written Warning,-1
+BEH000100,STU00093,2024-04-09,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000341,STU00298,2024-08-30,Property Damage,High  ,Suspension - 3 Days,-5
+BEH000090,STU00082,45202,Property Damage,High,Parent Conference,-5
+BEH000507,455,2025-01-09,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000972,STU00853,30-Oct-2024,Property Damage,High,Parent Conference,-5
+BEH000388,STU00352,,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000965,STU00848,1/3/2024,Tardiness,Low,Written Warning,-1
+BEH001049,STU00914,2025-01-05,Tardiness,Low,Verbal Warning,-1
+BEH001064,STU00924,2025-07-08,Skipping Class,Medium,Detention,-3
+BEH000137,STU00123,2024-10-30,,Low,Written Warning,-1
+BEH000623,STU00549,2023-12-16,Bullying,High,Suspension - 3 Days,-5
+BEH000115,STU00107,"July 13, 2024",Skipping Class  ,Medium,DETENTION,-3
+BEH000800,STU00698,2024-11-21,bullying,High,Suspension - 1 Day,-5
+BEH000528,STU00476,45153,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000761,STU00673,2024-05-18,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000844,STU00739,"July 09, 2025",Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH001045,STU00912,2024-05-24,  Dress Code Violation,Low,Written Warning,-1
+BEH000197,STU00175,2025-05-28,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000174,STU00159,45343,Property Damage,High,Suspension - 1 Day,-5
+BEH000852,STU00746,2025-02-05,Skipping Class,Medium,Parent Notification,-3
+BEH000136,STU00122,2024-11-03,Positive Recognition,,Certificate of Recognition,2
+BEH000622,STU00549,2023-10-23,Dress Code Violation,Low,Verbal Warning,-1
+BEH000556,STU00495,2023-12-22,Skipping Class,Medium,Parent Notification,-3
+BEH000192,STU173,2024-08-29,Tardiness,Low,Verbal Warning,-1
+BEH000816,STU00713,2025-09-18,Tardiness,Low,,-1
+BEH000187,STU00170,2025-11-10,Fighting,High,Parent Conference,-5
+BEH000003,STU00004,2025-09-07,Positive Recognition,Positive,Merit Award,2
+BEH000639,STU00565,2024-07-11,positive recognition,Positive,merit award,2
+BEH000700,STU00625,2024-04-24,Dress Code Violation,Low,Written Warning  ,-1
+BEH000947,STU00826,2023-08-10,Tardiness,Low,Verbal Warning,-1
+BEH000906,STU00792,2025-03-21,Property Damage,High,Suspension - 3 Days,-5
+BEH000806,STU00703,2025-05-22,Skipping Class,Medium,parent notification,-3
+BEH000636,STU00561,45573,Bullying,High,Suspension - 3 Days,-5
+BEH000863,STU00754,2023-08-19,Dress Code Violation,Low,Written Warning,-1
+BEH001163,STU01000,2025-09-19,Tardiness,Low,Written Warning,-1
+BEH000395,STU00358,2025-08-08,Bullying,High,Suspension - 1 Day,-5
+BEH000362,STU00321,2025-04-23,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH001012,STU00884,"August 21, 2024",Bullying,High,Parent Conference,-5
+BEH001141,STU00983,16-Feb-2024,Positive Recognition,Positive,Certificate of Recognition,2
+BEH001161,STU00998,2024-03-05,Fighting,High,Suspension - 3 Days,-5
+BEH000239,S0207,2023-09-18,Skipping Class,Medium,Parent Notification,-3
+BEH000083,STU00075,2024-10-06,Cheating/Academic Dishonesty,High  ,Suspension - 1 Day,-5
+BEH000992,STU00869,"November 17, 2023",Dress Code Violation,Low,written warning,-1
+BEH000146,STU00136,2024-09-18,Property Damage,High,Suspension - 1 Day,-5
+BEH000113,STU00105,2024-01-27,Property Damage,High,Suspension - 3 Days,-5
+BEH000025,STU00024,2024-10-11,Positive Recognition,Positive,Merit Award,2
+BEH000719,STU00641,2025-07-14,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000889,STU00780,2023-09-28,Positive Recognition  ,Positive,Merit Award,2
+BEH000831,STU00727,2024-08-12,Disruptive Behavior,Medium,,-3
+BEH000837,732,2025-05-16,Dress Code Violation,Low,Verbal Warning,-1
+BEH000472,STU426,"April 14, 2025",Dress Code Violation,Low,Verbal Warning,-1
+BEH000679,STU00601,2024-08-02,Positive Recognition,Positive,Merit Award,2
+BEH001039,STU00906,2024-06-30,Property Damage,High,Suspension - 3 Days,-5
+BEH000787,STU00692,2025-03-13,Fighting,High,Suspension - 3 Days,-5
+BEH001115,STU00967,2025-08-11,Fighting,High,Parent Conference,-5
+BEH000355,STU00317,2024-08-06,Fighting,high,Suspension - 3 Days,-5
+BEH000731,STU00651,2025-04-17,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000721,STU00642,2023-10-21,Tardiness,Low,Verbal Warning,
+BEH000629,STU00555,2024-10-10,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000427,STU00387,2025-11-15,Dress Code Violation,Low,Verbal  Warning,-1
+,STU00592,1/8/2024,Tardiness,Low,Written Warning,-1
+BEH000798,STU00697,45958,Property Damage,High,Suspension - 1 Day,-5
+BEH000381,STU00345,2024-03-20,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH001003,STU00876,2023-09-13,Disruptive Behavior,MEDIUM,Detention,
+BEH000094,STU00087,2024-10-25,Skipping Class,Medium,Detention,-3
+BEH000872,STU00760,2023-10-11,Fighting,High,Suspension  -  1  Day,-5
+BEH000420,STU00379,2024-02-25,Property Damage,High,Parent Conference,-5
+BEH000678,STU00600,2024-05-18,Positive Recognition,Positive,Merit Award,2
+BEH000901,S0788,2023-09-06,Fighting,High,Parent Conference,-5
+BEH000442,S0403,2024-01-10,Dress Code Violation,Low,Written Warning,-1
+BEH000141,stu00130,15/9/2025,  Positive Recognition,Positive,Merit Award,2
+BEH000900,STU00787,2025-10-25,Bullying,High,Suspension - 3 Days,-5
+BEH000655,STU00579,45797,Property Damage,High,Suspension - 3 Days,-5
+BEH001035,STU00904,2025-07-30,Cheating/Academic Dishonesty,High,suspension - 3 days,-5
+BEH000867,STU00757,2023-08-31,Skipping Class,Medium,Detention,-3
+BEH000149,STU00139,2024-06-04,Dress Code Violation,Low,Verbal Warning,-1
+BEH000277,STU00240,2023-12-09,Dress Code Violation,Low,Verbal  Warning,-1
+BEH001156,STU00995,2023-12-16,Fighting,High,Suspension - 3 Days,-5
+BEH000960,STU00845,30/9/2025,Dress Code Violation,Low,Written Warning,
+BEH000930,S0811,2024-07-22,Tardiness,Low,Verbal Warning,-1
+BEH000058,STU00056,2024-10-15,Disruptive Behavior,Medium,Parent Notification,-3
+BEH001089,STU00947,2024-04-13,,Low,Verbal Warning,-1
+BEH000692,STU00617,2024-07-19,Positive Recognition,Positive,Certificate of Recognition,2
+BEH001044,STU00911,2025-09-15,bullying,High,Parent Conference,-5
+BEH000742,STU00661,2024-04-01,Bullying,High,Parent Conference,-5
+BEH000503,449,2024-06-22,Positive Recognition,Positive,Certificate of Recognition,2
+BEH001096,STU951,2024-10-21,Bullying,High,Suspension - 3 Days,-5
+BEH000485,STU00434,2024-05-30,Skipping Class,Medium,Detention,-3
+BEH000152,STU00140,2024-12-12,Tardiness,Low,Written Warning,-1
+BEH000191,STU00172,2023-12-18,Dress Code Violation,Low,Written Warning,-1
+BEH001043,STU00911,2024-01-09,Tardiness,Low,Written Warning,-1
+BEH000698,STU00624,2024-01-10,Property Damage,High,Parent Conference,-5
+BEH000644,STU00569,2024-10-18,Positive Recognition,Positive,Merit Award  ,2
+BEH000347,STU00304,45711,Property Damage,High,Parent Conference,-5
+BEH000079,STU00071,2025-10-11,Tardiness,Low,Written Warning,-1
+BEH000925,STU00809,45690,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000356,STU00318,2/13/2025,Fighting,High,Suspension - 3 Days,-5
+BEH000017,STU00019,2024-12-26,Cheating/Academic Dishonesty,High,Parent Conference,-5
+,STU00421,2025-01-14,Dress Code Violation,Low,Verbal Warning,-1
+BEH000230,STU00197,2024-08-12,Positive Recognition,Positive,MERIT AWARD,2
+BEH001027,STU00897,2024-06-11,Fighting,High,Parent Conference,-5
+BEH000702,STU-00626,2025-03-15,Dress Code Violation,Low,Verbal Warning,-1
+BEH001082,STU00940,2024-11-26,Dress Code Violation,Low,Verbal Warning,-1
+BEH000093,STU00087,2024-01-22,  Skipping Class,,Detention,-3
+BEH000125,STU00113,2025-04-02,,Medium,Detention,-3
+BEH000599,STU00530,2025-05-20,Fighting,High,Suspension - 3 Days,-5
+BEH001070,STU-00930,2025-01-27,Skipping Class,,Detention,-3
+BEH000304,STU00265,2025-08-28,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000710,STU00631,2025-06-15,Skipping Class,Medium,Detention,-3
+BEH000754,STU00669,45181,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000492,STU00442,06-Aug-2024,Positive Recognition,Positive,Merit Award,2
+BEH000705,STU01033,"December 10, 2023",Tardiness,Low,Verbal Warning,-1
+BEH000201,STU00179,2024-08-07,  Bullying,High,Suspension - 1 Day,-5
+BEH000138,STU00124,2024-05-31,Property Damage,High,Parent Conference,-5
+BEH000912,stu00798,2025-08-25,Tardiness,Low  ,Verbal Warning,-1
+BEH000848,stu00742,4/8/2025,Fighting,High,Suspension - 3 Days,-5
+BEH001099,STU00954,12/23/2024,Skipping Class,Medium,Parent Notification,-3
+BEH000990,STU00868,2024-01-29,Property Damage,High,Suspension - 1 Day,-5
+BEH000148,STU00137,2023-12-20,Tardiness,Low,Written Warning,-1
+BEH000106,STU00098,2025-03-30,,Medium,Parent Notification,-3
+BEH000054,STU00051,2023-08-26,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000415,STU00374,2024-03-21,Property Damage,High,Parent Conference,-5
+BEH000788,STU692,23/3/2025,Skipping Class,Medium,Parent Notification,-3
+BEH000823,stu00722,2025-03-30,Skipping Class,  Medium,Detention,-3
+BEH000212,STU00185,2024-12-17,Skipping Class,Medium,Detention,-3
+BEH000051,STU00049,2025-05-20,Fighting,High,  Suspension - 1 Day,-5
+BEH000199,STU00177,2023-08-13,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000714,STU00636,2025-09-08,Tardiness,Low,Written Warning,-1
+BEH000811,STU00709,"April 27, 2024",Dress Code Violation,Low,Verbal Warning,-1
+BEH000564,STU00501,2025-10-03,Fighting,High,Parent Conference,-5
+BEH000129,STU00115,2024-02-21,Tardiness,Low,Verbal Warning,-1
+BEH000310,STU00269,2025-06-27,Fighting,High,Suspension - 1 Day,-5
+BEH000012,STU00014,30-Oct-2024,Positive Recognition  ,Positive,Certificate of Recognition,2
+BEH000343,STU00300,2025-04-08,Fighting,High,Suspension - 1 Day,-5
+BEH000824,722,,Dress Code Violation,Low,Verbal Warning,-1
+BEH000729,STU00648,2024-04-10,Disruptive Behavior,Medium,Detention,-3
+BEH000795,STU00695,2024-01-04,Tardiness,Low,Written Warning,-1
+BEH001160,STU00998,3/24/2025,Property Damage,High,Suspension - 3 Days,-5
+BEH000797,STU00697,2023-09-16,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000078,STU00071,2024-12-03,Property Damage,High,Suspension - 3 Days,-5
+BEH001159,STU00997,2024-03-31,Bullying,High,Suspension - 3 Days,-5
+BEH000894,STU00784,2024-01-24,Property Damage,High,Suspension - 3 Days,-5
+BEH000678,STU00600,2024-05-18,Positive Recognition,Positive,Merit Award,2
+BEH000127,stu00114,2025-04-03,Disruptive Behavior,Medium,Detention,-3
+BEH000098,STU00092,2023-08-02,Property Damage,,Suspension - 3 Days,-5
+BEH000818,STU00715,2024-12-03,Tardiness,Low,WRITTEN WARNING,-1
+BEH000952,STU00834,2/24/2024,Bullying,High,Suspension - 1 Day,-5
+BEH000210,STU00185,2024-03-27,dress code violation,Low,Written  Warning,-1
+BEH000097,STU00091,2024-08-06,Tardiness,Low,Written Warning,-1
+BEH000384,STU00347,2023-11-27,Property Damage,High,Suspension - 3 Days,-5
+,stu00451,13-Aug-2025,Positive Recognition,Positive,Merit Award,2
+BEH000037,STU00032,2025-10-20,Bullying,High,Suspension - 3 Days,-5
+BEH000695,STU00620,2025-04-29,Property Damage,High,Suspension - 3 Days,-5
+BEH001098,STU00953,45154,Dress Code Violation,Low,Written Warning,-1
+BEH000793,STU00694,2025-06-20,Tardiness,Low,Written Warning,-1
+BEH000886,STU00776,2024-10-20,Property  Damage,High,Suspension - 3 Days,-5
+BEH001130,STU00977,2024-09-29,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000455,stu00412,2025-07-20,Dress Code Violation,Low,Verbal Warning,-1
+BEH000724,STU00644,2024-02-23,Bullying,High,Parent Conference,
+BEH001124,S0972,2025-08-08,Bullying,High,Suspension - 1 Day,-5
+BEH000122,STU00111,2024-03-19,Bullying,High,Parent Conference,-5
+BEH000092,STU00085,"November 14, 2025",Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000126,STU00113,11/14/2025,Tardiness,Low,Written Warning,-1
+BEH000660,STU00583,2023-10-10,Property Damage,High,Suspension - 1 Day,-5
+BEH001023,STU00893,45392,Fighting,High,Parent Conference,-5
+BEH000667,STU00591,2025-02-03,Bullying,High,Suspension - 3 Days,-5
+BEH001030,STU00901,9/18/2024,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000462,STU00418,14/4/2024,Cheating/Academic Dishonesty,High,,-5
+BEH000605,STU00535,2024-06-04,Positive Recognition,,Certificate of Recognition,2
+BEH001000,STU00874,2025-09-14,Property Damage,High,Suspension - 1 Day,-5
+BEH000509,STU00456,2024-10-31,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+,STU693,2024-11-26,Bullying,High,Suspension - 3 Days,-5
+BEH000478,STU00430,2024-11-03,Dress Code Violation,Low,,-1
+BEH000248,STU00213,1/11/2024,Skipping Class,Medium,Parent Notification,-3
+BEH001134,STU00980,2023-10-26,Skipping Class,Medium,Parent Notification,-3
+BEH000752,STU00667,2023-11-08,Positive Recognition,  Positive,Merit Award,2
+BEH000394,357,2024-07-07,Property Damage,High,Suspension - 1 Day,-5
+BEH000783,STU00688,2024-03-28,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000255,STU00222,2023-08-13,Skipping Class,Medium,Parent Notification,-3
+BEH000618,STU-00544,2025-03-27,Dress Code Violation,,Verbal Warning,-1
+BEH000145,STU00134,27/5/2024,fighting,High,Suspension - 1 Day,-5
+BEH000294,STU00255,2024-01-25,,Medium,  Detention,-3
+BEH000956,STU00839,2024-09-22,Tardiness,Low,Verbal Warning,-1
+BEH000981,STU00861,2024-02-20,Dress Code Violation,Low,Written Warning,-1
+,STU00674,"May 29, 2025",Property Damage,High,Suspension - 3 Days,-5
+BEH000703,STU00627,21-Feb-2024,Skipping Class  ,Medium,Detention,-3
+BEH000322,STU00276,2025-04-04,Fighting,High,Suspension - 1 Day,-5
+,STU00062,30-Dec-2023,Disruptive Behavior,Medium,Detention,-3
+BEH000513,STU00459,7/30/2024,Property Damage,High,Suspension - 1 Day,-5
+BEH000597,STU00529,2024-09-10,Property Damage,High,Suspension - 3 Days,-5
+BEH000397,358,11/18/2025,Property Damage,HIGH,Suspension - 1 Day,-5
+BEH000449,STU00406,2025-10-03,Cheating/Academic Dishonesty,High,Suspension  -  1  Day,-5
+BEH001127,STU00975,2023-09-19,Dress Code Violation,Low,Verbal Warning,-1
+,STU00224,2024-11-22,Dress Code Violation,Low,Verbal Warning,-1
+BEH001040,STU00907,2023-08-15,Fighting,High,Suspension - 3 Days,-5
+BEH001101,STU00956,2023-09-09,Dress Code Violation,Low,Written Warning,-1
+BEH001076,STU00934,45818,Tardiness,Low,Verbal  Warning,-1
+BEH000573,STU00507,2024-07-01,Fighting,High,Suspension - 3 Days,-5
+BEH001028,STU00898,,Skipping Class,Medium,Parent Notification,-3
+BEH000553,STU00493,2024-09-05,Bullying,High,Parent Conference  ,-5
+BEH000396,STU00358,2025-05-20,Tardiness,Low,Verbal Warning,-1
+BEH000640,STU-00566,2023-08-26,Positive Recognition,Positive,Certificate of Recognition  ,2
+BEH000866,STU-00756,45734,,High,Parent Conference,-5
+BEH000534,STU00479,2024-01-21,Bullying,High,Suspension - 1 Day,-5
+BEH000314,STU00270,2023-12-20,Cheating/Academic Dishonesty,High,Parent Conference  ,-5
+BEH000143,STU00132,2024-10-28,Dress Code Violation,Low,Verbal Warning,-1
+BEH000405,STU00367,2025-11-12,Positive Recognition,Positive,Merit Award,2
+,STU00051,2024-10-27,Dress Code Violation,Low,Verbal Warning,-1
+BEH000373,STU00339,2023-08-22,Disruptive Behavior,Medium,Detention,-3
+BEH000095,STU00089,3/17/2024,Fighting,High,Suspension - 3 Days,-5
+BEH001060,STU00921,2024-10-22,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH001056,STU00917,2025-10-20,Disruptive Behavior,Medium,Parent Notification,-3
+BEH001038,STU00905,2024-02-24,Disruptive Behavior,Medium,Detention,-3
+BEH000151,STU00140,2024-09-24,Fighting,High,Parent Conference,-5
+BEH000139,STU00128,2025-11-04,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000045,STU00042,2023-11-12,DISRUPTIVE BEHAVIOR,Medium,Parent Notification,-3
+BEH001116,STU00967,2023-10-10,Dress Code Violation,Low,Written Warning,-1
+BEH000036,STU00031,2023-10-07,Tardiness,Low,Written Warning,-1
+BEH000497,STU00446,2023-08-09,,Low,Written Warning,-1
+BEH000929,STU00810,2025-01-08,Tardiness,,Written Warning,-1
+BEH000167,STU00153,2024-10-11,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000847,STU00741,2025-10-29,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000650,STU00576,2025-09-05,Property Damage,High,Suspension - 1 Day,-5
+BEH000102,STU94,45874,Fighting,HIGH,Suspension - 3 Days,-5
+BEH000150,STU00139,"August 17, 2025",Dress Code Violation,Low,Verbal Warning,-1
+BEH000460,S0416,2025-03-19,Dress Code Violation,Low,Written Warning,-1
+BEH000203,STU00180,2024-03-02,Bullying,High,Suspension - 3 Days,-5
+BEH000524,STU00472,2024-04-04,Positive Recognition,Positive,Certificate of Recognition,2
+BEH001136,STU00980,45791,Fighting,High,Suspension - 1 Day,-5
+BEH000024,STU00024,2024-09-29,Dress Code Violation,Low,Verbal Warning,-1
+BEH000329,STU00282,2024-12-14,Tardiness,Low,Verbal Warning,
+BEH000194,STU01076,2023-10-13,Bullying,High,Suspension - 1 Day,-5
+BEH000580,STU00511,2025-09-29,Property Damage,High,Suspension - 3 Days,-5
+BEH000638,STU-00563,45647,Tardiness,Low,Written Warning,-1
+BEH000654,STU00578,24/12/2024,Property Damage,High,Suspension - 1 Day,-5
+BEH000370,STU00331,2024-12-29,Positive Recognition,Positive,Merit Award,2
+BEH000642,STU00568,2024-12-12,Bullying,High,Parent Conference,-5
+BEH000950,STU00833,18-May-2024,Bullying,High,Suspension - 1 Day,-5
+BEH000778,STU00684,2024-09-03,Dress Code Violation,Low,Verbal Warning,-1
+BEH000563,STU-00500,2024-02-23,  Positive Recognition,Positive,Merit  Award,2
+BEH001011,STU00882,2025-04-24,Tardiness,Low,Written Warning,-1
+BEH000172,STU00157,2023-09-13,Disruptive Behavior,Medium,Detention,-3
+BEH000439,STU00401,2023-09-28,Property Damage,High,Suspension - 1 Day,-5
+BEH000645,STU570,2025-02-17,Cheating/Academic Dishonesty,High,Parent Conference,-5
+,STU00628,2024-10-24,,High,Parent Conference,
+BEH000414,STU00372,2024-12-26,Dress Code Violation,Low,Written Warning,-1
+BEH000463,STU00420,2024-09-03,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000782,STU00687,2025-08-28,,Positive,Certificate of Recognition,2
+BEH000153,STU00140,45968,,Low,Verbal Warning,-1
+BEH000579,STU00511,2024-06-15,Fighting,High,Suspension - 3 Days,-5
+BEH000744,STU00663,12/5/2024,Disruptive Behavior,Medium,Detention,
+,STU00557,2023-12-14,Dress Code Violation,Low,Written Warning,-1
+BEH000246,STU00213,2024-09-10,Dress Code Violation,Low,Verbal Warning,-1
+BEH000500,STU00448,2024-08-01,Bullying,High,,-5
+BEH000555,STU00493,2024-10-08,Fighting,High,Suspension - 3 Days,-5
+BEH000725,STU00645,2024-08-13,Dress Code Violation,Low,Verbal Warning,-1
+BEH000226,STU-00194,2024-10-02,Cheating/Academic Dishonesty,High,,-5
+BEH001032,STU00903,2025-06-09,Tardiness,Low,Verbal Warning,-1
+BEH001138,STU00981,2025-10-24,Skipping Class,Medium,Detention  ,-3
+BEH000568,STU00503,2024-05-28,Bullying,High,Suspension - 3 Days,-5
+BEH000398,STU359,2024-01-01,Skipping Class,Medium,Detention,-3
+BEH000123,112,2024-07-05,Bullying,High,Suspension - 3 Days,-5
+BEH000363,STU00322,2024-04-30,Tardiness,Low,Verbal Warning,-1
+BEH001117,STU00968,2023-12-12,Dress Code Violation,Low,Written Warning,-1
+BEH000263,STU00226,2024-05-22,Fighting,High,Suspension - 1 Day,
+BEH000410,STU00369,2024-07-30,Dress Code Violation,Low,Verbal Warning,-1
+BEH001054,STU00917,2023-11-13,Positive Recognition,Positive,Certificate of Recognition,2
+BEH001007,STU00879,2024-12-30,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000758,STU00671,2025-07-12,Dress Code Violation,Low,Written Warning,-1
+BEH001091,STU00948,2025-07-26,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000770,STU00678,2024-06-08,Dress Code Violation,Low,Verbal Warning,-1
+BEH000386,STU00349,2025-10-01,Cheating/Academic Dishonesty,High,Parent Conference,-5
+,STU00180,28/3/2025,Fighting,High,Parent Conference,-5
+BEH000749,STU00666,2024-10-15,Property Damage,  High,Suspension - 3 Days,-5
+BEH000750,STU00666,2024-04-28,Tardiness,Low,Verbal Warning,-1
+BEH000828,STU00725,"July 23, 2024",Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000648,STU00574,24/4/2025,Disruptive Behavior,Medium,Parent Notification,-3
+BEH001020,STU00890,30-May-2024,Positive Recognition,Positive,,2
+BEH001068,STU00929,2024-09-15,,Low,Verbal Warning,-1
+BEH000461,STU00417,11/28/2023,Property Damage,,Suspension - 3 Days,-5
+BEH001036,STU00905,,Bullying,High,Suspension - 3 Days,-5
+BEH000656,STU00580,2025-05-13,Skipping Class,Medium,Parent Notification,-3
+BEH000915,STU00800,5/6/2025,Skipping Class,Medium,Parent Notification,-3
+BEH000428,STU00387,2023-12-29,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000247,STU00213,1/3/2024,Fighting,High,Suspension - 1 Day,-5
+BEH000910,STU00796,2024-12-08,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000434,STU00394,2023-11-05,,  Low,Verbal Warning,-1
+BEH000979,STU00859,2025-06-27,  Dress Code Violation,Low,Written Warning,-1
+BEH001114,STU00966,2023-10-11,Positive Recognition,Positive,Merit Award,2
+BEH000091,STU00083,2024-04-27,Dress Code Violation,Low,Written Warning,-1
+BEH000982,STU00861,2024-10-03,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000407,STU00368,2024-03-12,Bullying,High,Suspension - 1 Day,-5
+BEH000009,STU8,2023-12-20,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000085,STU00076,2024-08-15,Fighting,High,Suspension - 3 Days,-5
+BEH000456,STU00412,2025-03-06,Dress Code Violation,Low,Written Warning,-1
+BEH000598,S0529,"November 21, 2023",Positive Recognition,Positive,Certificate of Recognition,2
+BEH000666,STU00588,2025-10-16,Bullying,High,Suspension - 1 Day,-5
+,STU00407,2025-05-31,Cheating/Academic Dishonesty,High,,
+BEH000426,STU00386,2023-11-02,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000299,STU00259,,,High,Suspension - 1 Day,-5
+BEH000932,STU-00813,2024-01-17,Tardiness,Low,Written Warning,-1
+BEH000223,STU00192,2025-11-16,,Low,Verbal Warning,-1
+BEH001034,S0903,2025-04-05,Disruptive Behavior,Medium,Detention,-3
+BEH000051,STU00049,20/5/2025,  Fighting,High,  Suspension - 1 Day,-5
+BEH000233,STU00202,2024-03-12,Skipping Class,Medium,Parent Notification,-3
+BEH001109,STU00964,2025-02-20,Cheating/Academic Dishonesty,High,,-5
+BEH000312,STU00269,2024-05-24,Disruptive Behavior,Medium,Detention,-3
+BEH000019,20,17-Jul-2024,Bullying,High,Suspension - 3 Days,-5
+BEH000033,STU00028,2024-09-14,Disruptive Behavior,  Medium,Parent  Notification,-3
+BEH001104,STU00958,2024-04-19,Tardiness,Low,Verbal Warning,-1
+BEH000608,STU00536,2023-10-03,Positive Recognition,Positive,Certificate of Recognition,2
+BEH001037,STU00905,2025-01-14,Positive Recognition,Positive,Merit Award,2
+BEH001097,STU00952,2024-06-11,Tardiness,Low,Verbal Warning,-1
+BEH000551,STU00492,2024-08-02,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000840,STU00734,2024-12-28,Fighting,High,Suspension - 1 Day,
+BEH000453,STU00410,45402,Fighting,High,Suspension - 3 Days,-5
+BEH000892,STU00783,2023-09-01,  Positive Recognition,,Merit Award,2
+BEH000621,547,2023-09-29,  Skipping Class,Medium,Detention,-3
+BEH000880,stu00768,2024-10-08,Property Damage,High,Parent Conference,-5
+BEH000318,STU00272,45518,Property Damage,High,Parent Conference,-5
+BEH000483,STU00432,,Bullying,High,Parent Conference,-5
+BEH000301,STU00260,2025-07-02,Skipping  Class,Medium,Detention,-3
+BEH000259,STU00224,2023-08-12,Skipping Class,Medium,Parent Notification,-3
+,STU00804,2024-10-08,Bullying,High,Suspension - 3 Days,-5
+BEH000804,STU00701,2024-09-02,Tardiness,Low,Written Warning,-1
+BEH000830,STU00726,45471,Skipping Class,Medium,Detention,-3
+BEH000677,STU00597,2023-08-21,Fighting,  High,Parent Conference,-5
+BEH000061,STU00058,2025-11-04,Property Damage,High,Parent Conference,-5
+BEH000531,STU00478,,Tardiness,Low,Written Warning,-1
+BEH001108,STU00962,2023-09-02,Bullying,High,Suspension - 1 Day,-5
+BEH000964,STU00847,2024-01-22,Tardiness,Low,Verbal Warning,-1
+BEH000649,STU00576,2025-05-28,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000652,STU00577,17-Jan-2024,Positive Recognition,Positive,MERIT AWARD,2
+BEH000843,STU00735,2023-09-15,Property Damage  ,High,Suspension - 1 Day,-5
+BEH000689,STU00613,2023-11-21,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000375,341,45141,Fighting,High,Parent Conference,-5
+BEH000039,STU00034,2024-09-13,Tardiness,Low,Written Warning,-1
+BEH000418,STU00378,1/1/2025,Property Damage  ,High,Suspension - 3 Days,-5
+BEH001033,STU00903,2024-04-25,Skipping Class,Medium,Parent Notification,-3
+BEH000569,STU00503,2023-09-30,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000913,STU00799,2023-10-25,Bullying,High,Suspension - 3 Days,-5
+BEH000718,STU00639,2024-06-18,Fighting,High,Suspension - 3 Days,-5
+BEH000254,STU00221,2024-12-04,Tardiness,Low,Written Warning,-1
+BEH000475,STU00428,2025-08-22,Bullying,High,Suspension - 3 Days,-5
+BEH000817,STU00714,2024-05-17,skipping class,Medium,Parent Notification,-3
+BEH000865,STU00755,2025-10-24,dress code violation,Low,Verbal Warning,-1
+BEH000633,STU00558,2/6/2025,Bullying,High,Suspension - 3 Days,-5
+,STU00602,2025-05-17,Dress Code Violation,Low,Written Warning,-1
+BEH000293,STU00253,2025-08-07,Disruptive Behavior,Medium,Detention,-3
+BEH001031,STU00902,2024-08-12,Disruptive Behavior,Medium,  Detention,-3
+BEH000317,STU00272,2025-07-21,Tardiness,,Written Warning,-1
+BEH001111,STU00965,2024-12-23,property damage,High,Parent Conference,-5
+BEH000785,STU00689,03-Jun-2025,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000308,STU00268,45395,Skipping Class,Medium,Detention,-3
+BEH000200,STU00179,2025-11-03,Tardiness,Low,Verbal Warning,-1
+BEH001059,STU00920,45621,  Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000071,STU00065,2025-02-05,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH001069,STU-00929,2025-06-30,,High,  Parent Conference,-5
+BEH000937,STU00818,2025-01-02,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000907,STU792,2024-06-20,Fighting,High,Suspension - 3 Days,-5
+BEH000286,STU00247,2024-10-23,Bullying,High,Suspension - 1 Day,-5
+BEH000604,STU00534,2025-05-16,Skipping Class,Medium,Parent Notification,-3
+BEH000379,STU00345,2024-06-11,Tardiness,Low,Written Warning,-1
+BEH000196,STU175,45854,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000694,STU00620,12/7/2024,Fighting,High,Suspension - 3 Days,-5
+BEH001153,STU00991,"October 25, 2025",Dress Code Violation,Low,  Verbal Warning,-1
+BEH000942,STU00822,05-May-2025,Disruptive Behavior,Medium,Detention,-3
+BEH000846,STU00740,2024-11-04,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000870,STU00758,3/4/2024,Skipping  Class,Medium,Parent Notification,-3
+BEH000154,STU00142,2025-02-19,Bullying,High,Parent  Conference,-5
+BEH000431,STU00389,2025-02-25,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000361,STU320,2023-09-14,Skipping Class,Medium,Detention,-3
+BEH000739,STU00658,2025-06-17,Fighting,High,Parent Conference,-5
+BEH000494,443,2025-06-28,property damage,  High,Parent Conference,-5
+BEH000918,STU00802,2024-08-06,Property Damage,High,Suspension - 1 Day,-5
+BEH000969,STU00850,2025-01-23,Skipping Class,Medium,Detention,-3
+BEH000476,STU00429,2024-08-24,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH001100,STU00956,2025-10-13,Bullying,High,Suspension  -  1  Day,-5
+BEH000634,stu00558,30/10/2024,Positive Recognition,Positive,Merit Award,2
+BEH000727,stu00646,2025-05-01,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000607,STU00536,2024-06-30,Tardiness,Low,Written Warning,
+BEH000736,STU00655,11/27/2025,Fighting,High,Suspension - 1 Day,-5
+BEH000383,STU00346,2025-03-11,Fighting,High  ,Parent Conference,-5
+BEH000897,STU00786,2024-03-12,Tardiness,Low,Written Warning,-1
+BEH000902,STU00789,2024-02-28,,Positive,Merit Award,2
+BEH000709,STU00631,2025-01-23,Tardiness,Low,Written Warning,-1
+BEH000432,STU00389,2024-10-02,Fighting,High,Suspension - 3 Days,-5
+BEH000147,STU00137,19-Jan-2024,Bullying,  High,Suspension - 3 Days,-5
+BEH000292,S0253,08-May-2025,  Fighting,High,Suspension - 1 Day,
+BEH000772,STU00679,45471,Tardiness,Low,Verbal Warning,-1
+BEH000624,STU00549,2024-07-10,Tardiness,Low,Written Warning,-1
+BEH000291,STU00253,07-Apr-2025,Tardiness,Low,Written Warning,-1
+BEH000176,STU00160,2025-06-15,Fighting,High,Parent Conference,-5
+BEH000289,STU00250,08-Sep-2023,Positive Recognition,Positive,Merit Award,2
+BEH000323,STU00279,2024-08-31,,Low,Verbal Warning,-1
+BEH000168,STU00155,2025-09-03,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000688,stu00612,,Property Damage,High,Suspension - 1 Day,-5
+BEH000874,STU00761,2024-12-22,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000836,STU00732,2024-06-29,  Fighting,High  ,,-5
+BEH001132,STU00978,2025-06-08,Tardiness,Low,Verbal Warning,-1
+BEH001158,stu00996,2025-02-28,Tardiness,Low,Written Warning,-1
+BEH000211,STU00185,2024-11-24,Property Damage,High,Suspension - 1 Day,-5
+BEH001105,STU-00958,04-Sep-2025,Skipping Class,Medium,PARENT NOTIFICATION,-3
+BEH000899,STU00787,2025-05-03,Positive Recognition,Positive,Merit Award,2
+BEH000572,STU00506,2023-12-29,property damage,High,Suspension - 3 Days,-5
+BEH000227,STU00195,2024-04-06,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000987,STU00866,2024-01-11,Positive Recognition,Positive,Certificate of Recognition,
+BEH001119,STU00968,2024-08-08,Fighting,High,Suspension - 1 Day,-5
+BEH000205,STU00180,2025-09-15,Property Damage,High,Parent Conference,-5
+BEH000814,STU00711,2024-01-17,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH001061,STU00921,2023-11-23,Tardiness,Low,Written Warning,-1
+BEH000120,STU00110,"December 10, 2024",fighting,High,Parent Conference,-5
+BEH000712,STU00635,"December 28, 2023",Positive Recognition,Positive,Certificate of Recognition,2
+BEH001128,stu00976,2024-06-20,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000786,689,2024-06-03,Skipping Class,Medium,Parent Notification,-3
+BEH000348,STU00305,2024-04-13,Fighting,High,Parent Conference,-5
+BEH000457,STU00412,2024-05-23,Fighting,High,Parent Conference,-5
+BEH001084,STU00942,2024-12-07,Skipping Class  ,Medium,Detention,-3
+BEH000792,STU00694,2023-11-15,Skipping Class,Medium,Detention,-3
+BEH000300,STU00260,2024-10-04,Tardiness,Low,Verbal Warning,-1
+BEH000856,STU00748,2024-12-05,Skipping Class,Medium,Parent Notification,-3
+BEH000165,STU00152,2025-10-18,Tardiness,Low,Written Warning,-1
+BEH000302,S0261,2023-12-08,Dress Code Violation,Low,Written Warning,-1
+BEH000229,STU00196,2025-03-03,Positive Recognition,Positive,Merit Award,2
+BEH000162,STU00151,2024-12-26,Positive Recognition,Positive,Merit Award,2
+BEH001080,STU00935,2025-06-06,,Low,Written Warning,-1
+BEH001083,STU00941,2024-07-19,Tardiness,low,Written Warning,-1
+BEH000081,STU00072,2025-06-09,Fighting,High,Parent Conference,-5
+BEH000995,STU00871,2024-12-01,Property Damage,High,Suspension - 3 Days,-5
+BEH000029,STU00026,2025-11-17,Skipping  Class,Medium,Detention,-3
+BEH000546,STU00489,2025-11-14,Property Damage,High,Suspension - 1 Day,-5
+BEH000552,STU00492,2023-10-04,Dress Code Violation,Low,Verbal Warning,
+BEH001157,STU00995,2023-08-11,Disruptive Behavior,Medium,Detention,
+BEH000446,STU00405,2023-08-08,Fighting,High,Suspension - 1 Day,-5
+BEH000945,STU00824,2025-10-10,Dress Code Violation,Low,Written Warning,-1
+BEH000981,STU00861,2024-02-20,Dress Code Violation,Low,Written Warning,-1
+BEH000423,STU00384,2024-04-08,Tardiness,Low,Written Warning,-1
+BEH000506,STU00455,45569,Bullying,High,Suspension - 1 Day,-5
+BEH000315,STU00271,2025-02-17,Tardiness,Low,Written Warning,
+BEH000175,STU00160,2025-06-11,,Medium,PARENT NOTIFICATION,-3
+BEH000760,STU00672,5/17/2024,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000503,STU01200,2024-06-22,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000675,STU00595,2025-10-29,Skipping Class,Medium,Parent Notification,-3
+BEH000513,STU01248,7/30/2024,Property Damage,High,Suspension - 1 Day,-5
+BEH000610,STU00537,2024-10-28,Property Damage,High,Parent Conference,-5
+BEH000862,752,2024-12-04,Fighting,High,Suspension - 3 Days,-5
+BEH000326,STU00280,2024-09-20,Tardiness,Low,Verbal Warning,-1
+BEH000026,STU00024,2023-08-28,Dress Code Violation,Low,Verbal Warning,-1
+BEH000637,STU00563,45726,Tardiness,Low,Written Warning,
+BEH001140,STU00983,2025-03-23,Tardiness,Low,Written Warning,-1
+BEH000484,STU00433,7/11/2023,Skipping Class,Medium,Parent Notification,-3
+BEH000386,STU00349,2025-10-01,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000130,STU00116,2025-05-26,Tardiness,Low,Verbal Warning,-1
+BEH000251,STU00217,2025-02-26,Property Damage,High,Suspension - 3 Days,-5
+BEH001016,STU00888,2025-02-27,Skipping Class,Medium,Parent Notification,-3
+BEH001053,STU00916,2024-09-12,Positive Recognition,Positive,Merit Award,2
+BEH000591,STU00524,2025-06-14,Skipping Class,Medium,Parent Notification,-3
+BEH001005,STU00878,18-Dec-2023,Positive Recognition,Positive,Merit Award,2
+BEH000946,STU00825,"October 05, 2024",Fighting,High,Suspension - 3 Days,-5
+BEH000616,STU00541,2025-05-09,tardiness,Low,Written Warning,-1
+BEH001085,STU00942,2024-10-09,Tardiness,Low,Verbal Warning,-1
+BEH000060,STU00058,2024-07-24,Bullying,High,Parent Conference,-5
+BEH000984,STU00863,2025-07-23,Tardiness,Low,Written Warning,-1
+BEH000073,STU00067,2024-11-06,Bullying,High,Parent Conference,-5
+BEH001150,stu00989,45445,Skipping Class,Medium,Parent Notification,-3
+BEH000819,STU00716,2023-12-27,Tardiness,Low,Verbal Warning,-1
+BEH000369,STU00329,2023-09-10,Bullying,High,Suspension - 3 Days,-5
+BEH000360,STU00320,2025-05-30,Tardiness,Low,Verbal Warning,-1
+BEH000378,stu00344,2024-05-28,Bullying,High,Suspension - 1 Day,-5
+BEH000406,STU00367,2024-08-28,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000807,STU00703,2025-07-11,Fighting,High,Suspension - 3 Days,
+BEH000283,STU00245,"December 31, 2023",Disruptive Behavior,Medium,Parent Notification,-3
+BEH000613,STU00540,2024-04-03,Tardiness,Low,Written Warning,-1
+BEH000055,STU00052,2024-08-04,Disruptive Behavior,medium,Detention,-3
+BEH000615,STU00540,2023-08-01,Disruptive Behavior,Medium,Detention,-3
+BEH000626,STU00550,45139,Skipping Class,Medium,Parent Notification,-3
+BEH001137,STU00981,45308,Bullying,High,Parent Conference,-5
+BEH000781,STU00686,1/16/2025,Disruptive Behavior,Medium,Detention,-3
+BEH000768,STU00677,2023-10-16,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000047,STU00044,2025-07-23,Bullying,High,Suspension - 1 Day,-5
+BEH001074,stu00931,2025-10-30,  Dress Code Violation,Low,Written  Warning,-1
+BEH000338,STU00295,2023-09-05,Dress Code Violation,Low,Verbal Warning,
+,STU00545,2024-01-10,Tardiness,Low,Verbal Warning,-1
+BEH001026,STU00896,2025-08-23,Bullying,High,Suspension - 1 Day,-5
+BEH000285,STU00246,2024-06-01,Disruptive Behavior,Medium,Detention,-3
+BEH000883,STU00772,2023-12-28,Dress Code Violation,Low,Verbal Warning,-1
+BEH000673,STU00594,2025-03-28,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000508,STU00456,2025-09-12,Disruptive Behavior,Medium,Detention,-3
+BEH000853,STU00747,2025-11-19,Property Damage,High,Parent Conference,-5
+BEH000044,STU00040,2025-10-31,Tardiness,  Low,Verbal Warning,-1
+BEH000416,STU375,2025-11-01,Dress Code Violation,Low,Verbal Warning,-1
+BEH000366,STU00325,45814,Positive Recognition,Positive,Merit Award,2
+BEH000346,STU00302,2025-11-18,Tardiness,Low,Written Warning,-1
+BEH000352,STU-00314,"February 08, 2024",Positive Recognition,Positive,Certificate of Recognition,2
+BEH000685,STU00610,,Positive Recognition,POSITIVE,Merit Award,2
+BEH000089,STU00080,2024-04-19,Skipping Class,  Medium,Parent Notification,-3
+BEH000498,STU00446,2023-11-24,Dress Code Violation,Low,Written Warning,-1
+BEH000600,STU00530,2024-10-09,Bullying,High,Parent Conference  ,-5
+BEH000018,STU00019,01-Sep-2024,Fighting,  High,Parent Conference,-5
+BEH000768,STU00677,2023-10-16,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000057,STU00056,06-Jan-2024,Disruptive Behavior,Medium,Detention,-3
+BEH000464,STU00420,"June 03, 2025",Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000767,STU00677,2025-01-30,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000869,STU758,2025-05-31,Positive Recognition,Positive,Certificate of Recognition  ,2
+BEH000973,STU00854,2024-07-19,Property Damage,High,Parent Conference,-5
+BEH000404,STU-00367,2024-02-29,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000977,STU00859,45152,Positive Recognition,Positive,Merit Award,2
+BEH000142,132,2025-04-03,Bullying,High,Suspension - 1 Day,-5
+,STU00810,2024-10-29,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000511,STU00458,"August 09, 2025",Positive Recognition,Positive,Merit Award,2
+BEH000419,STU00378,2023-12-09,Bullying,High,Parent Conference,-5
+BEH000240,STU00207,2025-09-04,Fighting,High,Suspension - 3 Days,-5
+BEH000904,STU00791,2024-05-16,Tardiness,Low,Written Warning,-1
+BEH000121,STU00111,2024-04-27,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH001078,STU00935,2025-09-06,Tardiness,Low,VERBAL WARNING,-1
+BEH000435,STU00397,2025-03-16,Bullying,High,Suspension - 3 Days,-5
+BEH001137,STU00981,45308,Bullying,High,Parent Conference,-5
+BEH000518,STU-00464,20/1/2024,Disruptive Behavior,MEDIUM,Parent Notification,-3
+BEH000080,STU00072,2025-11-11,Dress Code Violation,Low,Verbal Warning,-1
+BEH000353,STU00316,2023-08-13,Property Damage,High,Parent Conference,-5
+BEH000585,STU00515,2024-08-19,Dress Code Violation,Low,Written Warning,-1
+BEH000881,STU00768,2025-04-20,Fighting,High,Suspension - 3 Days,-5
+BEH000958,STU00842,,Dress Code Violation,Low,Written Warning,-1
+BEH000358,STU00318,2024-06-22,Property Damage,High,Suspension - 1 Day,-5
+BEH000002,stu00004,2024-09-23,PROPERTY DAMAGE,High,Suspension - 1 Day,-5
+,STU00636,2024-12-24,Skipping Class,Medium,Detention,-3
+BEH000155,stu00143,2025-06-25,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000335,STU00291,13-Oct-2023,Dress Code Violation,Low,Written Warning,-1
+BEH000651,STU00577,8/23/2025,Fighting,  High,Parent  Conference,-5
+BEH000172,STU00157,2023-09-13,Disruptive Behavior,Medium,Detention,-3
+,STU00516,2023-09-20,Fighting,High,Parent Conference,-5
+BEH000885,STU00774,2025-05-05,Positive Recognition,Positive,Merit Award  ,2
+BEH000259,STU00224,45150,SKIPPING CLASS,Medium,Parent Notification,-3
+BEH000339,STU00296,2024-03-08,Property Damage,High,Suspension - 3 Days,-5
+BEH001010,STU00881,2024-01-11,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH001002,STU00876,2023-10-20,Fighting,High,Suspension - 3 Days,-5
+BEH000683,stu00605,2024-10-12,Skipping Class,Medium,Detention,-3
+BEH000602,STU00531,2025-08-16,Skipping Class,Medium,Detention,-3
+BEH001135,STU00980,2024-12-13,Fighting,High,Suspension - 1 Day,-5
+,793,2024-06-18,Disruptive Behavior,Medium,Detention,-3
+BEH000499,STU00447,2025-04-27,Fighting  ,,Suspension - 1 Day,-5
+BEH000890,STU781,2025-09-27,Property Damage,High,,-5
+BEH000118,STU00109,2025-01-17,Fighting,High,Suspension - 1 Day,-5
+BEH000570,STU504,2025-02-25,Fighting,High,Suspension - 1 Day,-5
+BEH000005,STU00005,2023-11-06,Bullying,High,Suspension - 3 Days,-5
+BEH000766,STU00676,2024-09-17,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000697,STU-00624,2023-12-26,Dress Code Violation,Low,Verbal Warning,
+BEH000220,STU00190,2025-06-02,Tardiness,Low,Verbal Warning,-1
+BEH001149,STU00988,2024-04-29,Property Damage,High,Suspension - 3 Days  ,-5
+BEH000903,STU00789,2025-03-06,Bullying,High,Parent Conference,-5
+BEH000459,STU00414,2023-09-12,fighting,High,Suspension - 1 Day,-5
+BEH000858,STU00749,11/26/2023,Skipping Class,Medium,Parent Notification,-3
+BEH000344,STU00301,2024-09-01,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH001063,STU00922,"February 09, 2025",,Medium,Detention,-3
+BEH000105,STU00097,2025-11-17,  Property Damage,High,Suspension - 1 Day,-5
+BEH000757,S0670,2025-10-01,  Fighting,  High,Suspension - 3 Days,-5
+BEH000748,STU00665,2025-08-21,Tardiness,Low,Verbal Warning,-1
+BEH000642,STU00568,12/12/2024,Bullying  ,High,Parent Conference,-5
+BEH000959,STU00844,2024-12-11,Bullying,High,Suspension - 3 Days,-5
+BEH000135,STU00121,2025-01-15,CHEATING/ACADEMIC DISHONESTY,High,Suspension - 3 Days,-5
+BEH000776,681,2025-03-02,Fighting,High,Suspension - 1 Day,-5
+BEH000340,STU00297,2023-10-30,Dress Code Violation,Low,Verbal Warning,-1
+BEH000368,STU00329,,Positive Recognition,Positive,Merit Award,2
+BEH000562,STU500,2023-11-12,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000184,STU00167,4/21/2024,property damage,High,Suspension - 1 Day  ,-5
+BEH000119,STU00109,2023-08-13,Disruptive Behavior,Medium,Detention,-3
+BEH000072,stu00066,2024-06-26,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000738,STU00656,9/2/2024,,High,Suspension - 1 Day,-5
+BEH000189,STU00171,2025-06-11,Tardiness,Low,Verbal Warning,-1
+BEH000670,STU00593,03-Aug-2023,Positive Recognition,Positive,Merit Award,2
+BEH000112,STU00105,2023-09-21,Dress Code Violation,Low,Verbal Warning,-1
+BEH000779,STU00684,45353,Fighting,High,Suspension - 1 Day,-5
+BEH001139,STU00981,"November 15, 2024",Skipping Class,Medium,Parent Notification,-3
+BEH000392,STU356,15-May-2024,Bullying,High,Suspension - 3 Days,-5
+BEH000875,STU00763,2024-03-25,Property Damage,High,Suspension - 3 Days,
+BEH000548,STU00491,2024-06-22,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000332,STU00285,2023-11-05,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000625,STU00550,2023-08-12,Disruptive Behavior,  Medium,Detention,-3
+BEH000004,STU00005,2025-08-04,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000941,STU00821,2023-08-12,Dress Code Violation  ,Low,Verbal Warning,-1
+BEH000295,STU00255,2024-12-26,Tardiness,Low,Written Warning,-1
+BEH000794,STU00695,2025-01-13,Dress Code Violation,Low,Written Warning,-1
+BEH000948,STU00826,"August 23, 2025",Fighting,High,Suspension - 1 Day,-5
+BEH000331,STU00284,3/26/2024,Property Damage,High,Parent Conference,-5
+BEH000178,STU00162,2025-07-17,Disruptive Behavior,Medium,Detention,-3
+BEH000163,STU00151,2025-10-20,Skipping Class,Medium,Detention,-3
+BEH000290,STU00251,2025-08-06,Dress  Code  Violation,Low,Written Warning,-1
+BEH000350,STU00306,2025-09-21,Fighting,High,Suspension - 1 Day,-5
+BEH000609,STU00536,2023-11-14,,High,Parent Conference,-5
+BEH000132,STU00118,2025-06-02,Tardiness,Low,Written Warning,-1
+,STU00808,2025-08-12,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000430,STU00389,2024-05-02,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000516,STU00461,2025-01-31,Tardiness,Low,,-1
+BEH000851,STU00743,11-Nov-2023,Skipping Class,Medium,Parent Notification,-3
+BEH000825,STU00722,2024-01-13,Skipping Class,Medium,Parent Notification,-3
+BEH000672,STU00594,08-Feb-2025,Positive Recognition,Positive,Merit Award,2
+BEH000923,STU00807,2025-10-21,Fighting,High,,-5
+BEH000117,STU00109,2025-09-30,Disruptive Behavior,Medium,,-3
+,STU00849,12-Sep-2025,  Positive Recognition,Positive,merit award,2
+BEH000074,STU00067,2023-08-17,Fighting,High,,-5
+BEH000832,STU00728,9/12/2024,Bullying,High,Suspension - 1 Day,-5
+BEH000231,STU00199,2025-11-13,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000249,STU00215,01-Aug-2024,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000265,STU00228,2023-08-19,Fighting,High,Suspension - 1 Day,-5
+BEH000267,STU00230,2024-02-17,Disruptive Behavior,Medium,Detention  ,-3
+BEH000278,STU00240,2023-12-06,Tardiness  ,Low,Verbal Warning,-1
+BEH001107,STU00962,2025-10-16,Fighting,High,Suspension - 1 Day,-5
+BEH000533,STU00479,"October 17, 2024",  Bullying,High,Suspension - 1 Day,-5
+BEH000008,STU00008,2024-08-22,Tardiness,Low,Written Warning,-1
+BEH000440,stu00402,2025-04-23,Cheating/Academic Dishonesty,High,,
+BEH000124,S0112,12/12/2024,Fighting,,Suspension - 1 Day,-5
+BEH000860,751,2025-08-23,Bullying,High,Suspension - 1 Day,-5
+BEH000064,STU00060,45468,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000408,STU00368,2025-04-28,Bullying,High,Parent Conference,-5
+BEH001015,STU00886,,Skipping Class,Medium,Parent Notification,
+BEH000554,STU00493,2024-08-22,Fighting,High,Suspension - 3 Days,-5
+BEH001006,STU00879,2024-05-14,Property Damage,High,Suspension - 1 Day,-5
+BEH000544,STU00488,26-Sep-2024,Skipping Class,Medium,Detention,-3
+BEH000565,STU00501,2025-02-02,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000661,STU00583,2025-11-11,Dress Code Violation,Low,Written Warning,-1
+BEH000228,STU00195,2024-07-11,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH001122,STU00970,2024-04-19,Skipping Class,Medium,Parent Notification  ,-3
+BEH000571,STU00504,2024-12-09,Skipping Class,Medium,Parent Notification,-3
+BEH001093,STU949,2025-04-29,Dress Code Violation,Low,Written Warning,-1
+BEH000234,STU00202,2024-02-12,Bullying,High,Parent Conference,-5
+BEH000699,STU00624,45445,DRESS CODE VIOLATION,Low,Verbal Warning,
+BEH000803,STU00701,2024-01-24,Dress Code Violation,Low,Written Warning,-1
+BEH000619,STU00545,6/10/2025,  Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000471,STU00426,2025-06-16,Positive Recognition,Positive,Merit Award,2
+BEH000334,S0290,2024-04-10,Dress Code Violation,Low,Written Warning,-1
+BEH000333,STU00290,2023-11-25,Dress Code Violation,Low,Verbal Warning,-1
+BEH001152,S0991,2024-09-03,Skipping Class,Medium,Parent Notification,-3
+BEH000011,STU00012,2025-11-28,Disruptive Behavior,Medium,Detention,-3
+BEH001075,STU01058,2025-02-07,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000320,STU00275,2025-04-19,Fighting,High,Parent Conference,-5
+BEH000961,STU00845,2024-11-23,Tardiness,Low,Written Warning,-1
+BEH000971,STU00853,,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000813,STU00710,2024-09-03,Fighting,High,Suspension - 3 Days,-5
+BEH000028,STU00025,2025-11-27,Disruptive Behavior,Medium,Detention,-3
+BEH000279,STU00241,2025-08-11,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000376,STU00342,2025-05-17,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000297,STU00257,2024-04-16,Positive Recognition  ,Positive,  Certificate of Recognition,2
+BEH000479,STU00430,2024-08-14,Skipping Class,Medium,Detention,-3
+BEH000298,STU00258,2024-04-07,Dress Code Violation,  Low,Written Warning,-1
+BEH001048,STU00913,2024-07-09,Bullying,High,Suspension - 1 Day,-5
+BEH000321,276,2024-08-30,Property Damage,High,Suspension - 3 Days,-5
+BEH000762,STU00673,2024-08-25,  Bullying,High,Suspension - 1 Day  ,-5
+BEH000911,STU00798,2024-10-03,Skipping Class,Medium,Parent Notification,-3
+BEH000470,STU00425,2025-05-23,Property Damage,High,Parent Conference  ,-5
+BEH001103,STU00957,28-Sep-2024,Fighting,High,Parent Conference,-5
+BEH000221,STU00191,2024-12-28,Tardiness,Low,Verbal Warning,-1
+BEH000319,STU00274,2023-10-22,Fighting,High  ,Suspension - 3 Days,-5
+BEH000895,S0784,2025-05-09,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000756,STU00669,2023-10-30,Property Damage,High,Suspension - 1 Day,-5
+BEH000821,STU00717,2025-09-26,Bullying,High,Suspension - 3 Days,-5
+BEH000771,STU00678,2025-09-25,Property Damage,High,Suspension - 3 Days,-5
+BEH000324,STU00279,2024-06-25,Bullying,High,Suspension - 3 Days,-5
+BEH000628,STU00553,20/11/2025,Fighting,High,Suspension - 3 Days,-5
+BEH000542,STU00487,2024-05-17,Dress Code Violation,Low,Verbal Warning,-1
+BEH000451,STU00409,2025-01-08,Dress Code Violation,Low,Verbal Warning,-1
+BEH000020,STU00021,2023-11-27,Fighting,High,Suspension - 1 Day,-5
+BEH000403,366,16-Aug-2024,Property Damage,High,Parent Conference,-5
+BEH000708,STU00631,"August 02, 2025",Bullying,High,Suspension - 1 Day,-5
+BEH000084,STU00075,,CHEATING/ACADEMIC DISHONESTY,High,Suspension - 1 Day,-5
+BEH000180,STU00163,31-Dec-2024,Tardiness,,Written Warning,-1
+BEH000557,STU00496,2024-10-24,Fighting,High,suspension - 1 day,-5
+BEH000048,STU00046,2025-10-17,Disruptive Behavior,,Parent Notification,-3
+BEH000653,STU00577,2025-07-17,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH001144,STU00984,3/19/2025,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000559,STU00498,2025-08-23,Bullying,High,Suspension - 1 Day,-5
+BEH000997,STU00873,28-Aug-2024,Tardiness,Low,Verbal Warning,-1
+BEH000066,STU00061,3/19/2024,Dress  Code  Violation,Low,Verbal Warning,-1
+BEH000995,STU00871,2024-12-01,Property Damage,High,Suspension - 3 Days,-5
+BEH000791,STU00694,2024-09-12,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000850,STU00742,2025-09-25,Tardiness,Low,Verbal Warning,-1
+BEH000156,STU00143,2024-11-02,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000268,STU00231,13/10/2025,Bullying,High,Suspension - 1 Day,-5
+BEH000007,STU00007,2025-06-27,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000292,S0253,08-May-2025,Fighting,High,Suspension - 1 Day,
+BEH000540,STU00484,2024-09-05,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000158,STU00146,2023-08-27,TARDINESS,Low,Verbal Warning,-1
+BEH000284,STU00246,45306,Property Damage,High,Suspension - 3 Days,-5
+BEH000541,STU00486,2025-06-07,Fighting,High,Parent Conference,-5
+BEH000387,STU00351,2023-09-14,Property Damage,High,Suspension - 1 Day,-5
+BEH000149,STU00139,2024-06-04,Dress Code Violation,Low,Verbal Warning,-1
+BEH000717,STU00638,2024-07-24,Cheating/Academic Dishonesty,High,  Suspension - 3 Days,-5
+BEH000773,STU00679,2025-06-25,BULLYING,High,Parent Conference,-5
+BEH000371,STU00332,2024-06-21,Tardiness,Low,Verbal Warning,-1
+BEH000493,STU00443,2025-10-01,Dress Code Violation  ,Low,Verbal Warning,-1
+BEH000733,STU00654,9/23/2023,Bullying,High,Suspension - 3 Days,-5
+BEH000976,STU00858,45599,Fighting,High,Suspension - 1 Day,-5
+BEH000849,S0742,2024-05-31,Property Damage,High,Parent Conference,-5
+BEH000159,STU00147,,Disruptive Behavior,medium,Parent Notification,-3
+BEH000878,STU00766,2024-06-29,  Property Damage,High,Parent Conference,-5
+BEH000514,460,,Positive Recognition,Positive,Merit Award,2
+BEH001018,STU00889,2025-04-07,Tardiness,Low,Written Warning,-1
+BEH000141,stu00130,2025-09-15,Positive Recognition,Positive,Merit Award,2
+BEH000216,STU00188,2025-05-19,Fighting,High,Suspension - 3 Days,-5
+BEH001051,STU00915,2023-08-27,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000577,stu00509,2024-03-27,Disruptive Behavior,Medium,Detention,-3
+BEH000962,STU00845,2024-04-07,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000215,STU00187,2023-10-14,Fighting,High,Suspension - 3 Days,-5
+BEH000549,STU01179,2024-09-08,Dress Code Violation,Low,Written Warning,-1
+BEH001022,STU00891,"January 18, 2024",Disruptive  Behavior,Medium,Detention,-3
+,STU00974,,Dress Code Violation,Low,Verbal Warning,-1
+BEH000746,STU00665,2025-02-08,Bullying,,Suspension - 3 Days,-5
+BEH000412,STU00371,2024-08-03,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000707,STU00629,01-Mar-2024,Skipping Class,Medium,Parent Notification,-3
+BEH001088,STU00945,2023-12-16,Skipping Class,Medium,,-3
+BEH000413,STU00371,,,Medium,Detention,-3
+BEH000062,STU00059,2025-08-28,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000327,STU00281,2023-11-03,Bullying,High,Parent Conference,-5
+BEH000532,STU00479,2025-09-03,Tardiness,Low,Written Warning,-1
+BEH000594,STU00526,2025-01-30,Property Damage,High,Suspension - 1 Day,-5
+BEH000970,STU00853,2024-06-15,Dress Code Violation,Low,Verbal Warning,-1
+BEH000521,STU00469,2025-06-19,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000769,STU00677,,Positive Recognition,Positive,Merit Award,2
+BEH000367,STU00326,2024-05-29,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000812,STU00709,2024-12-30,Property Damage,High,Parent Conference,-5
+BEH000543,STU00488,8/2/2025,Bullying,High,Suspension - 1 Day,-5
+BEH000464,STU00420,"June 03, 2025",Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000309,STU00268,,Disruptive Behavior,Medium,Detention,-3
+BEH000744,STU00663,12/5/2024,Disruptive Behavior,Medium,Detention,
+BEH000166,STU00152,,Dress Code Violation,Low,Written Warning,-1
+BEH000210,STU00185,27-Mar-2024,DRESS CODE VIOLATION,Low,Written  Warning,-1
+BEH000575,STU00508,2024-05-12,Skipping Class  ,Medium,Detention,-3
+BEH000225,STU00193,2025-09-21,Property Damage,High,,-5
+BEH000477,STU00430,2024-03-11,Dress  Code  Violation,Low,,-1
+BEH000436,S0399,2025-04-18,Skipping Class,Medium,Detention,-3
+BEH000489,STU00439,,  Disruptive Behavior,Medium,Parent Notification,-3
+BEH000810,STU00709,2025-03-27,Fighting,High,Suspension - 1 Day,-5
+BEH000063,STU00060,2025-03-07,Tardiness,Low,Written Warning,-1
+BEH000116,STU00108,,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000576,STU00509,2024-10-22,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH001015,STU00886,,skipping class,Medium,Parent Notification,
+BEH000504,STU00450,2025-05-26,Dress Code Violation,Low,Written Warning,-1
+BEH000069,STU00062,31/5/2025,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000683,STU01451,2024-10-12,Skipping Class,Medium,Detention,-3
+BEH001013,STU00884,45536,Skipping Class,Medium,Parent Notification,-3
+BEH000111,STU00103,2024-08-06,Tardiness,Low,Written Warning,
+BEH000967,STU00848,1/10/2025,TARDINESS,Low,Verbal Warning,-1
+BEH000250,STU00216,2025-02-01,Bullying,High,Suspension - 1 Day,-5
+BEH000181,STU00164,2024-12-31,Dress Code Violation,Low,Verbal Warning,-1
+BEH000991,STU00869,2024-08-04,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000467,STU-00422,2025-03-31,Bullying,High,Suspension - 1 Day,-5
+BEH000172,STU00157,2023-09-13,Disruptive Behavior,Medium,Detention,-3
+BEH000701,STU00626,2025-03-21,Bullying,High,,-5
+BEH000070,STU00064,2024-03-04,Tardiness,Low,Written Warning,-1
+BEH000596,STU00528,2024-09-10,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000641,STU00567,2024-03-04,Property Damage,High  ,Suspension - 1 Day,-5
+BEH000274,STU00235,2025-03-01,Bullying,,Suspension - 3 Days,-5
+BEH000103,STU00094,2024-07-28,Property Damage,High,Parent Conference,-5
+BEH000262,STU00225,"September 25, 2025",FIGHTING,High,Suspension - 1 Day,-5
+BEH000755,S0669,2025-08-07,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000443,STU00404,2025-01-24,Skipping Class,Medium,Detention,-3
+BEH000722,STU00642,5/20/2024,Disruptive Behavior,Medium,Detention,-3
+BEH000630,STU00557,2024-01-30,Fighting,High,Suspension - 1 Day,-5
+,STU00857,2024-03-26,Dress Code Violation,Low,Written Warning,-1
+BEH001155,STU00994,45325,Fighting  ,High,Suspension - 3 Days,-5
+BEH000253,STU00219,,Bullying,High,Suspension - 1 Day,-5
+BEH000351,STU00310,2024-10-08,Skipping Class,Medium,Detention,-3
+BEH000944,STU-00823,2025-08-03,Tardiness,,Verbal Warning,-1
+BEH001106,STU00962,2024-02-24,Skipping Class,medium,Detention,-3
+BEH000258,STU00223,2025-11-08,Bullying,High,Parent Conference,-5
+BEH000401,STU00365,2025-10-06,POSITIVE RECOGNITION,,Merit Award,2
+BEH000593,STU00526,2025-02-28,Property Damage,High,Suspension - 1 Day,-5
+,STU00637,2025-01-25,Tardiness,Low,Written Warning,-1
+BEH000933,STU00814,1/24/2025,Positive Recognition,Positive,Merit Award,2
+BEH000252,STU00218,2023-12-14,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000066,STU00061,3/19/2024,Dress  Code  Violation,Low,Verbal Warning,-1
+BEH000647,STU00572,2025-10-23,Property Damage,High,Suspension - 3 Days,-5
+BEH000705,STU00628,"December 10, 2023",Tardiness,Low,Verbal Warning,-1
+BEH001146,STU00987,2025-08-20,Property Damage,High,Suspension - 1 Day,-5
+BEH000027,STU00025,,Disruptive Behavior,Medium,Detention,-3
+BEH001142,STU00983,2023-09-05,Cheating/Academic Dishonesty,,Parent Conference,-5
+BEH000893,STU00783,2023-09-05,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000603,STU00531,2025-02-06,Dress Code Violation,Low,Verbal Warning,-1
+BEH000662,STU-00584,2025-06-08,Bullying,High,Suspension - 3 Days,-5
+BEH000169,STU00156,2025-11-25,Skipping Class,Medium,Parent Notification,-3
+BEH000217,STU-00189,2024-12-24,Bullying,High,Parent Conference,-5
+BEH000558,STU00497,9/16/2023,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000833,STU00729,2023-08-16,Disruptive Behavior,Medium,Detention,-3
+BEH000053,STU00051,2024-02-01,Disruptive Behavior,Medium,  Parent Notification,-3
+BEH000566,STU00501,2024-11-23,Skipping Class,Medium,Parent Notification,-3
+BEH000687,STU00610,2025-05-29,Property Damage,High,Suspension - 3 Days,-5
+BEH000588,STU00517,2023-12-08,Property Damage,High,Suspension - 1 Day,-5
+BEH000592,STU00524,2023-12-22,Property Damage,High,Suspension - 3 Days,-5
+BEH001145,STU00985,45442,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000134,STU00121,2025-08-26,Dress Code Violation,Low,written warning,-1
+BEH001148,STU00988,2023-11-22,Bullying,High,Parent  Conference,
+BEH000963,STU-00846,2024-12-27,Skipping Class,Medium,Detention,-3
+BEH000822,STU00720,2025-11-28,Fighting,High,Parent Conference,-5
+BEH000276,STU00239,2024-12-21,Disruptive Behavior,Medium,Detention,-3
+BEH000438,STU00401,2025-10-19,Positive Recognition,Positive,Merit Award,2
+BEH000243,STU00211,,Skipping Class,Medium,Detention,-3
+BEH000330,STU00282,2024-10-25,Tardiness,Low,Verbal Warning,-1
+BEH000974,STU00855,2024-10-23,Fighting,High  ,Parent Conference,-5
+BEH000208,STU00182,2025-09-14,Tardiness,Low,Verbal Warning,-1
+BEH000096,90,2025-03-12,Property Damage,High,Suspension - 3 Days,-5
+BEH001008,STU00880,2025-11-07,Property Damage,High,Parent Conference,-5
+BEH000214,STU00186,2024-05-15,Cheating/Academic Dishonesty,High,  Suspension - 3 Days,-5
+BEH001102,STU00957,2023-10-07,  Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000547,STU00489,2024-11-23,Tardiness,Low,Written Warning,-1
+BEH000784,STU00688,2025-04-17,Bullying,High,Suspension - 3 Days,-5
+BEH000186,STU00169,2025-10-09,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000704,STU00628,2024-10-15,Tardiness,Low,Verbal Warning,-1
+BEH000491,STU00440,"August 15, 2023",Disruptive Behavior,Medium,Detention,-3
+BEH000336,STU292,,Disruptive Behavior,Medium,parent notification,-3
+BEH000715,STU00637,2024-05-20,Fighting,High,Parent Conference,-5
+BEH000578,510,2025-08-10,Bullying,High,Parent Conference,-5
+BEH000170,STU00156,,Property Damage,High,Suspension - 1 Day,-5
+BEH000955,STU00836,2024-12-08,Positive Recognition,Positive,Certificate of Recognition,2
+BEH001055,STU00917,2024-03-19,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000014,STU00015,2025-06-29,Dress Code Violation,Low,Verbal Warning,-1
+BEH000307,STU00268,2025-05-03,Tardiness,Low,  Written Warning,-1
+BEH000469,STU00424,2024-11-01,Disruptive Behavior,MEDIUM,Parent Notification,-3
+BEH000799,STU00697,2024-08-15,Dress Code Violation,Low,Written Warning,-1
+BEH000487,STU00436,20/9/2023,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000737,STU-00655,2025-10-12,,High,Parent Conference,-5
+BEH001024,stu00893,2025-03-14,Dress Code Violation,Low,Verbal Warning,-1
+BEH000612,STU00539,11-Mar-2025,Dress Code Violation,Low,,-1
+BEH000958,STU00842,,Dress Code Violation,Low,Written Warning,-1
+BEH000087,STU00078,2024-03-13,Positive Recognition,Positive,Merit Award,2
+BEH001110,STU00965,2023-09-01,Cheating/Academic Dishonesty  ,High,suspension - 3 days,-5
+BEH000939,STU819,2024-04-27,Positive Recognition,Positive,certificate of recognition,2
+BEH000264,STU00228,2025-07-19,Fighting,High,Suspension - 1 Day,-5
+BEH000635,STU00560,2024-01-18,Skipping Class,Medium,Detention,-3
+BEH000173,STU00159,2025-03-15,Property Damage,High,Suspension - 1 Day,-5
+BEH000834,STU00730,2025-03-15,Positive Recognition,Positive,Merit Award,2
+BEH001125,STU00972,2025-11-27,cheating/academic dishonesty,High,Parent Conference,-5
+BEH001047,STU00913,2025-09-23,Skipping Class,Medium,Parent Notification,-3
+BEH000400,STU00364,2023-08-17,Positive Recognition,Positive,Merit Award,2
+BEH001025,STU00894,,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000530,STU00478,,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000928,STU00810,2025-03-12,Property Damage,High,Suspension - 1 Day,-5
+BEH000429,STU00387,2024-09-04,bullying,High,Parent Conference,-5
+BEH000537,STU00482,2025-02-01,Bullying,High,Suspension - 1 Day,-5
+BEH000879,STU00766,2024-07-25,Bullying,High,Suspension - 3 Days,-5
+BEH001009,STU00880,2023-11-19,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000424,S0385,2025-08-17,Property Damage,High,Suspension - 1 Day,-5
+BEH000444,STU00404,45368,Dress Code Violation,Low,Written Warning,-1
+BEH001131,STU977,28/12/2023,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000612,STU00539,11-Mar-2025,Dress Code Violation,Low,,-1
+BEH000021,STU00022,2023-12-02,Property Damage,High,Parent Conference,-5
+BEH000242,STU00210,2023-09-25,Tardiness,Low,Verbal Warning,-1
+BEH000682,STU00603,2025-05-02,Skipping Class,Medium,Detention,-3
+BEH000032,STU00027,2025-03-25,Property Damage,High,,-5
+BEH001079,STU00935,2024-08-31,Property Damage,High,Suspension - 3 Days,-5
+BEH000954,STU00836,2023-12-18,Dress Code Violation,Low,Verbal Warning,-1
+BEH000590,STU00522,2024-03-08,  Bullying,High,Suspension - 1 Day,-5
+BEH000185,STU00168,2025-11-25,Dress Code Violation,Low,Written Warning,-1
+BEH000345,STU00301,10/28/2023,Disruptive Behavior,Medium,Detention,-3
+BEH000364,STU00323,45219,Bullying,High,Suspension - 3 Days,
+BEH000065,STU00060,2025-03-30,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000664,STU00585,2023-09-25,Tardiness,Low,Written Warning,-1
+BEH000077,STU00069,2023-09-03,Dress Code Violation,Low,Verbal Warning,
+BEH000016,STU00018,2025-05-21,Tardiness,Low,Written Warning,-1
+BEH000337,STU00294,2024-08-25,Bullying,High,Parent Conference,-5
+BEH000829,STU00726,2024-04-23,Dress Code Violation,Low,Written Warning,-1
+BEH000107,STU00098,2025-09-09,Dress Code Violation,Low,Verbal Warning,-1
+BEH000877,STU00766,2025-11-03,Property Damage,  High,Suspension - 3 Days,-5
+BEH000305,STU00265,2025-03-18,Dress Code Violation,Low,Verbal Warning,-1
+BEH000820,STU00716,2024-08-29,Cheating/Academic Dishonesty,High,,-5
+,STU00889,,Tardiness,Low,Verbal Warning,-1
+BEH001065,STU00925,2025-03-30,Bullying,High,Parent Conference,-5
+BEH000486,STU00435,2024-01-29,Positive Recognition,Positive,Merit Award,2
+BEH000631,STU00557,2025-03-22,Positive Recognition,Positive,Merit Award,
+BEH001133,STU-00979,2025-02-15,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000244,STU00211,2024-05-31,Bullying,High,Suspension - 1 Day,-5
+BEH000195,STU00174,2023-10-31,Fighting,High,suspension - 3 days,-5
+BEH000845,STU00739,"April 24, 2025",Property Damage,High,Suspension - 3 Days,-5
+BEH000842,STU00734,2024-09-10,Bullying,High,Suspension - 3 Days,-5
+BEH000438,STU00401,19/10/2025,  Positive Recognition,Positive,Merit Award,2
+BEH000581,STU00512,2025-11-18,Cheating/Academic Dishonesty,,Parent Conference,-5
+BEH000389,STU00354,2025-10-06,Tardiness,,Written Warning,-1
+BEH000662,STU01244,2025-06-08,Bullying,High,Suspension - 3 Days,-5
+BEH000377,STU00343,2025-06-13,Property Damage,HIGH,Parent Conference,-5
+BEH001062,stu00922,27/9/2024,Tardiness,Low,Written Warning,-1
+BEH000164,STU00151,2025-05-28,Property Damage,High,,-5
+BEH000723,STU00642,2024-08-07,Property Damage,High,Suspension - 3 Days,-5
+BEH000206,STU00181,2024-11-05,Cheating/Academic Dishonesty,High  ,Parent Conference,-5
+BEH000745,STU00663,2024-05-27,Dress Code Violation,Low,Written Warning,-1
+BEH000801,STU00699,2025-11-12,Property  Damage,High,Parent Conference,-5
+BEH000357,stu00318,12/4/2024,Dress Code Violation,Low,Verbal Warning,-1
+BEH000980,STU00861,45856,Skipping Class,Medium,parent notification,-3
+BEH000680,STU00602,2024-10-06,Dress Code Violation,Low,Verbal Warning,-1
+BEH000050,STU00047,2025-11-13,Property Damage,High,Suspension - 3 Days,-5
+,STU00969,,Positive Recognition,Positive,Certificate of Recognition,2
+BEH000188,STU00171,2024-09-03,Property Damage,High,Suspension - 1 Day,-5
+BEH000012,STU00014,2024-10-30,Positive Recognition,Positive,Certificate of Recognition,2
+BEH001123,STU00972,4/2/2024,Tardiness,Low,verbal warning,-1
+BEH000994,STU00871,"June 11, 2025",Fighting,,Suspension - 1 Day,-5
+BEH000198,STU00176,2025-06-27,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000306,STU00266,31/1/2024,Bullying,High,Suspension - 3 Days,-5
+BEH000986,STU00865,2025-07-24,Property Damage,High,,-5
+BEH001090,S0947,2023-09-27,Bullying,High,Suspension - 1 Day,-5
+,STU00592,"April 10, 2024",Dress Code Violation,Low,Written Warning,-1
+BEH001075,STU00931,2025-02-07,Positive Recognition,Positive,Certificate of Recognition,2
+BEH001052,STU00916,2023-10-11,Disruptive Behavior,Medium,Detention,-3
+BEH000671,STU00593,2023-10-13,Positive Recognition,Positive,Merit Award,2
+BEH000561,STU00499,2024-01-18,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH001092,STU00948,2025-09-01,Bullying,High,PARENT CONFERENCE,-5
+BEH000110,STU00101,2025-06-07,Cheating/Academic Dishonesty,High,Parent Conference,-5
+,STU00023,2025-10-22,Cheating/Academic Dishonesty,High,SUSPENSION - 1 DAY,-5
+BEH000868,STU00757,2025-05-23,Tardiness,Low,Verbal Warning,-1
+BEH000808,stu00704,2025-09-06,Disruptive Behavior,Medium,Detention,-3
+BEH000517,STU00463,2024-03-03,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000728,STU00647,2023-09-07,Tardiness,Low,Written Warning,-1
+BEH000041,STU00037,"April 19, 2025",Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000617,STU00544,2025-02-25,Bullying,High,Parent Conference,-5
+BEH000777,STU00684,2025-02-04,Tardiness,Low,Verbal Warning,-1
+BEH000983,STU00862,2024-08-22,Property Damage,High,Parent Conference,-5
+BEH000921,STU806,12/18/2023,Dress Code Violation,Low,Written Warning,-1
+BEH000790,STU00693,,Bullying,High,Parent Conference,-5
+BEH000536,S0481,"September 08, 2024",Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000759,STU00671,,Dress Code Violation,Low,Written Warning,-1
+BEH001057,STU00919,2025-11-11,,Positive,Merit Award,2
+BEH000761,STU00673,18-May-2024,  Disruptive Behavior,Medium,Parent Notification,-3
+BEH000741,STU00659,2024-05-03,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000589,STU00518,"January 04, 2025",Positive Recognition,Positive,Merit Award,2
+BEH001129,STU00976,2025-05-13,Dress Code Violation,Low,Verbal Warning,-1
+BEH000796,STU00696,2023-08-14,Dress Code Violation,Low,Written Warning,-1
+BEH000601,STU00530,"August 23, 2024",Skipping Class,Medium,Parent Notification,-3
+BEH000526,STU00475,2024-07-01,Skipping Class,Medium,Parent Notification,-3
+BEH000805,STU00702,2024-11-11,Tardiness,Low,Verbal Warning,-1
+BEH000943,STU00822,2024-09-15,Disruptive Behavior,Medium,Parent Notification,-3
+BEH001143,STU00984,45188,Fighting,High,,-5
+BEH000606,STU00535,2025-10-07,Skipping Class,medium,Detention,
+BEH000325,STU00280,2023-12-06,Tardiness,Low,Written Warning,-1
+BEH000510,stu00456,2023-08-08,Skipping Class,Medium,Detention,-3
+BEH000391,STU00355,2025-10-20,Skipping Class,Medium,Parent Notification,-3
+BEH000067,STU00061,2025-11-26,Positive Recognition,Positive,Merit Award,2
+BEH001022,STU00891,2024-01-18,Disruptive Behavior,Medium,Detention,-3
+BEH000037,STU00032,2025-10-20,Bullying,High,Suspension - 3 Days,-5
+BEH000035,STU00031,22-May-2025,property damage,High,Suspension - 3 Days,-5
+BEH000905,STU00792,2024-12-06,Bullying,High  ,Suspension - 3 Days,-5
+BEH000365,STU00325,2025-05-13,Tardiness,Low,Verbal Warning,-1
+BEH000040,STU00035,2025-03-07,cheating/academic dishonesty,High,Suspension - 1 Day,-5
+BEH000567,STU00502,2025-02-08,Fighting,High,Suspension - 3 Days,-5
+BEH000515,STU00461,2023-09-16,tardiness,Low,Written Warning,-1
+BEH000600,STU00530,2024-10-09,Bullying,High,Parent Conference  ,-5
+BEH000219,STU00190,2025-10-16,Disruptive Behavior,Medium,Detention,-3
+BEH000993,STU00870,4/7/2025,Skipping Class,Medium,Detention,-3
+BEH000922,STU00807,2025-09-05,Bullying,High,  Parent Conference,-5
+BEH000646,STU00570,2025-06-09,Disruptive Behavior,Medium,Detention,-3
+BEH000809,STU00706,2025-07-16,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000887,STU00778,,,Medium,Parent Notification,-3
+BEH000936,STU00816,2024-01-07,Property Damage,High,Suspension  -  1  Day,-5
+BEH000474,STU00427,2025-03-23,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000711,STU00633,"August 08, 2023",Skipping Class,Medium,DETENTION,-3
+BEH000010,STU9,2025-08-18,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000030,STU00026,2023-10-28,Bullying,High,Suspension - 1 Day,-5
+BEH000256,STU00222,2025-09-19,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000454,STU00411,2023-08-14,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000015,STU00017,2023-12-08,Tardiness,Low,Written Warning,-1
+BEH000261,STU00225,2025-08-21,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000884,STU00773,2025-01-06,Bullying,High,,-5
+BEH001072,STU00930,2025-10-20,Dress Code Violation,Low,Verbal Warning,-1
+BEH000046,STU00043,2023-11-14,Disruptive Behavior,Medium,Detention,-3
+BEH000236,STU00203,2023-09-08,Tardiness,Low,Verbal Warning,-1
+BEH000447,STU00406,2023-11-05,Skipping Class,Medium,Parent Notification,-3
+BEH000523,STU00472,2023-08-06,Bullying,High,Suspension - 3 Days,-5
+BEH001118,STU00968,2024-09-05,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000417,STU00377,2023-08-05,Positive Recognition,Positive,Merit Award,2
+BEH000676,STU00596,45164,Positive Recognition,Positive,Certificate of Recognition,
+BEH000527,STU475,2025-01-18,Tardiness,Low,VERBAL WARNING,-1
+BEH000049,46,2025-09-29,Property Damage  ,High,Suspension - 3 Days,-5
+BEH000985,stu00863,2024-10-22,Dress Code Violation,Low,Verbal Warning,-1
+BEH000898,STU00787,2025-01-05,Tardiness,Low,Written Warning,-1
+BEH000257,STU00222,2023-10-03,Dress Code Violation,  Low,Written Warning,-1
+BEH000385,STU00347,3/2/2025,Property Damage,High,Parent Conference  ,-5
+BEH000747,STU00665,2023-12-20,Property Damage,High,Parent Conference,-5
+BEH000732,STU00652,2025-02-01,Cheating/Academic Dishonesty,HIGH,Suspension - 3 Days,-5
+BEH000855,STU00748,14/6/2025,Positive Recognition,Positive,Merit Award,2
+BEH000949,STU00828,2025-03-21,Property Damage,High,Suspension - 1 Day,-5
+BEH000839,STU00733,2025-05-09,skipping class,Medium,Detention,-3
+BEH000104,STU00097,7/8/2025,Property Damage,High,Parent  Conference,-5
+,STU00427,2024-12-17,Tardiness,LOW,Written Warning,-1
+BEH000425,STU00386,2023-08-24,Dress Code Violation,Low,Written Warning,-1
+BEH000194,stu00174,2023-10-13,Bullying,High,Suspension - 1 Day,-5
+BEH000245,STU00212,2025-02-12,Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH001087,STU00944,2023-12-26,PROPERTY DAMAGE,High,Suspension - 3 Days,-5
+BEH000282,STU00243,25-Nov-2025,Tardiness,Low,Verbal Warning,-1
+BEH000658,STU00582,2024-11-19,Positive Recognition,Positive,Merit Award,2
+BEH000966,STU00848,2025-11-19,Skipping Class,Medium,Parent Notification,-3
+BEH000775,STU00681,7/23/2025,Positive Recognition,Positive,  Merit Award,2
+BEH000183,STU00166,2025-02-22,Property Damage,High,Suspension - 3 Days,-5
+BEH000133,STU00119,2023-11-22,,Positive,Certificate of Recognition,2
+BEH000917,STU00802,2023-11-18,Tardiness,Low,written warning,-1
+BEH000743,STU00661,,Bullying,High,,-5
+BEH000501,STU00448,45319,Dress Code Violation,Low,Written Warning,-1
+BEH000128,STU00114,2024-04-03,Positive Recognition,Positive,Merit Award,
+,STU00234,2024-05-15,Disruptive Behavior,Medium,  Parent Notification,-3
+BEH000399,STU00361,2024-06-15,,High,Parent Conference,-5
+BEH001017,STU00888,2025-10-20,Positive Recognition,Positive,Merit Award,2
+BEH000988,STU00867,9/21/2023,  Positive Recognition,Positive,Merit Award,2
+BEH000001,STU00002,2024-05-26,Property Damage,High,Suspension - 1 Day,-5
+BEH000574,STU00507,2025-08-10,Bullying,High,parent conference,-5
+BEH001050,STU00915,22/7/2024,Bullying,High,Suspension - 3 Days,-5
+BEH000934,STU815,2023-09-08,Positive Recognition,Positive,Merit Award,2
+BEH000287,STU00248,2025-04-25,Positive Recognition,Positive,Merit Award,2
+BEH000177,STU00160,2024-05-29,,Positive,Merit Award,2
+BEH000109,STU00100,2025-04-09,Tardiness,Low,Verbal Warning,-1
+BEH001041,STU00909,2023-10-11,Positive Recognition,POSITIVE,Certificate of Recognition,2
+BEH000753,STU00668,12-Oct-2023,Fighting,High,parent conference,-5
+BEH000538,STU00482,,Property Damage,High,Suspension - 1 Day,-5
+BEH000502,S0449,2023-10-02,Bullying,High,Parent Conference,-5
+BEH000549,STU00491,2024-09-08,Dress Code Violation,Low,Written Warning,-1
+BEH000686,STU00610,2024-09-21,Disruptive Behavior,Medium,Detention,-3
+BEH000659,STU00583,2024-02-12,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000433,STU00391,2023-10-30,Tardiness,Low,Verbal Warning,
+BEH000989,S0868,2025-06-07,Dress Code Violation,Low,Verbal Warning,-1
+BEH000999,STU00874,2025-03-19,Property Damage,High,Suspension - 1 Day,-5
+BEH000914,800,2024-01-27,skipping class,Medium,Parent Notification,-3
+BEH000988,STU00867,9/21/2023,Positive Recognition,Positive,Merit Award,2
+BEH000013,stu00014,2023-09-22,Dress Code Violation,  Low,Written Warning,-1
+BEH000957,STU00841,7/29/2025,property damage,High,Suspension - 3 Days,-5
+BEH000222,STU00191,2023-10-10,Positive Recognition,Positive,Merit Award,2
+BEH000662,STU-00584,2025-06-08,Bullying,High,Suspension - 3 Days,-5
+BEH000354,STU00316,2025-02-17,Dress Code Violation,Low,Verbal Warning,-1
+BEH000271,STU00233,2025-04-06,Fighting,High,Suspension - 1 Day,-5
+BEH000241,STU00209,45172,Bullying,High,Suspension - 1 Day,-5
+BEH000873,STU00761,2024-07-30,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000978,STU00859,06-May-2024,Bullying,High,Suspension - 3 Days,-5
+BEH000328,STU00281,2025-03-12,Fighting,High,Suspension - 3 Days,-5
+BEH000207,STU00181,2025-03-14,Dress Code Violation,Low,Written Warning,
+BEH000693,STU00619,2025-02-03,PROPERTY DAMAGE,High,Suspension - 1 Day,-5
+BEH001154,S0993,2025-07-18,Tardiness,Low,Written Warning,-1
+BEH000080,STU00072,2025-11-11,Dress Code Violation,Low,Verbal Warning,-1
+BEH000409,STU00369,2025-07-10,Dress Code Violation,Low,Written Warning,-1
+BEH000266,STU00229,2024-05-16,Skipping Class,Medium,Parent Notification,-3
+,STU00646,6/21/2024,Tardiness,Low,Written Warning,-1
+BEH000171,STU00156,45641,Cheating/Academic Dishonesty,  High,  Parent Conference,-5
+BEH001151,STU00990,1/12/2024,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000614,STU00540,2025-02-26,Tardiness,Low,Written Warning,-1
+BEH000765,STU00674,05-Sep-2023,Bullying,High,Suspension - 1 Day,-5
+BEH001081,STU00937,2025-05-03,Fighting,High  ,SUSPENSION - 1 DAY,-5
+BEH000582,STU00513,2025-06-19,Bullying,High,Suspension - 1 Day,-5
+BEH000342,STU00299,2024-07-20,Bullying,High,Parent Conference,-5
+BEH000296,STU00255,2024-02-21,Positive Recognition,Positive,Certificate of Recognition,2
+BEH001073,STU00931,2023-08-28,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH001058,STU00919,12/28/2023,Disruptive Behavior,Medium,Parent Notification,-3
+,STU00732,2023-08-17,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000275,STU238,2023-08-18,Disruptive Behavior,Medium,Parent Notification,-3
+BEH001112,STU00966,2023-09-07,  Bullying,High,Suspension - 1 Day,-5
+BEH000535,STU00480,01-Feb-2024,Positive Recognition,Positive  ,Merit Award,2
+BEH001046,STU00913,2023-11-28,Cheating/Academic Dishonesty,High,Parent Conference,-5
+BEH000316,STU-00271,2025-07-09,Property Damage,High,Parent Conference,-5
+BEH000584,STU00513,2023-12-14,Dress Code Violation,low,Verbal Warning,-1
+BEH000841,STU00734,2025-01-05,Tardiness,Low,Verbal Warning,-1
+BEH000665,STU00587,2023-11-12,Disruptive Behavior,Medium,Parent Notification,-3
+BEH000772,STU00679,45471,TARDINESS,Low,Verbal Warning,-1
+BEH000730,STU00650,2024-01-24,Positive Recognition,Positive,Merit Award,2
+BEH000161,STU00149,2025-03-06,Property Damage,High,Suspension  -  1  Day,-5
+BEH000504,STU00450,26/5/2025,dress code violation,Low,Written Warning,-1
+BEH000674,STU00595,2023-08-11,Positive Recognition,Positive,Certificate of Recognition,2
+BEH001066,STU00927,2023-12-27,Property Damage,High,Parent Conference,-5
+BEH000953,stu00835,,Tardiness,Low,Verbal Warning,-1
+BEH000108,STU00099,2025-01-23,Disruptive Behavior,Medium,,-3
+,STU00030,"June 08, 2025",Skipping Class,Medium,Detention,-3
+BEH000857,STU00749,2024-04-12,Property Damage,High,,-5
+BEH000935,STU00816,2023-11-14,Positive Recognition,Positive,Merit Award,2
+BEH000452,STU00409,2024-02-25,Fighting,High,Suspension - 3 Days,-5
+BEH000114,STU00105,2025-09-06,Tardiness,Low,Verbal Warning,-1
+BEH000734,654,2024-05-24,Dress Code Violation,Low,Written Warning,-1
+BEH000603,STU00531,45694,Dress Code Violation  ,Low,Verbal Warning,-1
+BEH001001,STU00875,2024-10-04,Bullying,High,Suspension - 3 Days,-5
+BEH000059,STU00056,2025-07-13,Fighting,High,Parent Conference,-5
+BEH000720,STU00641,2024-04-19,Tardiness,Low,Written Warning,-1
+BEH000859,STU00749,2023-08-18,Property Damage,High,SUSPENSION - 1 DAY,-5
+BEH001120,STU00969,2023-11-27,Property Damage,High,Suspension - 1 Day,-5
+BEH000006,STU00007,2023-08-10,Tardiness,Low,Written Warning,-1
+BEH000854,STU00747,2024-06-01,Fighting,High,Suspension - 3 Days,-5
+BEH000232,STU00200,2024-04-15,tardiness,Low,Verbal Warning,-1
+BEH001014,STU00886,,Tardiness,Low,Verbal Warning,-1
+BEH000042,STU00038,2024-04-24,Skipping Class,Medium,Parent Notification,-3
+BEH000838,stu00733,"January 27, 2024",Skipping Class,,Parent Notification,-3
+BEH000891,STU00781,1/23/2025,Positive Recognition,Positive,Merit Award,2
+,STU00491,2024-07-21,Bullying,High,Suspension - 1 Day,-5
+BEH001042,STU00911,2025-10-29,Bullying,High,Suspension - 1 Day,-5
+BEH000931,STU00812,2025-02-08,Fighting,High,Parent Conference,-5
+BEH000512,STU00458,2024-10-27,Skipping Class,Medium,Parent Notification,-3
+BEH000780,STU00686,2024-08-02,Bullying,High,,-5
+,STU00270,2024-05-30,Dress Code Violation,Low,Verbal Warning,-1
+BEH000763,STU00674,"December 09, 2023",Skipping Class,Medium,Detention,-3
+BEH000043,stu00039,2024-04-17,Positive Recognition,Positive,Merit Award,2
+BEH000490,STU00439,2025-10-28,,,parent notification,-3
+BEH000138,STU01438,2024-05-31,Property Damage,High,Parent Conference,-5
+BEH001095,STU00950,2025-05-15,Skipping Class,Medium,Parent Notification,-3
+BEH000390,S0355,2024-04-09,Skipping Class,Medium,Detention,-3
+BEH000522,stu00469,2025-07-04,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000815,STU00712,2024-02-08,Bullying,High,Parent Conference,-5
+BEH000482,STU00431,2024-03-30,Bullying,High,Parent Conference,-5
+,STU00241,2025-02-25,Property Damage,High,Suspension - 3 Days,-5
+BEH000960,STU00845,30/9/2025,  Dress Code Violation,Low,Written Warning,
+BEH000504,STU00450,5/26/2025,Dress Code Violation  ,Low,Written Warning,-1
+BEH001071,STU930,2025-02-23,Skipping Class,Medium,Detention,-3
+BEH000627,STU00552,2025-10-16,Property Damage,High,Parent Conference,-5
+BEH000445,STU00404,,Bullying,High,Suspension - 1 Day,-5
+BEH000179,STU162,2025-08-24,Property Damage,HIGH,Suspension - 1 Day,-5
+BEH000281,241,21-Nov-2023,Skipping Class,Medium,Parent Notification,-3
+BEH000237,STU00205,2025-07-04,Dress Code Violation,Low,Verbal Warning,-1
+BEH000468,STU00423,2024-11-21,Cheating/Academic Dishonesty,High,Suspension - 3 Days,-5
+BEH000740,STU00658,2025-05-29,Positive Recognition,Positive,Merit Award,2
+BEH000595,STU00526,2023-08-09,Property Damage,High,Suspension - 3 Days,-5
+BEH000140,stu00129,2024-09-15,Disruptive Behavior,Medium,Detention,-3
+BEH000938,STU00819,2023-10-06,Dress Code Violation,Low,Verbal Warning,-1
+BEH000888,STU00780,2025-04-19,Property Damage,High,Parent Conference,-5
+BEH000101,STU00094,"November 11, 2025",Bullying,High,Suspension - 3 Days,-5
+BEH000349,STU00305,2024-12-24,Property Damage,High,Suspension - 3 Days,-5
+BEH000422,STU00383,"November 01, 2024",Cheating/Academic Dishonesty,High,Suspension - 1 Day,-5
+BEH000374,STU00340,2025-01-18,Property Damage,High,Suspension - 3 Days,-5
