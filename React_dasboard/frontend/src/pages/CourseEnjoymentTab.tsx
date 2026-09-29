@@ -85,7 +85,7 @@ export const CourseEnjoymentTab: React.FC<CourseEnjoymentTabProps> = ({ onOpenEx
                 <YAxis type="number" dataKey="satisfaction" name="Satisfaction (1-5)" domain={[3.5, 5.0]} stroke="var(--text-muted)" />
                 <ZAxis type="number" dataKey="responses" range={[60, 400]} name="Responses" />
                 <Tooltip cursor={{ strokeDasharray: '3 3' }} contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px' }} />
-                <Scatter name="Courses" data={matrixPoints} fill="#a855f7" />
+                <Scatter name="Courses" data={matrixPoints} fill="#d4d4d4" />
               </ScatterChart>
             </ResponsiveContainer>
           </div>

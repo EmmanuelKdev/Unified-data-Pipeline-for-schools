@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func
 from app.db.database import get_db
 from app.models.schema import Course, CourseFeedback, Department, AcademicRecord
-from app.schemas.pydantic_models import CourseEnjoymentItem, DepartmentSentiment, CourseMatrixPoint
+from app.schemas.pydantic_models import CourseEnjoymentItem, CourseAnalyticsResponse, DepartmentSentiment, CourseMatrixPoint
 from app.api.deps import get_current_user
 
 router = APIRouter(prefix="/courses", tags=["Course Enjoyment Analytics"])
@@ -87,3 +87,21 @@ def get_course_satisfaction_matrix(db: Session = Depends(get_db), current_user=D
             "student_count": resp_count
         })
     return matrix
+
+# Course Analytics views: PYDANTIC RESPONSE MODELS
+@router.get(
+    "/{course_id}/analytics",
+    response_model=List[CourseAnalyticsResponse],
+)
+def get_course_analytics(db: Session = Depends(get_db)):
+    """Fetch high-level course completion and score metrics for the analytics dashboard."""
+    query = text("SELECT * FROM mv_api_course_activity_metrics")
+    results = db.execute(query).mappings().all()
+
+    if not results:
+        raise HTTPException(
+            status_code=404, detail="No course activity analytics available"
+        )
+
+    return [dict(row) for row in results]
+

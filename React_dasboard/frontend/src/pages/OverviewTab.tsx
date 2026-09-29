@@ -1,41 +1,45 @@
 import React, { useEffect, useState } from 'react';
 import { Users, GraduationCap, CalendarCheck, AlertTriangle, DollarSign, ArrowUpRight, TrendingUp, Sparkles } from 'lucide-react';
 import { KpiCard } from '../components/KpiCard';
-import { fetchKpis, fetchGradeDistribution, fetchTruancyAlerts } from '../api/client';
-import { KpiSummary, GradeDistribution, StudentDetail } from '../types';
+import { fetchExecutiveOverview } from '../api/client';
+import { OverviewMetrics, GradeDistribution, Student, AcademicTrajectory } from '../types';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Cell } from 'recharts';
 
 interface OverviewTabProps {
-  onSelectStudent: (student: StudentDetail) => void;
+  onSelectStudent: (student: Student) => void;
   setActiveTab: (tab: string) => void;
 }
 
 export const OverviewTab: React.FC<OverviewTabProps> = ({ onSelectStudent, setActiveTab }) => {
-  const [kpis, setKpis] = useState<KpiSummary | null>(null);
+  const [kpis, setKpis] = useState<OverviewMetrics | null>(null);
+  const [trajectory, setTrajectory] = useState<AcademicTrajectory[]>([]);
   const [gradeDist, setGradeDist] = useState<GradeDistribution[]>([]);
-  const [truancyList, setTruancyList] = useState<StudentDetail[]>([]);
+  const [truancyList, setTruancyList] = useState<Student[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    fetchKpis().then(setKpis);
-    fetchGradeDistribution().then(setGradeDist);
-    fetchTruancyAlerts().then(setTruancyList);
+    fetchExecutiveOverview('Fall 2025')
+      .then((data) => {
+        setKpis(data.kpis);
+        console.log('Fetched Executive Overview Data:', data.kpis);
+        setTrajectory(data.academic_trajectory);
+        console.log('Fetched Academic Trajectory Data:', data.academic_trajectory);
+        setGradeDist(data.grade_distribution);
+        setTruancyList(data.at_risk_ledger);
+      })
+      .catch(console.error)
+      .finally(() => setLoading(false));
   }, []);
 
-  const gpaTrendData = [
-    { term: 'Fall 2023', gpa: 3.18, attendance: 92.4 },
-    { term: 'Spring 2024', gpa: 3.25, attendance: 93.1 },
-    { term: 'Fall 2024', gpa: 3.32, attendance: 94.0 },
-    { term: 'Spring 2025', gpa: 3.38, attendance: 94.2 },
-    { term: 'Fall 2025', gpa: 3.42, attendance: 94.8 },
-  ];
-
   const gradeColors: Record<string, string> = {
-    'A': '#10b981',
-    'B': '#6366f1',
-    'C': '#06b6d4',
-    'D': '#f59e0b',
-    'F': '#f43f5e',
+    A: '#f5f5f5',
+    B: '#d4d4d4',
+    C: '#a3a3a3',
+    D: '#71717a',
+    F: '#ef4444',
   };
+
+  if (loading) return <div>Loading dashboard...</div>;
 
   return (
     <div>
@@ -54,45 +58,38 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ onSelectStudent, setAc
       {/* KPI Stat Cards Grid */}
       <div className="kpi-grid">
         <KpiCard
-          title="Total Enrollment"
-          value={kpis?.total_students.toLocaleString() || '1,420'}
-          subtext="+4.2% from previous academic year"
-          icon={Users}
-          accentColor="var(--accent-primary)"
-        />
-        <KpiCard
-          title="Average GPA"
-          value={kpis?.average_gpa.toFixed(2) || '3.42'}
-          subtext="+0.08 GPA institutional gain"
-          icon={GraduationCap}
-          accentColor="var(--accent-cyan)"
-        />
-        <KpiCard
-          title="School Attendance Rate"
-          value={`${kpis?.attendance_rate.toFixed(1) || '94.8'}%`}
-          subtext="Benchmark target: 95.0%"
-          icon={CalendarCheck}
-          accentColor="var(--accent-emerald)"
-        />
-        <KpiCard
-          title="At-Risk Students"
-          value={kpis?.at_risk_students || '18'}
-          subtext="Requires academic/attendance intervention"
-          icon={AlertTriangle}
-          accentColor="var(--accent-rose)"
-        />
-        <KpiCard
-          title="Net Operating Margin"
-          value={`$${((kpis?.net_margin || 2400000) / 1000000).toFixed(2)}M`}
-          subtext="Revenue: $14.2M | Expenses: $11.8M"
-          icon={DollarSign}
-          accentColor="var(--accent-emerald)"
-        />
+        title="Total Enrollment"
+        value={kpis?.total_enrollment?.toLocaleString() || '1,420'}
+        subtext={`+${kpis?.enrollment_growth_pct ?? 4.2}% from previous academic year`}
+        icon={Users}
+        accentColor="var(--accent-primary)"
+      />
+      <KpiCard
+        title="Average GPA"
+        value={kpis?.average_gpa?.toFixed(2) || '3.42'}
+        subtext={`+${kpis?.gpa_gain ?? 0.08} GPA institutional gain`}
+        icon={GraduationCap}
+        accentColor="var(--accent-cyan)"
+      />
+      <KpiCard
+        title="School Attendance Rate"
+        value={`${(kpis?.attendance_rate ?? kpis?.attendance_rate ?? 94.8).toFixed(1)}%`}
+        subtext="Benchmark target: 95.0%"
+        icon={CalendarCheck}
+        accentColor="var(--accent-emerald)"
+      />
+      <KpiCard
+        title="At-Risk Students"
+        value={kpis?.at_risk_students?.toString() || '18'}
+        subtext="Requires academic/attendance intervention"
+        icon={AlertTriangle}
+        accentColor="var(--accent-rose)"
+      />
       </div>
 
       {/* Main Charts Row */}
       <div className="dashboard-grid">
-        {/* GPA Trajectory Line/Area Chart */}
+        {/* GPA Trajectory Chart */}
         <div className="glass-panel col-8" style={{ padding: '1.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
             <div>
@@ -103,24 +100,37 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ onSelectStudent, setAc
           </div>
 
           <div style={{ width: '100%', height: '280px' }}>
-            <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={gpaTrendData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                <defs>
-                  <linearGradient id="gpaGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#6366f1" stopOpacity={0.4} />
-                    <stop offset="95%" stopColor="#6366f1" stopOpacity={0.0} />
-                  </linearGradient>
-                </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
-                <XAxis dataKey="term" stroke="var(--text-muted)" fontSize={12} />
-                <YAxis domain={[2.5, 4.0]} stroke="var(--text-muted)" fontSize={12} />
-                <Tooltip
-                  contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px' }}
-                />
-                <Area type="monotone" dataKey="gpa" stroke="#6366f1" strokeWidth={3} fillOpacity={1} fill="url(#gpaGrad)" name="Average GPA" />
-              </AreaChart>
-            </ResponsiveContainer>
-          </div>
+  <ResponsiveContainer width="100%" height="100%">
+    <AreaChart data={trajectory} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+      <defs>
+        <linearGradient id="gpaGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="5%" stopColor="#f5f5f5" stopOpacity={0.4} />
+          <stop offset="95%" stopColor="#f5f5f5" stopOpacity={0.0} />
+        </linearGradient>
+      </defs>
+      <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
+      
+      {/* Map term_name instead of term */}
+      <XAxis dataKey="term_name" stroke="var(--text-muted)" fontSize={12} />
+      
+      {/* Adjust domain min to 1.0 or 'auto' since average_gpa is ~1.95 - 1.99 */}
+      <YAxis domain={[1.0, 4.0]} stroke="var(--text-muted)" fontSize={12} />
+      
+      <Tooltip contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px' }} />
+      
+      {/* Map average_gpa instead of gpa */}
+      <Area 
+        type="monotone" 
+        dataKey="average_gpa" 
+        stroke="#f5f5f5" 
+        strokeWidth={3} 
+        fillOpacity={1} 
+        fill="url(#gpaGrad)" 
+        name="Average GPA" 
+      />
+    </AreaChart>
+  </ResponsiveContainer>
+</div>
         </div>
 
         {/* Grade Letter Distribution Bar Chart */}
@@ -139,7 +149,7 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ onSelectStudent, setAc
                 <Tooltip contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px' }} />
                 <Bar dataKey="count" radius={[6, 6, 0, 0]}>
                   {gradeDist.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={gradeColors[entry.grade] || '#6366f1'} />
+                    <Cell key={`cell-${index}`} fill={gradeColors[entry.grade] || '#a3a3a3'} />
                   ))}
                 </Bar>
               </BarChart>
@@ -150,7 +160,7 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ onSelectStudent, setAc
 
       {/* At-Risk & Quick Actions Row */}
       <div className="dashboard-grid">
-        {/* At Risk Truancy Alert Ledger */}
+        {/* At Risk Student Ledger */}
         <div className="glass-panel col-8" style={{ padding: '1.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
             <div>
@@ -178,7 +188,7 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ onSelectStudent, setAc
                 </tr>
               </thead>
               <tbody>
-                {truancyList.slice(0, 5).map(s => (
+                {truancyList.slice(0, 5).map((s) => (
                   <tr key={s.id}>
                     <td>
                       <div style={{ fontWeight: 600 }}>{s.first_name} {s.last_name}</div>
@@ -186,7 +196,7 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ onSelectStudent, setAc
                     </td>
                     <td>{s.grade_level}</td>
                     <td style={{ fontWeight: 700, color: s.gpa < 2.5 ? 'var(--accent-rose)' : 'var(--text-primary)' }}>{s.gpa.toFixed(2)}</td>
-                    <td style={{ fontWeight: 700, color: 'var(--accent-rose)' }}>{s.attendance_rate.toFixed(1)}%</td>
+                    <td style={{ fontWeight: 700, color: 'var(--accent-rose)' }}>{(s.attendance_rate ?? s.attendance_percentage ?? 0).toFixed(1)}%</td>
                     <td>
                       <span className={`badge ${s.tuition_status === 'Overdue' ? 'badge-danger' : 'badge-info'}`}>
                         {s.tuition_status || 'Paid'}

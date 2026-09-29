@@ -1,9 +1,9 @@
 import React from 'react';
 import { X, GraduationCap, Calendar, DollarSign, Award, AlertTriangle, Mail } from 'lucide-react';
-import { StudentDetail } from '../types';
+import { Student } from '../types';
 
 interface StudentDetailModalProps {
-  student: StudentDetail | null;
+  student: Student | null;
   onClose: () => void;
 }
 

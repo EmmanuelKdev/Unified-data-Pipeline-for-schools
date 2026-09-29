@@ -92,20 +92,20 @@ export const FinancialTab: React.FC<FinancialTabProps> = ({ onOpenExportModal })
               <AreaChart data={revExpTrends} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
                 <defs>
                   <linearGradient id="revGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.4} />
-                    <stop offset="95%" stopColor="#10b981" stopOpacity={0.0} />
+                    <stop offset="5%" stopColor="#f5f5f5" stopOpacity={0.4} />
+                    <stop offset="95%" stopColor="#f5f5f5" stopOpacity={0.0} />
                   </linearGradient>
                   <linearGradient id="expGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#f43f5e" stopOpacity={0.4} />
-                    <stop offset="95%" stopColor="#f43f5e" stopOpacity={0.0} />
+                    <stop offset="5%" stopColor="#ef4444" stopOpacity={0.4} />
+                    <stop offset="95%" stopColor="#ef4444" stopOpacity={0.0} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
                 <XAxis dataKey="month" stroke="var(--text-muted)" />
                 <YAxis stroke="var(--text-muted)" tickFormatter={(val) => `$${(val / 1000000).toFixed(1)}M`} />
                 <Tooltip contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px' }} />
-                <Area type="monotone" dataKey="revenue" stroke="#10b981" strokeWidth={3} fillOpacity={1} fill="url(#revGrad)" name="Revenue ($)" />
-                <Area type="monotone" dataKey="expense" stroke="#f43f5e" strokeWidth={2} fillOpacity={1} fill="url(#expGrad)" name="Expenses ($)" />
+                <Area type="monotone" dataKey="revenue" stroke="#f5f5f5" strokeWidth={3} fillOpacity={1} fill="url(#revGrad)" name="Revenue ($)" />
+                <Area type="monotone" dataKey="expense" stroke="#ef4444" strokeWidth={2} fillOpacity={1} fill="url(#expGrad)" name="Expenses ($)" />
               </AreaChart>
             </ResponsiveContainer>
           </div>
@@ -125,8 +125,8 @@ export const FinancialTab: React.FC<FinancialTabProps> = ({ onOpenExportModal })
                 <XAxis type="number" stroke="var(--text-muted)" tickFormatter={(val) => `$${(val / 1000).toFixed(0)}k`} />
                 <YAxis dataKey="department" type="category" stroke="var(--text-primary)" fontSize={11} width={120} />
                 <Tooltip contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px' }} />
-                <Bar dataKey="allocated_budget" fill="rgba(99, 102, 241, 0.3)" name="Allocated Budget" />
-                <Bar dataKey="actual_spent" fill="#6366f1" name="Actual Spent" />
+                <Bar dataKey="allocated_budget" fill="rgba(255, 255, 255, 0.15)" name="Allocated Budget" />
+                <Bar dataKey="actual_spent" fill="#d4d4d4" name="Actual Spent" />
               </BarChart>
             </ResponsiveContainer>
           </div>

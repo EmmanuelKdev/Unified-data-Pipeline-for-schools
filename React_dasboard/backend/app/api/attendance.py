@@ -1,103 +1,121 @@
-from typing import List
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
-from sqlalchemy import func, extract
+from typing import List, Optional
 from app.db.database import get_db
-from app.models.schema import AttendanceRecord, Student
-from app.schemas.pydantic_models import MonthlyAttendance, StudentDetail
-from app.api.deps import get_current_user
+from app.models.schema import FactAttendance, DimStudent
+from app.schemas.pydantic_models import AttendanceAnalyticsResponse, AttendanceSummaryResponse, AttendanceResponse, MonthlyAttendanceResponse
+from sqlalchemy import text
 
-router = APIRouter(prefix="/attendance", tags=["Attendance Analytics"])
 
-@router.get("/monthly-trends", response_model=List[MonthlyAttendance])
-def get_monthly_attendance_trends(db: Session = Depends(get_db), current_user=Depends(get_current_user)):
-    # Group attendance by month (1 to 6)
-    month_names = ["Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+router = APIRouter(prefix="/attendance", tags=["Attendance"])
+
+@router.get("/", response_model=List[AttendanceResponse])
+def get_attendance(
+    student_id: Optional[str] = None,
+    date_key: Optional[int] = None,
+    skip: int = 0,
+    limit: int = 100,
+    db: Session = Depends(get_db)
+):
+    query = db.query(FactAttendance)
+    if student_id:
+        query = query.join(DimStudent).filter(DimStudent.student_id == student_id)
+    if date_key:
+        query = query.filter(FactAttendance.date_key == date_key)
+    return query.offset(skip).limit(limit).all()
+
+
+# Student Attendance views: PYDANTIC RESPONSE MODELS
+
+
+@router.get(
+    "/analytics",
+    response_model=AttendanceAnalyticsResponse,
+)
+def get_attendance_analytics(
+    year: Optional[int] = Query(default=None, ge=2000, description="Four-digit year"),
+    db: Session = Depends(get_db),
+):
+    """Fetch analytics aggregates directly from mv_api_attendance_summary safely."""
+
+    query = """
+    WITH summary_base AS (
+        SELECT 
+            student_id,
+            COALESCE(first_name, '') AS first_name,
+            COALESCE(last_name, '') AS last_name,
+            total_records,
+            days_present,
+            days_absent,
+            attendance_percentage
+        FROM mv_api_attendance_summary
+    ),
     
-    trends = []
-    for month_num in range(9, 13): # Sep to Dec
-        total = db.query(func.count(AttendanceRecord.id)).filter(extract('month', AttendanceRecord.date) == month_num).scalar() or 0
-        present = db.query(func.count(AttendanceRecord.id)).filter(
-            extract('month', AttendanceRecord.date) == month_num,
-            AttendanceRecord.status == "Present"
-        ).scalar() or 0
-        excused = db.query(func.count(AttendanceRecord.id)).filter(
-            extract('month', AttendanceRecord.date) == month_num,
-            AttendanceRecord.status == "Excused"
-        ).scalar() or 0
-        unexcused = db.query(func.count(AttendanceRecord.id)).filter(
-            extract('month', AttendanceRecord.date) == month_num,
-            AttendanceRecord.status == "Unexcused"
-        ).scalar() or 0
-        tardy = db.query(func.count(AttendanceRecord.id)).filter(
-            extract('month', AttendanceRecord.date) == month_num,
-            AttendanceRecord.status == "Tardy"
-        ).scalar() or 0
+    kpi_summary AS (
+        SELECT
+            COALESCE(SUM(total_records), 0) AS total_records,
+            COALESCE(SUM(days_present), 0) AS total_present,
+            COALESCE(SUM(days_absent), 0) AS total_absent,
+            ROUND(
+                (COALESCE(SUM(days_present), 0)::numeric / NULLIF(SUM(total_records), 0)) * 100, 
+                2
+            ) AS overall_attendance_rate
+        FROM summary_base
+    ),
 
-        rate = round((present / total) * 100.0, 1) if total > 0 else 94.5
-        month_label = month_names[month_num - 9]
-        trends.append({
-            "month": month_label,
-            "attendance_rate": rate,
-            "excused": excused,
-            "unexcused": unexcused,
-            "tardy": tardy
-        })
+    truancy_roster AS (
+        SELECT 
+            student_id,
+            first_name,
+            last_name,
+            total_records,
+            days_present,
+            days_absent,
+            attendance_percentage
+        FROM summary_base
+        WHERE attendance_percentage < 85.0
+        ORDER BY attendance_percentage ASC
+    )
 
-    for month_num in range(1, 3): # Jan to Feb
-        total = db.query(func.count(AttendanceRecord.id)).filter(extract('month', AttendanceRecord.date) == month_num).scalar() or 0
-        present = db.query(func.count(AttendanceRecord.id)).filter(
-            extract('month', AttendanceRecord.date) == month_num,
-            AttendanceRecord.status == "Present"
-        ).scalar() or 0
-        excused = db.query(func.count(AttendanceRecord.id)).filter(
-            extract('month', AttendanceRecord.date) == month_num,
-            AttendanceRecord.status == "Excused"
-        ).scalar() or 0
-        unexcused = db.query(func.count(AttendanceRecord.id)).filter(
-            extract('month', AttendanceRecord.date) == month_num,
-            AttendanceRecord.status == "Unexcused"
-        ).scalar() or 0
-        tardy = db.query(func.count(AttendanceRecord.id)).filter(
-            extract('month', AttendanceRecord.date) == month_num,
-            AttendanceRecord.status == "Tardy"
-        ).scalar() or 0
+    SELECT 
+        (SELECT row_to_json(kpi_summary.*) FROM kpi_summary) AS kpis,
+        (SELECT json_agg(truancy_roster.*) FROM truancy_roster) AS truancy_roster;
+    """
 
-        rate = round((present / total) * 100.0, 1) if total > 0 else 95.0
-        month_label = month_names[month_num + 3]
-        trends.append({
-            "month": month_label,
-            "attendance_rate": rate,
-            "excused": excused,
-            "unexcused": unexcused,
-            "tardy": tardy
-        })
-
-    return trends
-
-@router.get("/truancy-alerts", response_model=List[StudentDetail])
-def get_truancy_risk_students(db: Session = Depends(get_db), current_user=Depends(get_current_user)):
-    # Fetch students with attendance rate under 88%
-    students = db.query(Student).filter(Student.attendance_rate < 88.0).order_by(Student.attendance_rate.asc()).all()
-    
-    result = []
-    for s in students:
-        t_status = s.tuition_account.status if s.tuition_account else "Paid"
-        bal = s.tuition_account.balance_due if s.tuition_account else 0.0
-        dept_name = s.department.name if s.department else "General"
-        result.append({
-            "id": s.id,
-            "student_code": s.student_code,
-            "first_name": s.first_name,
-            "last_name": s.last_name,
-            "email": s.email,
-            "grade_level": s.grade_level,
-            "department_name": dept_name,
-            "status": s.status,
-            "gpa": s.gpa,
-            "attendance_rate": s.attendance_rate,
-            "enrollment_date": s.enrollment_date,
-            "tuition_status": t_status,
-            "balance_due": bal
-        })
+    result = db.execute(text(query)).mappings().first()
     return result
+
+@router.get(
+    "/{student_id}/one-student",
+    response_model=AttendanceSummaryResponse,
+)
+def get_student_attendance(
+    student_id: int,
+    db: Session = Depends(get_db)
+):
+    """Fetch aggregated attendance metrics for a student."""
+
+    query = text(
+        """
+        SELECT *
+        FROM mv_api_attendance_summary
+        WHERE student_id = :sid
+        """
+    )
+
+    result = (
+        db.execute(
+            query,
+            {"sid": student_id}
+        )
+        .mappings()
+        .first()
+    )
+
+    if not result:
+        raise HTTPException(
+            status_code=404,
+            detail=f"No attendance records found for Student ID {student_id}"
+        )
+
+    return dict(result)

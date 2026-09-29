@@ -1,32 +1,35 @@
 /* ==========================================================================
-   AuraEdu Modern Glassmorphism & Fluid CSS Design System
+   AuraEdu — Monochrome Dashboard Design System
+   A mature, high-contrast black & white system. Grayscale carries almost
+   all UI and data-vis meaning; a single muted red is reserved strictly for
+   critical / danger states so risk signals stay scannable.
    ========================================================================== */
 
 :root {
   /* Color Palette - Dark Theme Defaults */
-  --bg-primary: #0b0f19;
-  --bg-secondary: #13192b;
-  --bg-card: rgba(23, 31, 51, 0.7);
-  --bg-card-hover: rgba(30, 41, 67, 0.85);
-  --border-color: rgba(255, 255, 255, 0.08);
-  --border-highlight: rgba(99, 102, 241, 0.3);
+  --bg-primary: #08090a;
+  --bg-secondary: #111113;
+  --bg-card: rgba(255, 255, 255, 0.035);
+  --bg-card-hover: rgba(255, 255, 255, 0.06);
+  --border-color: rgba(255, 255, 255, 0.09);
+  --border-highlight: rgba(255, 255, 255, 0.28);
 
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-primary: #f5f5f5;
+  --text-secondary: #a3a3a3;
+  --text-muted: #6b6b6e;
 
-  /* Accents */
-  --accent-primary: #6366f1;
-  --accent-primary-hover: #4f46e5;
-  --accent-cyan: #06b6d4;
-  --accent-emerald: #10b981;
-  --accent-amber: #f59e0b;
-  --accent-rose: #f43f5e;
-  --accent-purple: #a855f7;
+  /* Accents — grayscale, with one reserved functional color */
+  --accent-primary: #ffffff;
+  --accent-primary-hover: #d4d4d4;
+  --accent-cyan: #a3a3a3;      /* steel gray — secondary series / info */
+  --accent-emerald: #d4d4d4;   /* light gray — positive / success */
+  --accent-amber: #8a8a8e;     /* mid gray — warning / caution */
+  --accent-rose: #ef4444;      /* the one reserved color — critical / danger only */
+  --accent-purple: #71717a;    /* dark steel — tertiary series */
 
-  /* Glassmorphism Effects */
-  --glass-backdrop: blur(16px);
-  --glass-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  /* Effects — flatter, less "glassy", more deliberate */
+  --glass-backdrop: blur(10px);
+  --glass-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
   --glass-border: 1px solid var(--border-color);
 
   /* Radius & Transitions */
@@ -38,18 +41,26 @@
 }
 
 [data-theme="light"] {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
-  --bg-card: rgba(255, 255, 255, 0.85);
-  --bg-card-hover: rgba(255, 255, 255, 0.98);
-  --border-color: rgba(0, 0, 0, 0.08);
-  --border-highlight: rgba(99, 102, 241, 0.4);
+  --bg-primary: #fafafa;
+  --bg-secondary: #f1f1f1;
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --bg-card-hover: rgba(255, 255, 255, 1);
+  --border-color: rgba(0, 0, 0, 0.09);
+  --border-highlight: rgba(0, 0, 0, 0.35);
 
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --text-primary: #0a0a0a;
+  --text-secondary: #52525b;
+  --text-muted: #8a8a8e;
 
-  --glass-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+  --accent-primary: #0a0a0a;
+  --accent-primary-hover: #262626;
+  --accent-cyan: #52525b;
+  --accent-emerald: #3f3f46;
+  --accent-amber: #52525b;
+  --accent-rose: #dc2626;
+  --accent-purple: #52525b;
+
+  --glass-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.1);
 }
 
 /* Reset & Global Base */
@@ -74,7 +85,7 @@ h1, h2, h3, h4, h5, h6, .brand-title {
   letter-spacing: -0.02em;
 }
 
-/* Glassmorphism Card Utility */
+/* Card Utility */
 .glass-panel {
   background: var(--bg-card);
   backdrop-filter: var(--glass-backdrop);
@@ -93,8 +104,9 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 .app-container {
   display: flex;
   min-height: 100vh;
-  background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
-              radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.035) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 40%);
 }
 
 .main-content {
@@ -151,14 +163,15 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 }
 
 .nav-item:hover {
-  background: rgba(99, 102, 241, 0.12);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--text-primary);
 }
 
 .nav-item.active {
   background: var(--accent-primary);
-  color: #ffffff;
-  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  color: var(--bg-primary);
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.12);
+  font-weight: 700;
 }
 
 /* Status Badges */
@@ -175,27 +188,27 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 }
 
 .badge-success {
-  background: rgba(16, 185, 129, 0.15);
-  color: var(--accent-emerald);
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .badge-warning {
-  background: rgba(245, 158, 11, 0.15);
-  color: var(--accent-amber);
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
 }
 
 .badge-danger {
-  background: rgba(244, 63, 94, 0.15);
+  background: rgba(239, 68, 68, 0.12);
   color: var(--accent-rose);
-  border: 1px solid rgba(244, 63, 94, 0.3);
+  border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
 .badge-info {
-  background: rgba(99, 102, 241, 0.15);
-  color: var(--accent-primary);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
 }
 
 /* KPI Stat Cards Grid */
@@ -220,10 +233,10 @@ h1, h2, h3, h4, h5, h6, .brand-title {
   position: absolute;
   top: 0;
   right: 0;
-  width: 4px;
+  width: 3px;
   height: 100%;
   background: var(--accent-primary);
-
+  opacity: 0.7;
 }
 
 .kpi-title {
@@ -282,7 +295,7 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 }
 
 .data-table th {
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.03);
   padding: 1rem;
   color: var(--text-muted);
   font-weight: 600;
@@ -296,7 +309,6 @@ h1, h2, h3, h4, h5, h6, .brand-title {
   padding: 1rem;
   border-bottom: 1px solid var(--border-color);
   color: var(--text-primary);
-
 }
 
 .data-table tbody tr {
@@ -304,12 +316,12 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 }
 
 .data-table tbody tr:hover {
-  background: rgba(99, 102, 241, 0.05);
+  background: rgba(255, 255, 255, 0.035);
 }
 
 /* Form Controls & Inputs */
 .input-control {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
   padding: 0.65rem 1rem;
@@ -320,8 +332,8 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 }
 
 .input-control:focus {
-  border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  border-color: var(--border-highlight);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
 .btn {
@@ -340,22 +352,22 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 
 .btn-primary {
   background: var(--accent-primary);
-  color: #ffffff;
+  color: var(--bg-primary);
 }
 
 .btn-primary:hover {
   background: var(--accent-primary-hover);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 /* Custom Scrollbar */

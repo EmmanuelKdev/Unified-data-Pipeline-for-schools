@@ -52,7 +52,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      background: 'radial-gradient(circle at 50% 30%, rgba(99, 102, 241, 0.15) 0%, #0b0f19 70%)',
+      background: 'radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.06) 0%, #08090a 70%)',
       padding: '1.5rem'
     }}>
       <div className="glass-panel" style={{
@@ -69,14 +69,14 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
             width: '60px',
             height: '60px',
             borderRadius: '18px',
-            background: 'linear-gradient(135deg, #6366f1 0%, #a855f7 100%)',
+            background: 'linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%)',
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 10px 25px rgba(99, 102, 241, 0.5)',
+            boxShadow: '0 10px 25px rgba(255, 255, 255, 0.15)',
             marginBottom: '1rem'
           }}>
-            <GraduationCap size={32} color="#ffffff" />
+            <GraduationCap size={32} color="#08090a" />
           </div>
           <h1 style={{ fontSize: '1.8rem', color: '#ffffff' }}>AuraEdu</h1>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
@@ -100,7 +100,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
                 fontWeight: 600,
                 cursor: 'pointer',
                 background: role === r ? 'var(--accent-primary)' : 'transparent',
-                color: role === r ? '#ffffff' : 'var(--text-secondary)',
+                color: role === r ? 'var(--bg-primary)' : 'var(--text-secondary)',
                 transition: 'all 0.2s ease'
               }}
             >
