@@ -68,7 +68,7 @@ def extract_source(source_name, file_name, **context):
 
 
 with DAG(
-    dag_id="school_data_extract_bronze",
+    dag_id="1.school_data_extract_bronze",
     description="Extract raw school data source exports into the Bronze layer",
     default_args=default_args,
     schedule="@daily",

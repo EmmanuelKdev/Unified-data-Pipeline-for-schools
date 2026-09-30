@@ -52,7 +52,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      background: 'radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.06) 0%, #08090a 70%)',
+      background: 'radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.28) 0%, #08090a 70%)',
       padding: '1.5rem'
     }}>
       <div className="glass-panel" style={{
@@ -61,7 +61,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
         padding: '2.5rem',
         borderRadius: '24px',
         boxShadow: '0 20px 50px rgba(0, 0, 0, 0.6)',
-        border: '1px solid rgba(255, 255, 255, 0.1)'
+        border: '1px solid rgba(255, 255, 255, 0.32)'
       }}>
         {/* Logo */}
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
@@ -78,14 +78,14 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
           }}>
             <GraduationCap size={32} color="#08090a" />
           </div>
-          <h1 style={{ fontSize: '1.8rem', color: '#ffffff' }}>AuraEdu</h1>
+          <h1 style={{ fontSize: '1.8rem', color: '#ffffff' }}>AlephEdu</h1>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
             School Analytics & Financial Intelligence System
           </p>
         </div>
 
         {/* Role Quick Selector */}
-        <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.5rem', background: 'rgba(0,0,0,0.3)', padding: '0.3rem', borderRadius: '10px' }}>
+        <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.5rem', background: 'rgba(125, 125, 125, 0.3)', padding: '0.3rem', borderRadius: '10px' }}>
           {(['Admin', 'Principal', 'Bursar'] as const).map((r) => (
             <button
               key={r}

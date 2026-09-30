@@ -64,7 +64,7 @@ export const AcademicTab: React.FC<AcademicTabProps> = ({ onOpenExportModal }) =
         <div className="glass-panel" style={{ padding: '1.25rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
             <Award size={20} color="var(--accent-emerald)" />
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600 }}>HONOR ROLL RATIO</span>
+            <span style={{ fontSize: '0.85rem', color: 'var(--text-primary)', fontWeight: 600 }}>HONOR ROLL RATIO</span>
           </div>
           <div style={{ fontSize: '1.8rem', fontWeight: 700, color: 'var(--text-primary)' }}>
             {kpis.honor_roll.percentage}%
@@ -78,7 +78,7 @@ export const AcademicTab: React.FC<AcademicTabProps> = ({ onOpenExportModal }) =
         <div className="glass-panel" style={{ padding: '1.25rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
             <BookOpen size={20} color="var(--accent-primary)" />
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600 }}>HIGHEST PERFORMING SUBJECT</span>
+            <span style={{ fontSize: '0.85rem', color: 'var(--text-primary)', fontWeight: 600 }}>HIGHEST PERFORMING SUBJECT</span>
           </div>
           <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text-primary)' }}>
             {kpis.highest_performing_subject.subject_name} ({kpis.highest_performing_subject.average_score.toFixed(1)})
@@ -94,7 +94,7 @@ export const AcademicTab: React.FC<AcademicTabProps> = ({ onOpenExportModal }) =
         <div className="glass-panel" style={{ padding: '1.25rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
             <GraduationCap size={20} color="var(--accent-cyan)" />
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600 }}>PASS RATE (A-C GRADES)</span>
+            <span style={{ fontSize: '0.85rem', color: 'var(--text-primary)', fontWeight: 600 }}>PASS RATE (A-C GRADES)</span>
           </div>
           <div style={{ fontSize: '1.8rem', fontWeight: 700, color: 'var(--text-primary)' }}>
             {kpis.pass_rate.percentage}%
@@ -122,7 +122,7 @@ export const AcademicTab: React.FC<AcademicTabProps> = ({ onOpenExportModal }) =
                 <PolarGrid stroke="var(--border-color)" />
                 <PolarAngleAxis dataKey="subject" stroke="var(--text-primary)" fontSize={12} />
                 <PolarRadiusAxis angle={30} domain={[50, 100]} stroke="var(--text-muted)" />
-                <Radar name="Average Score" dataKey="average_score" stroke="#f5f5f5" fill="#f5f5f5" fillOpacity={0.25} />
+                <Radar name="Average Score" dataKey="average_score" stroke="#f5f5f5" fill="rgba(165, 233, 123, 0.78)" fillOpacity={0.35} />
               </RadarChart>
             </ResponsiveContainer>
           </div>

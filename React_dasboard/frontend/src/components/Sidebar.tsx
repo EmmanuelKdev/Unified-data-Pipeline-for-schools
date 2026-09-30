@@ -20,7 +20,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, curre
   ];
 
   return (
-    <aside className="sidebar">
+    <aside className="sidebar" style={{ background: 'rgba(255, 255, 255, 0.09)'}}>
       {/* Brand Logo & Header */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '2rem', padding: '0 0.5rem' }}>
         <div style={{
@@ -33,10 +33,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, curre
           justifyContent: 'center',
           boxShadow: '0 6px 16px rgba(99, 102, 241, 0.4)'
         }}>
-          <GraduationCap size={24} color="#ffffff" />
+          <GraduationCap size={24} color="var(--accent-primary)" />
         </div>
         <div>
-          <h2 className="brand-title" style={{ fontSize: '1.25rem', lineHeight: '1.1' }}>AuraEdu</h2>
+          <h2 className="brand-title" style={{ fontSize: '1.25rem', lineHeight: '1.1' }}>AlephEdu</h2>
           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 500 }}>School Analytics Platform</span>
         </div>
       </div>
@@ -51,7 +51,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, curre
               key={item.id}
               onClick={() => setActiveTab(item.id)}
               className={`nav-item ${isActive ? 'active' : ''}`}
-              style={{ width: '100%', border: 'none', background: 'none' }}
+              style={{ width: '100%', border: 'none', background: 'none', color: 'var(--text-primary)' }}
             >
               <Icon size={18} />
               <span>{item.label}</span>

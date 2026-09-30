@@ -20,7 +20,7 @@ export const KpiCard: React.FC<KpiCardProps> = ({
   return (
     <div className="glass-panel kpi-card">
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
-        <span className="kpi-title">{title}</span>
+        <span className="kpi-title" style={{ color: 'var(--text-primary)' }}>{title}</span>
         <div style={{
           width: '36px',
           height: '36px',
@@ -35,7 +35,7 @@ export const KpiCard: React.FC<KpiCardProps> = ({
         </div>
       </div>
       
-      <div className="kpi-value">{value}</div>
+      <div className="kpi-value" style={{ fontSize: '3rem', fontWeight: 600, color: 'var(--text-primary)' }}>{value}</div>
       <div className="kpi-sub" style={{ color: accentColor }}>
         {subtext}
       </div>

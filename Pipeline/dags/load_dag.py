@@ -596,7 +596,7 @@ def gold_layer_summary(**context):
 # DAG
 # ---------------------------------------------------------------------------
 with DAG(
-    dag_id="school_data_load_gold",
+    dag_id="3.school_data_load_gold",
     description=(
         "Build Gold-layer dimension and fact tables "
         "for reporting and analytics"

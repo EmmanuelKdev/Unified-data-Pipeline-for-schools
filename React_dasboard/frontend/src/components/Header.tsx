@@ -31,16 +31,16 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="header-bar">
       {/* Search Input */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: 1, maxWidth: '400px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: 1, maxWidth: '400px', background: 'rgba(255, 255, 255, 0.09)'}}>
         <div style={{ position: 'relative', width: '100%' }}>
           <Search size={16} color="var(--text-muted)" style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)' }} />
           <input
             type="text"
             className="input-control"
-            placeholder="Search students, courses, department budgets..."
+            placeholder="Search students, courses, department budgets..." 
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            style={{ width: '100%', paddingLeft: '2.5rem' }}
+            style={{ width: '100%', paddingLeft: '2.5rem', background: 'transparent', border: '1px solid rgba(255, 255, 255, 0.32)', color: 'var(--text-primary)' }}
           />
         </div>
       </div>

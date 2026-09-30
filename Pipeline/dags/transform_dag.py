@@ -264,7 +264,7 @@ def write_data_quality_log(**context):
 
 
 with DAG(
-    dag_id="school_data_transform_silver",
+    dag_id="2.school_data_transform_silver",
     description="Clean, deduplicate, and conform Bronze school data into the Silver layer",
     default_args=default_args,
     schedule=BRONZE_DATASETS,  # triggers automatically once all Bronze tables have landed
