@@ -35,12 +35,22 @@ export const AcademicTab: React.FC<AcademicTabProps> = ({ onOpenExportModal }) =
   const { kpis, subject_mastery_radar, grade_distribution, performance_ledger } = data;
 
   const gradeColors: Record<string, string> = {
-    'A': '#f5f5f5',
-    'B': '#d4d4d4',
-    'C': '#a3a3a3',
-    'D': '#71717a',
-    'F': '#ef4444',
+    'A': 'var(--accent-primary)',
+    'B': 'var(--accent-emerald)',
+    'C': 'var(--accent-cyan)',
+    'D': 'var(--accent-amber)',
+    'F': 'var(--accent-rose)',
   };
+
+  // Shared chart styling so both charts follow the active theme
+  const tooltipStyle: React.CSSProperties = {
+    background: 'var(--bg-secondary)',
+    color: 'var(--text-primary)',
+    border: '1px solid var(--border-color)',
+    borderRadius: '8px',
+    boxShadow: 'var(--glass-shadow)',
+  };
+  const axisTick = { fill: 'var(--text-muted)' };
 
   return (
     <div>
@@ -120,9 +130,10 @@ export const AcademicTab: React.FC<AcademicTabProps> = ({ onOpenExportModal }) =
             <ResponsiveContainer width="100%" height="100%">
               <RadarChart data={subject_mastery_radar}>
                 <PolarGrid stroke="var(--border-color)" />
-                <PolarAngleAxis dataKey="subject" stroke="var(--text-primary)" fontSize={12} />
-                <PolarRadiusAxis angle={30} domain={[50, 100]} stroke="var(--text-muted)" />
-                <Radar name="Average Score" dataKey="average_score" stroke="#f5f5f5" fill="rgba(165, 233, 123, 0.78)" fillOpacity={0.35} />
+                <PolarAngleAxis dataKey="subject" tick={{ fill: 'var(--text-primary)', fontSize: 12 }} />
+                <PolarRadiusAxis angle={30} domain={[50, 100]} stroke="var(--border-color)" tick={axisTick} />
+                <Tooltip contentStyle={tooltipStyle} />
+                <Radar name="Average Score" dataKey="average_score" stroke="var(--accent-primary)" strokeWidth={2} fill="var(--accent-cyan)" fillOpacity={0.45} />
               </RadarChart>
             </ResponsiveContainer>
           </div>
@@ -141,12 +152,12 @@ export const AcademicTab: React.FC<AcademicTabProps> = ({ onOpenExportModal }) =
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={grade_distribution} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
-                <XAxis dataKey="grade" stroke="var(--text-muted)" />
-                <YAxis stroke="var(--text-muted)" />
-                <Tooltip contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px' }} />
+                <XAxis dataKey="grade" stroke="var(--border-color)" tick={axisTick} />
+                <YAxis stroke="var(--border-color)" tick={axisTick} />
+                <Tooltip contentStyle={tooltipStyle} cursor={{ fill: 'var(--tint-hover)' }} />
                 <Bar dataKey="count" radius={[6, 6, 0, 0]}>
                   {grade_distribution.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={gradeColors[entry.grade] || '#a3a3a3'} />
+                    <Cell key={`cell-${index}`} fill={gradeColors[entry.grade] || 'var(--accent-amber)'} />
                   ))}
                 </Bar>
               </BarChart>

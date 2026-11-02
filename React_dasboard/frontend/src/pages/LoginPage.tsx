@@ -52,7 +52,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      background: 'radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.28) 0%, #08090a 70%)',
+      background: 'radial-gradient(circle at 50% 30%, var(--glow-1) 0%, var(--bg-primary) 70%)',
       padding: '1.5rem'
     }}>
       <div className="glass-panel" style={{
@@ -60,8 +60,8 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
         maxWidth: '440px',
         padding: '2.5rem',
         borderRadius: '24px',
-        boxShadow: '0 20px 50px rgba(0, 0, 0, 0.6)',
-        border: '1px solid rgba(255, 255, 255, 0.32)'
+        boxShadow: 'var(--glass-shadow)',
+        border: '1px solid var(--border-color)'
       }}>
         {/* Logo */}
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
@@ -69,23 +69,23 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
             width: '60px',
             height: '60px',
             borderRadius: '18px',
-            background: 'linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%)',
+            background: 'linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-purple) 100%)',
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 10px 25px rgba(255, 255, 255, 0.15)',
+            boxShadow: '0 10px 25px var(--tint-strong)',
             marginBottom: '1rem'
           }}>
-            <GraduationCap size={32} color="#08090a" />
+            <GraduationCap size={32} color="var(--on-accent)" />
           </div>
-          <h1 style={{ fontSize: '1.8rem', color: '#ffffff' }}>AlephEdu</h1>
+          <h1 style={{ fontSize: '1.8rem', color: 'var(--text-primary)' }}>AlephEdu</h1>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
             School Analytics & Financial Intelligence System
           </p>
         </div>
 
         {/* Role Quick Selector */}
-        <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.5rem', background: 'rgba(125, 125, 125, 0.3)', padding: '0.3rem', borderRadius: '10px' }}>
+        <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.5rem', background: 'var(--tint-hover)', padding: '0.3rem', borderRadius: '10px' }}>
           {(['Admin', 'Principal', 'Bursar'] as const).map((r) => (
             <button
               key={r}
@@ -100,7 +100,8 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLoginSuccess }) => {
                 fontWeight: 600,
                 cursor: 'pointer',
                 background: role === r ? 'var(--accent-primary)' : 'transparent',
-                color: role === r ? 'var(--bg-primary)' : 'var(--text-secondary)',
+                color: role === r ? 'var(--on-accent)' : 'var(--text-secondary)',
+                fontFamily: 'inherit',
                 transition: 'all 0.2s ease'
               }}
             >

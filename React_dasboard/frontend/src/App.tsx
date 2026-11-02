@@ -10,10 +10,17 @@ import { AttendanceTab } from './pages/AttendanceTab';
 import { FinancialTab } from './pages/FinancialTab';
 import { CourseEnjoymentTab } from './pages/CourseEnjoymentTab';
 import { StudentDirectoryTab } from './pages/StudentDirectoryTab';
-import { User, StudentDetail } from './types';
+import { User, Student } from './types';
 
 export function App() {
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+  // Light is the default. A choice made with the toggle is remembered in the browser.
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    try {
+      return localStorage.getItem('aura_theme') === 'dark' ? 'dark' : 'light';
+    } catch {
+      return 'light';
+    }
+  });
   const [token, setToken] = useState<string | null>(localStorage.getItem('aura_token') || "demo-token-123");
   const [currentUser, setCurrentUser] = useState<User | null>({
     id: 1,
@@ -24,11 +31,12 @@ export function App() {
   const [activeTab, setActiveTab] = useState('overview');
   const [selectedTerm, setSelectedTerm] = useState('Fall 2025');
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedStudent, setSelectedStudent] = useState<StudentDetail | null>(null);
+  const [selectedStudent, setSelectedStudent] = useState<Student | null>(null);
   const [isExportModalOpen, setIsExportModalOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    try { localStorage.setItem('aura_theme', theme); } catch { /* storage unavailable */ }
   }, [theme]);
 
   const toggleTheme = () => {

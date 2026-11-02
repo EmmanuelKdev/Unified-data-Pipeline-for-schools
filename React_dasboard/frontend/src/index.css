@@ -1,36 +1,89 @@
 /* ==========================================================================
-   AuraEdu — Monochrome Dashboard Design System
-   A mature, high-contrast black & white system. Grayscale carries almost
-   all UI and data-vis meaning; a single muted red is reserved strictly for
-   critical / danger states so risk signals stay scannable.
+   AuraEdu — Dashboard Design System (Lavender / Navy / Sky theme)
+   Palette: pale-lavender page, white cards, near-black navy for primary UI,
+   soft sky blue for secondary series and highlights. One reserved red for
+   critical / danger states only.
+   Class names are unchanged from the previous monochrome version.
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+:root,
+[data-theme="light"] {
+  --bg-primary: #ffffff;             /* pale lavender page */
+  --bg-secondary: #ffffff;           /* sidebar */
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
+  --border-color: #f5f6fa;
+  --border-highlight: #c9d3e8;
+
+  --text-primary: #111827;
+  --text-secondary: #4b5565;
+  --text-muted: #7a8396;
+
+  --accent-primary: #111827;         /* near-black navy */
+  --accent-primary-hover: #243049;
+  --on-accent: #ffffff;
+  --accent-cyan: #8fc3d9;            /* sky blue (secondary bars) */
+  --accent-emerald: #4f8fa3;
+  --accent-amber: #8b97ad;
+  --accent-rose: #dc2626;
+  --accent-purple: #5a6b8c;
+
+  --tint-subtle: rgba(17, 24, 39, 0.025);
+  --tint-hover: rgba(17, 24, 39, 0.045);
+  --tint-strong: rgba(17, 24, 39, 0.09);
+  --glow-1: rgba(201, 227, 238, 0.55);
+  --glow-2: rgba(201, 227, 238, 0.3);
+  --icon-bg: #d6eaf2;
+
+  --card-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+}
+
+/* Shared tokens (same in both themes) */
 :root {
-  /* Color Palette - Dark Theme Defaults */
-  --bg-primary: #223d53;
-  --bg-secondary: #111113;
-  --bg-card: rgba(255, 255, 255, 0.035);
-  --bg-card-hover: rgba(255, 255, 255, 0.06);
-  --border-color: rgba(255, 255, 255, 0.09);
-  --border-highlight: rgba(255, 255, 255, 0.28);
+  --card-border: 1px solid var(--border-color);
+  --radius-sm: 3px;
+  --radius-md: 7px;
+  --radius-lg: 10px;
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  --text-primary: #f5f5f5;
-  --text-secondary: #a3a3a3;
-  --text-muted: #6b6b6e;
+/* Dark theme (navy): applied with data-theme="dark" */
+[data-theme="dark"] {
+  /*  */
+  --bg-primary: #0b1220;
+  --bg-secondary: #111827;
+  --bg-card: #141c2e;
+  --bg-card-hover: #18223a;
+  --border-color: rgba(201, 227, 238, 0.12);
+  --border-highlight: rgba(201, 227, 238, 0.38);
 
-  /* Accents — grayscale, with one reserved functional color */
-  --accent-primary: #ffffff;
-  --accent-primary-hover: #d4d4d4;
-  --accent-cyan: #a3a3a3;      /* steel gray — secondary series / info */
-  --accent-emerald: #d4d4d4;   /* light gray — positive / success */
-  --accent-amber: #8a8a8e;     /* mid gray — warning / caution */
-  --accent-rose: #ef4444;      /* the one reserved color — critical / danger only */
-  --accent-purple: #71717a;    /* dark steel — tertiary series */
+  --text-primary: #f3f6fb;
+  --text-secondary: #aab4c5;
+  --text-muted: #7c879a;
 
-  /* Effects — flatter, less "glassy", more deliberate */
-  --glass-backdrop: blur(10px);
-  --glass-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
-  --glass-border: 1px solid var(--border-color);
+  /* Accents: navy / sky family, plus one reserved functional color */
+  --accent-primary: #c9e3ee;         /* sky: primary action, active nav, key bar */
+  --accent-primary-hover: #a8d0e0;
+  --on-accent: #0b1220;              /* text on accent-primary */
+  --accent-cyan: #8fc3d9;            /* secondary series / info */
+  --accent-emerald: #6fa8b8;         /* positive / success */
+  --accent-amber: #a9b4c8;           /* warning / caution */
+  --accent-rose: #ef4444;            /* critical / danger only */
+  --accent-purple: #6b7fa3;          /* tertiary series */
+
+  /* Tints used for hovers and subtle fills (theme aware) */
+  --tint-subtle: rgba(201, 227, 238, 0.05);
+  --tint-hover: rgba(201, 227, 238, 0.09);
+  --tint-strong: rgba(201, 227, 238, 0.16);
+  --glow-1: rgba(143, 195, 217, 0.07);
+  --glow-2: rgba(143, 195, 217, 0.04);
+  --icon-bg: rgba(201, 227, 238, 0.14);
+
+  /* Effects */
+  --card-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
+  --card-border: 1px solid var(--border-color);
 
   /* Radius & Transitions */
   --radius-sm: 8px;
@@ -38,29 +91,6 @@
   --radius-lg: 20px;
   --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-[data-theme="light"] {
-  --bg-primary: #fafafa;
-  --bg-secondary: #f1f1f1;
-  --bg-card: rgba(255, 255, 255, 0.92);
-  --bg-card-hover: rgba(255, 255, 255, 1);
-  --border-color: rgba(0, 0, 0, 0.09);
-  --border-highlight: rgba(0, 0, 0, 0.35);
-
-  --text-primary: #0a0a0a;
-  --text-secondary: #52525b;
-  --text-muted: #8a8a8e;
-
-  --accent-primary: #0a0a0a;
-  --accent-primary-hover: #262626;
-  --accent-cyan: #52525b;
-  --accent-emerald: #3f3f46;
-  --accent-amber: #52525b;
-  --accent-rose: #dc2626;
-  --accent-purple: #52525b;
-
-  --glass-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.1);
 }
 
 /* Reset & Global Base */
@@ -71,27 +101,26 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6, .brand-title {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
-/* Card Utility */
+/* Card Utility (class name kept as .glass-panel so existing components work) */
 .glass-panel {
   background: var(--bg-card);
-  backdrop-filter: var(--glass-backdrop);
-  -webkit-backdrop-filter: var(--glass-backdrop);
-  border: var(--glass-border);
-  box-shadow: var(--glass-shadow);
+  border: var(--card-border);
+  box-shadow: var(--card-shadow);
   border-radius: var(--radius-md);
   transition: var(--transition-smooth);
 }
@@ -105,8 +134,8 @@ h1, h2, h3, h4, h5, h6, .brand-title {
   display: flex;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.035) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 40%);
+    radial-gradient(circle at 10% 20%, var(--glow-1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, var(--glow-2) 0%, transparent 40%);
 }
 
 .main-content {
@@ -130,7 +159,6 @@ h1, h2, h3, h4, h5, h6, .brand-title {
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--border-color);
   background: var(--bg-card);
-  backdrop-filter: var(--glass-backdrop);
   position: sticky;
   top: 0;
   z-index: 40;
@@ -163,15 +191,15 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 }
 
 .nav-item:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--tint-hover);
   color: var(--text-primary);
 }
 
 .nav-item.active {
   background: var(--accent-primary);
-  color: var(--bg-primary);
-  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.12);
-  font-weight: 700;
+  color: var(--on-accent);
+  box-shadow: 0 4px 14px var(--tint-strong);
+  font-weight: 600;
 }
 
 /* Status Badges */
@@ -188,13 +216,13 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 }
 
 .badge-success {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-primary);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: color-mix(in srgb, var(--accent-emerald) 16%, transparent);
+  color: var(--accent-emerald);
+  border: 1px solid color-mix(in srgb, var(--accent-emerald) 35%, transparent);
 }
 
 .badge-warning {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--tint-subtle);
   color: var(--text-secondary);
   border: 1px solid var(--border-color);
 }
@@ -206,9 +234,9 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 }
 
 .badge-info {
-  background: rgba(255, 255, 255, 0.05);
+  background: color-mix(in srgb, var(--accent-cyan) 22%, transparent);
   color: var(--text-secondary);
-  border: 1px solid var(--border-color);
+  border: 1px solid color-mix(in srgb, var(--accent-cyan) 40%, transparent);
 }
 
 /* KPI Stat Cards Grid */
@@ -235,23 +263,23 @@ h1, h2, h3, h4, h5, h6, .brand-title {
   right: 0;
   width: 3px;
   height: 100%;
-  background: var(--accent-primary);
-  opacity: 0.7;
+  background: var(--accent-cyan);
+  opacity: 0.9;
 }
 
 .kpi-title {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 .kpi-value {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-primary);
 }
 
@@ -264,6 +292,15 @@ h1, h2, h3, h4, h5, h6, .brand-title {
   margin-top: 0.5rem;
 }
 
+/* Featured dark card, as in the reference design (use alongside .glass-panel) */
+.card-dark {
+  background: #111827;
+  color: #ffffff;
+  border-color: transparent;
+}
+.card-dark .kpi-title, .card-dark .kpi-sub { color: rgba(255, 255, 255, 0.65); }
+.card-dark .kpi-value { color: #ffffff; }
+
 /* Charts Grid */
 .dashboard-grid {
   display: grid;
@@ -274,11 +311,13 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 
 .col-12 { grid-column: span 12; }
 .col-8 { grid-column: span 8; }
+.col-7 { grid-column: span 7; }
 .col-6 { grid-column: span 6; }
+.col-5 { grid-column: span 5; }
 .col-4 { grid-column: span 4; }
 
 @media (max-width: 1024px) {
-  .col-8, .col-6, .col-4 { grid-column: span 12; }
+  .col-8, .col-7, .col-6, .col-5, .col-4 { grid-column: span 12; }
 }
 
 /* Custom Data Table */
@@ -295,10 +334,10 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 }
 
 .data-table th {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--tint-subtle);
   padding: 1rem;
   color: var(--text-muted);
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.05em;
@@ -316,24 +355,25 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 }
 
 .data-table tbody tr:hover {
-  background: rgba(255, 255, 255, 0.035);
+  background: var(--tint-subtle);
 }
 
 /* Form Controls & Inputs */
 .input-control {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--tint-subtle);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
   padding: 0.65rem 1rem;
   border-radius: var(--radius-sm);
+  font-family: inherit;
   font-size: 0.9rem;
   outline: none;
   transition: var(--transition-fast);
 }
 
 .input-control:focus {
-  border-color: var(--border-highlight);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-cyan) 30%, transparent);
 }
 
 .btn {
@@ -343,7 +383,8 @@ h1, h2, h3, h4, h5, h6, .brand-title {
   gap: 0.5rem;
   padding: 0.65rem 1.25rem;
   border-radius: var(--radius-sm);
-  font-weight: 600;
+  font-family: inherit;
+  font-weight: 500;
   font-size: 0.9rem;
   cursor: pointer;
   border: none;
@@ -352,22 +393,22 @@ h1, h2, h3, h4, h5, h6, .brand-title {
 
 .btn-primary {
   background: var(--accent-primary);
-  color: var(--bg-primary);
+  color: var(--on-accent);
 }
 
 .btn-primary:hover {
   background: var(--accent-primary-hover);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 12px var(--tint-strong);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--tint-subtle);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--tint-hover);
 }
 
 /* Custom Scrollbar */
@@ -379,6 +420,6 @@ h1, h2, h3, h4, h5, h6, .brand-title {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--tint-strong);
   border-radius: 9999px;
 }

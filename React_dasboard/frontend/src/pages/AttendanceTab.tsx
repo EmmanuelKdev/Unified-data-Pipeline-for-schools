@@ -20,6 +20,16 @@ export const AttendanceTab: React.FC<AttendanceTabProps> = ({ onSelectStudent, o
       .finally(() => setLoading(false));
   }, []);
 
+  // Shared chart styling so both charts follow the active theme
+  const tooltipStyle: React.CSSProperties = {
+    background: 'var(--bg-secondary)',
+    color: 'var(--text-primary)',
+    border: '1px solid var(--border-color)',
+    borderRadius: '8px',
+    boxShadow: 'var(--glass-shadow)',
+  };
+  const axisTick = { fill: 'var(--text-muted)' };
+
   const kpis = data?.kpis;
   console.log('Attendance Analytics Data:', data);
   const monthlyTrends = data?.monthly_trends || [];
@@ -105,23 +115,24 @@ export const AttendanceTab: React.FC<AttendanceTabProps> = ({ onSelectStudent, o
         <AreaChart data={truancyRoster} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
           <defs>
             <linearGradient id="attGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#f5f5f5" stopOpacity={0.4} />
-              <stop offset="95%" stopColor="#f5f5f5" stopOpacity={0.0} />
+              <stop offset="5%" style={{ stopColor: 'var(--accent-cyan)' }} stopOpacity={0.55} />
+              <stop offset="95%" style={{ stopColor: 'var(--accent-cyan)' }} stopOpacity={0.0} />
             </linearGradient>
           </defs>
           <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
           <XAxis 
             dataKey="last_name" 
-            stroke="var(--text-muted)" 
+            stroke="var(--border-color)"
+            tick={axisTick}
             tickFormatter={(value, idx) => `${truancyRoster[idx]?.first_name?.[0]}. ${value}`}
           />
-          <YAxis domain={[0, 100]} stroke="var(--text-muted)" />
+          <YAxis domain={[0, 100]} stroke="var(--border-color)" tick={axisTick} />
           <Tooltip 
-            contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px' }}
+            contentStyle={tooltipStyle}
             formatter={(value: number) => [`${value}%`, 'Attendance Rate']}
             labelFormatter={(label, payload) => payload[0]?.payload ? `${payload[0].payload.first_name} ${payload[0].payload.last_name}` : label}
           />
-          <Area type="monotone" dataKey="attendance_percentage" stroke="#f5f5f5" strokeWidth={3} fillOpacity={1} fill="url(#attGrad)" name="Attendance %" />
+          <Area type="monotone" dataKey="attendance_percentage" stroke="var(--accent-primary)" strokeWidth={3} fillOpacity={1} fill="url(#attGrad)" name="Attendance %" />
         </AreaChart>
       </ResponsiveContainer>
     </div>
@@ -140,16 +151,17 @@ export const AttendanceTab: React.FC<AttendanceTabProps> = ({ onSelectStudent, o
           <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
           <XAxis 
             dataKey="last_name" 
-            stroke="var(--text-muted)" 
+            stroke="var(--border-color)"
+            tick={axisTick}
             tickFormatter={(value, idx) => `${truancyRoster[idx]?.first_name?.[0]}. ${value}`}
           />
-          <YAxis stroke="var(--text-muted)" />
+          <YAxis stroke="var(--border-color)" tick={axisTick} />
           <Tooltip 
-            contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px' }}
+            contentStyle={tooltipStyle}
             labelFormatter={(label, payload) => payload[0]?.payload ? `${payload[0].payload.first_name} ${payload[0].payload.last_name}` : label}
           />
-          <Bar dataKey="days_present" fill="#d4d4d4" name="Days Present" stackId="a" />
-          <Bar dataKey="days_absent" fill="#ef4444" name="Days Absent" stackId="a" />
+          <Bar dataKey="days_present" fill="var(--accent-cyan)" name="Days Present" stackId="a" />
+          <Bar dataKey="days_absent" fill="var(--accent-rose)" name="Days Absent" stackId="a" />
         </BarChart>
       </ResponsiveContainer>
     </div>

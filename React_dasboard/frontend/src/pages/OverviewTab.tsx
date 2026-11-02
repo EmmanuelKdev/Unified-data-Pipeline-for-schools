@@ -32,12 +32,22 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ onSelectStudent, setAc
   }, []);
 
   const gradeColors: Record<string, string> = {
-    A: '#f5f5f5',
-    B: '#d4d4d4',
-    C: '#a3a3a3',
-    D: '#71717a',
-    F: '#ef4444',
+    A: 'var(--accent-primary)',
+    B: 'var(--accent-emerald)',
+    C: 'var(--accent-cyan)',
+    D: 'var(--accent-amber)',
+    F: 'var(--accent-rose)',
   };
+
+  // Shared chart styling so both charts follow the active theme
+  const tooltipStyle: React.CSSProperties = {
+    background: 'var(--bg-secondary)',
+    color: 'var(--text-primary)',
+    border: '1px solid var(--border-color)',
+    borderRadius: '8px',
+    boxShadow: 'var(--glass-shadow)',
+  };
+  const axisTick = { fill: 'var(--text-muted)' };
 
   if (loading) return <div>Loading dashboard...</div>;
 
@@ -104,25 +114,25 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ onSelectStudent, setAc
     <AreaChart data={trajectory} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
       <defs>
         <linearGradient id="gpaGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="5%" stopColor="#f5f5f5" stopOpacity={0.4} />
-          <stop offset="95%" stopColor="#f5f5f5" stopOpacity={0.0} />
+          <stop offset="5%" style={{ stopColor: 'var(--accent-cyan)' }} stopOpacity={0.55} />
+          <stop offset="95%" style={{ stopColor: 'var(--accent-cyan)' }} stopOpacity={0.0} />
         </linearGradient>
       </defs>
       <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
       
       {/* Map term_name instead of term */}
-      <XAxis dataKey="term_name" stroke="var(--text-muted)" fontSize={12} />
+      <XAxis dataKey="term_name" stroke="var(--border-color)" tick={axisTick} fontSize={12} />
       
       {/* Adjust domain min to 1.0 or 'auto' since average_gpa is ~1.95 - 1.99 */}
-      <YAxis domain={[1.0, 4.0]} stroke="var(--text-muted)" fontSize={12} />
+      <YAxis domain={[1.0, 4.0]} stroke="var(--border-color)" tick={axisTick} fontSize={12} />
       
-      <Tooltip contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px' }} />
+      <Tooltip contentStyle={tooltipStyle} cursor={{ fill: 'var(--tint-hover)' }} />
       
       {/* Map average_gpa instead of gpa */}
       <Area 
         type="monotone" 
         dataKey="average_gpa" 
-        stroke="#f5f5f5" 
+        stroke="var(--accent-primary)"
         strokeWidth={3} 
         fillOpacity={1} 
         fill="url(#gpaGrad)" 
@@ -144,12 +154,12 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ onSelectStudent, setAc
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={gradeDist} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
-                <XAxis dataKey="grade" stroke="var(--text-muted)" />
-                <YAxis stroke="var(--text-muted)" />
-                <Tooltip contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px' }} />
+                <XAxis dataKey="grade" stroke="var(--border-color)" tick={axisTick} />
+                <YAxis stroke="var(--border-color)" tick={axisTick} />
+                <Tooltip contentStyle={tooltipStyle} cursor={{ fill: 'var(--tint-hover)' }} />
                 <Bar dataKey="count" radius={[6, 6, 0, 0]}>
                   {gradeDist.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={gradeColors[entry.grade] || '#a3a3a3'} />
+                    <Cell key={`cell-${index}`} fill={gradeColors[entry.grade] || 'var(--accent-amber)'} />
                   ))}
                 </Bar>
               </BarChart>
@@ -222,7 +232,7 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ onSelectStudent, setAc
             <button
               onClick={() => setActiveTab('finance')}
               className="glass-panel"
-              style={{ padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', border: 'none', cursor: 'pointer', textAlign: 'left' }}
+              style={{ padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', border: '1px solid var(--border-color)', cursor: 'pointer', textAlign: 'left', fontFamily: 'inherit', width: '100%' }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                 <DollarSign size={20} color="var(--accent-emerald)" />
@@ -237,7 +247,7 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ onSelectStudent, setAc
             <button
               onClick={() => setActiveTab('courses')}
               className="glass-panel"
-              style={{ padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', border: 'none', cursor: 'pointer', textAlign: 'left' }}
+              style={{ padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', border: '1px solid var(--border-color)', cursor: 'pointer', textAlign: 'left', fontFamily: 'inherit', width: '100%' }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                 <Sparkles size={20} color="var(--accent-purple)" />
@@ -252,7 +262,7 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ onSelectStudent, setAc
             <button
               onClick={() => setActiveTab('attendance')}
               className="glass-panel"
-              style={{ padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', border: 'none', cursor: 'pointer', textAlign: 'left' }}
+              style={{ padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', border: '1px solid var(--border-color)', cursor: 'pointer', textAlign: 'left', fontFamily: 'inherit', width: '100%' }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                 <CalendarCheck size={20} color="var(--accent-cyan)" />

@@ -22,6 +22,17 @@ export const CourseEnjoymentTab: React.FC<CourseEnjoymentTabProps> = ({ onOpenEx
     responses: c.total_responses
   }));
 
+
+  // Shared chart styling so charts follow the active theme
+  const tooltipStyle: React.CSSProperties = {
+    background: 'var(--bg-secondary)',
+    color: 'var(--text-primary)',
+    border: '1px solid var(--border-color)',
+    borderRadius: '8px',
+    boxShadow: 'var(--glass-shadow)',
+  };
+  const axisTick = { fill: 'var(--text-muted)' };
+
   return (
     <div>
       {/* Title & Actions */}
@@ -42,7 +53,7 @@ export const CourseEnjoymentTab: React.FC<CourseEnjoymentTabProps> = ({ onOpenEx
           <div key={c.id} className="glass-panel" style={{
             padding: '1.5rem',
             position: 'relative',
-            borderColor: idx === 0 ? 'rgba(245, 158, 11, 0.4)' : idx === 1 ? 'rgba(99, 102, 241, 0.4)' : 'rgba(16, 185, 129, 0.4)'
+            borderColor: idx === 0 ? 'var(--accent-amber)' : idx === 1 ? 'var(--accent-cyan)' : 'var(--accent-emerald)'
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
               <span className={`badge ${idx === 0 ? 'badge-warning' : idx === 1 ? 'badge-info' : 'badge-success'}`}>
@@ -81,11 +92,11 @@ export const CourseEnjoymentTab: React.FC<CourseEnjoymentTabProps> = ({ onOpenEx
             <ResponsiveContainer width="100%" height="100%">
               <ScatterChart margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
-                <XAxis type="number" dataKey="difficulty" name="Difficulty (1-5)" domain={[1, 5]} stroke="var(--text-muted)" unit="★" />
-                <YAxis type="number" dataKey="satisfaction" name="Satisfaction (1-5)" domain={[3.5, 5.0]} stroke="var(--text-muted)" />
+                <XAxis type="number" dataKey="difficulty" name="Difficulty (1-5)" domain={[1, 5]} stroke="var(--border-color)" tick={axisTick} unit="★" />
+                <YAxis type="number" dataKey="satisfaction" name="Satisfaction (1-5)" domain={[3.5, 5.0]} stroke="var(--border-color)" tick={axisTick} />
                 <ZAxis type="number" dataKey="responses" range={[60, 400]} name="Responses" />
-                <Tooltip cursor={{ strokeDasharray: '3 3' }} contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px' }} />
-                <Scatter name="Courses" data={matrixPoints} fill="#d4d4d4" />
+                <Tooltip cursor={{ strokeDasharray: '3 3' }} contentStyle={tooltipStyle} />
+                <Scatter name="Courses" data={matrixPoints} fill="var(--accent-primary)" fillOpacity={0.75} />
               </ScatterChart>
             </ResponsiveContainer>
           </div>
@@ -107,7 +118,7 @@ export const CourseEnjoymentTab: React.FC<CourseEnjoymentTabProps> = ({ onOpenEx
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-            <div style={{ padding: '0.85rem', borderRadius: '10px', background: 'rgba(0,0,0,0.2)', borderLeft: '3px solid var(--accent-emerald)' }}>
+            <div style={{ padding: '0.85rem', borderRadius: '10px', background: 'var(--tint-subtle)', borderLeft: '3px solid var(--accent-emerald)' }}>
               <div style={{ fontSize: '0.8rem', fontStyle: 'italic', color: 'var(--text-primary)' }}>
                 "Incredible class! The workshop sessions in Creative Writing really unlocked my writing confidence."
               </div>
@@ -116,7 +127,7 @@ export const CourseEnjoymentTab: React.FC<CourseEnjoymentTabProps> = ({ onOpenEx
               </div>
             </div>
 
-            <div style={{ padding: '0.85rem', borderRadius: '10px', background: 'rgba(0,0,0,0.2)', borderLeft: '3px solid var(--accent-primary)' }}>
+            <div style={{ padding: '0.85rem', borderRadius: '10px', background: 'var(--tint-subtle)', borderLeft: '3px solid var(--accent-primary)' }}>
               <div style={{ fontSize: '0.8rem', fontStyle: 'italic', color: 'var(--text-primary)' }}>
                 "Hands-on programming with physical robotics kits was super exciting and practical!"
               </div>
