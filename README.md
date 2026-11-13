@@ -298,6 +298,9 @@ A FastAPI service reads the Gold layer and exposes it as authenticated REST/JSON
 
 ## 🖥 Frontend Dashboard
 
+![fig1](Docs/overview.png)
+![fig2](Docs/overview2.png)
+
 A React and TypeScript single-page application with a lavender, navy and sky-blue theme (light by default, with a dark option).
 
 | View | Shows |
