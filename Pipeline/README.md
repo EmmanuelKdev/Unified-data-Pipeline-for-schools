@@ -1,17 +1,18 @@
 <div align="center">
 
-# 🛒 E-Commerce Data Engineering Pipeline
+# 🎓 Unified School Data Pipeline
 
-**A production-style end-to-end data pipeline built on the Bronze → Silver → Gold medallion architecture**
+**An end-to-end data platform that unifies fragmented school systems using the Bronze → Silver → Gold medallion architecture**
 
-[![Airflow](https://img.shields.io/badge/Apache%20Airflow-2.8-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)](https://airflow.apache.org/)
-[![Astronomer](https://img.shields.io/badge/Astronomer-Astro%20CLI-7352FF?style=flat-square)](https://www.astronomer.io/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-336791?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=flat-square&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
-[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![Airflow](https://img.shields.io/badge/Apache%20Airflow-3.x-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)](https://airflow.apache.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Warehouse-336791?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-Dashboard-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![Power BI](https://img.shields.io/badge/BI-Power%20BI%20%7C%20Metabase%20%7C%20Tableau-F2C811?style=flat-square&logo=powerbi&logoColor=black)](#-bi-tool-integration)
+[![Python](https://img.shields.io/badge/Python-3-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
 
-[Overview](#-overview) · [Architecture](#-architecture) · [Quick Start](#-quick-start) · [Pipeline Layers](#-pipeline-layers) · [Data Model](#-data-model) · [Project Structure](#-project-structure) · [Commands](#-commands-reference)
+[Overview](#-overview) · [Architecture](#-architecture) · [Quick Start](#-quick-start) · [Pipeline Layers](#-pipeline-layers) · [Data Model](#-data-model) · [Backend API](#-backend-api) · [Dashboard](#-frontend-dashboard) · [BI](#-bi-tool-integration) · [Structure](#-project-structure)
 
 </div>
 
@@ -19,20 +20,31 @@
 
 ## 📌 Overview
 
-This project implements a full data engineering pipeline for the [Olist Brazilian E-Commerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) public dataset. Raw CSV files are ingested, cleaned, and modelled into a star schema warehouse that feeds a Power BI dashboard.
+Schools usually run several independent systems that were never designed to work together, so one student's data ends up scattered across incompatible formats and identifiers. This project unifies seven such systems into a single, analytics-ready star schema, then serves it through a REST API and a React dashboard. The same warehouse can also feed BI tools directly.
+
+Live student data was not available during development. The pipeline is therefore built and validated against **AI-generated synthetic data** that deliberately reproduces the problems real school systems produce.
 
 ### What's built
 
-- **4 Airflow DAGs** orchestrating the full ETL lifecycle on a daily schedule
-- **Bronze layer** — raw data ingested as-is with `_loaded_at` audit timestamps
-- **Silver layer** — deduplicated, typed, null-safe, and standardised tables
-- **Gold layer** — star schema with dimensions, facts, ML features, and Power BI views
-- **Quality gate** — automated row count, null rate, and business rule validation
+- **3 Airflow DAGs** (extract, transform, load) chained with Airflow Assets instead of fixed cron timing
+- **Bronze layer**: the raw data of all 7 sources, stored untouched with audit columns
+- **Silver layer**: normalised IDs and dates, standardised text, deduplicated records, and orphans quarantined in audit tables
+- **Gold layer**: a star schema with 4 dimensions and 6 fact tables
+- **FastAPI backend** with JWT authentication and one router per reporting domain
+- **React dashboard** with an overview, academics, attendance, financial, course and student directory views
+- **BI-ready warehouse** that Power BI, Metabase or Tableau can query directly
 
-### Coming next
+### Data sources
 
-- 🔲 FastAPI backend — `/api/metrics`, `/api/trends`, `/api/pipeline/status`
-- 🔲 React + Recharts dashboard — KPI cards, time-series charts, pipeline monitor
+| # | Source system | File | Represents |
+|---|---|---|---|
+| 1 | Student Information System | `sis_students.csv` | Demographics, grade level, enrolment status |
+| 2 | Learning Management System | `lms_course_activity.csv` | Course enrolments, completion, status |
+| 3 | Attendance | `attendance_records.csv` | Daily attendance status |
+| 4 | Gradebook | `gradebook_assessments.csv` | Assessment scores, letter grades, course codes |
+| 5 | Financial / ERP | `financial_erp_records.csv` | Fees, discounts, payments, balances |
+| 6 | Behaviour / Discipline | `behavior_discipline_records.csv` | Incidents, severity, actions |
+| 7 | Admissions | `admissions_applications.csv` | Applications, decisions, sources |
 
 ---
 
@@ -41,67 +53,54 @@ This project implements a full data engineering pipeline for the [Olist Brazilia
 ```
 ┌──────────────────────────────────────────────────────────────┐
 │                       DATA SOURCES                           │
-│          Olist Brazilian E-Commerce  (9 CSV files)           │
+│     7 simulated school systems  (raw CSV exports)            │
+│     SIS · LMS · Attendance · Gradebook · ERP · Behaviour ·   │
+│     Admissions                                               │
 └─────────────────────────────┬────────────────────────────────┘
                               │
-                              ▼  DAG 1 · daily 01:00 UTC
+                              ▼  DAG 1 · school_data_extract_bronze · @daily
 ┌──────────────────────────────────────────────────────────────┐
-│  🥉 BRONZE  ·  schema: bronze                                │
+│  🥉 BRONZE  ·  tables: bronze_*                              │
 │                                                              │
-│  Raw ingestion — all columns stored as TEXT                  │
-│  _loaded_at audit timestamp appended to every table          │
-│  No transformations, no type casts, no filtering             │
-│                                                              │
-│  bronze.orders        bronze.customers    bronze.products    │
-│  bronze.order_items   bronze.payments     bronze.sellers     │
-│  bronze.reviews       bronze.geolocation                     │
+│  Raw ingestion, no cleaning, nothing dropped                 │
+│  _source_file · _ingested_at · _batch_id added to every row  │
+│  Full snapshot replaced on each run                          │
 └─────────────────────────────┬────────────────────────────────┘
-                              │
-                              ▼  DAG 2 · daily 03:00 UTC
+                              │   Airflow Assets: bronze://<source>
+                              ▼  DAG 2 · school_data_transform_silver
 ┌──────────────────────────────────────────────────────────────┐
-│  🥈 SILVER  ·  schema: silver                                │
+│  🥈 SILVER  ·  tables: silver_*                              │
 │                                                              │
-│  Deduplication    ROW_NUMBER() OVER (PARTITION BY pk         │
-│                                      ORDER BY loaded_at DESC)│
-│  Null handling    NULLIF(col, '') before every type cast      │
-│  Type casting     ::TIMESTAMP  ::NUMERIC(12,2)  ::INT        │
-│  Standardisation  UPPER(TRIM()) city/state                   │
-│                   LOWER(TRIM()) category names               │
-│  Imputation       Per-category median for product dimensions │
-│  Ordering         ORDER BY natural key ASC                   │
+│  ID normalisation    STU7 / stu00007 / S0007 → STU00007      │
+│  Date normalisation  ISO, US/EU, DD-Mon-YYYY, Excel serial   │
+│  Text cleaning       trim, collapse spaces, canonical terms  │
+│  Deduplication       keep the most complete record per key   │
+│  Orphan quarantine   silver_*_rejected audit tables          │
+│  Missing values      kept as NULL, never invented            │
+│  Run log             silver_data_quality_log                 │
 └─────────────────────────────┬────────────────────────────────┘
-                              │
-                              ▼  DAG 3 · daily 05:00 UTC
+                              │   Airflow Assets: silver://<source>
+                              ▼  DAG 3 · school_data_load_gold
 ┌──────────────────────────────────────────────────────────────┐
-│  🥇 GOLD  ·  schema: gold                                    │
+│  🥇 GOLD  ·  star schema                                     │
 │                                                              │
-│  Dimensions   dim_customers   dim_products                   │
-│               dim_sellers     dim_dates                      │
+│  Dimensions   dim_student   dim_course                       │
+│               dim_term      dim_date                         │
 │                                                              │
-│  Facts        fact_orders   fact_order_payments              │
-│               fact_seller_performance                        │
-│                                                              │
-│  ML features  fulfilment_days   approval_hours               │
-│               delivery_delta_days   is_high_instalment       │
-│                                                              │
-│  Public views  public.*  ──▶  Power BI navigator ready       │
-└─────────────────────────────┬────────────────────────────────┘
-                              │
-                              ▼  DAG 4 · daily 07:00 UTC
-┌──────────────────────────────────────────────────────────────┐
-│  ✅ QUALITY CHECKS                                           │
-│                                                              │
-│  Row count minimums per gold table                           │
-│  Null rate thresholds on key columns                         │
-│  Business rules  no negative revenue · no orphan FK keys     │
-│                  no duplicate order IDs · valid review scores│
+│  Facts        fact_attendance   fact_course_activity         │
+│               fact_grades       fact_financial               │
+│               fact_behavior     fact_admissions              │
 └─────────────────────────────┬────────────────────────────────┘
                               │
               ┌───────────────┴────────────────┐
-              ▼                                ▼  (next phase)
-        Power BI Desktop              FastAPI + React Dashboard
-    (public.* views via PostgreSQL)
+              ▼                                ▼
+     FastAPI backend (JWT)             BI tools (read-only SQL)
+              │                        Power BI · Metabase · Tableau
+              ▼
+     React dashboard
 ```
+
+The DAGs are not wired together with trigger operators. Each layer publishes Airflow Assets, and the next DAG is scheduled on those assets, so it starts only when every table it depends on has been refreshed.
 
 ---
 
@@ -109,261 +108,275 @@ This project implements a full data engineering pipeline for the [Olist Brazilia
 
 ### Prerequisites
 
-| Tool | Version | Purpose |
-|---|---|---|
-| [Docker Desktop](https://www.docker.com/products/docker-desktop/) | Latest | Runs the PostgreSQL warehouse container |
-| [Astro CLI](https://www.astronomer.io/docs/astro/cli/install-cli) | Latest | Manages local Airflow environment |
-| [Python](https://www.python.org/downloads/) | 3.12 | Local test execution |
-
----
-
-### Step 1 — Install the Astro CLI
-
-```powershell
-# Run PowerShell as Administrator
-winget install -e --id Astronomer.Astro
-
-# Confirm the install
-astro version
-```
-
-> **Already using Docker Desktop?** Keep it by skipping the Podman dependency:
-> ```powershell
-> winget install -e --id Astronomer.Astro --skip-dependencies
-> ```
-
----
-
-### Step 2 — Clone and configure
-
-```bash
-git clone https://github.com/your-username/ecommerce-pipeline.git
-cd ecommerce-pipeline
-```
-
-Create a `.env` file in the project root:
-
-```env
-WAREHOUSE_HOST=host.docker.internal
-WAREHOUSE_PORT=5433
-WAREHOUSE_DB=ecommerce_dw
-WAREHOUSE_USER=warehouse
-WAREHOUSE_PASSWORD=warehouse
-DATA_DIR=/usr/local/airflow/include/data
-```
-
----
-
-### Step 3 — Add the dataset
-
-Download the dataset from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) and place all CSV files into `include/data/`:
-
-```
-include/data/
-├── olist_orders_dataset.csv
-├── olist_order_items_dataset.csv
-├── olist_customers_dataset.csv
-├── olist_products_dataset.csv
-├── olist_sellers_dataset.csv
-├── olist_order_payments_dataset.csv
-├── olist_order_reviews_dataset.csv
-├── olist_geolocation_dataset.csv
-└── product_category_name_translation.csv
-```
-
-> Add `include/data/` to your `.gitignore` — do not commit raw data files.
-
----
-
-### Step 4 — Start the warehouse
-
-```bash
-docker compose -f docker-compose.warehouse.yml up -d
-```
-
----
-
-### Step 5 — Start Airflow
-
-```bash
-# First time only — initialises the Astro project files
-astro dev init
-
-# Start the Airflow environment
-astro dev start
-```
-
-Open **http://localhost:8080** · credentials: `admin` / `admin`
-
----
-
-### Step 6 — Add the warehouse connection
-
-In the Airflow UI navigate to **Admin → Connections → +** and enter:
-
-| Field | Value |
+| Tool | Purpose |
 |---|---|
-| Connection ID | `postgres_warehouse` |
-| Connection Type | `Postgres` |
-| Host | `host.docker.internal` |
-| Database | `ecommerce_dw` |
-| Login | `warehouse` |
-| Password | `warehouse` |
-| Port | `5433` |
+| [Python 3](https://www.python.org/downloads/) | Pipeline, backend and tests |
+| [Apache Airflow 3.x](https://airflow.apache.org/docs/) | Orchestration (run locally, in Docker, or with the [Astro CLI](https://www.astronomer.io/docs/astro/cli/install-cli)) |
+| [Node.js](https://nodejs.org/) | React dashboard |
+| PostgreSQL *(optional)* | Production warehouse. SQLite is used by default. |
 
----
-
-### Step 7 — Run the pipeline
+### Step 1: Clone
 
 ```bash
-astro dev run dags trigger 01_bronze_ingest
-astro dev run dags trigger 02_silver_clean
-astro dev run dags trigger 03_gold_model
-astro dev run dags trigger 04_quality_checks
+git clone https://github.com/your-username/unified-school-data-pipeline.git
+cd unified-school-data-pipeline
 ```
 
-> DAGs also run automatically on their daily schedule — see [DAG Schedules](#dag-schedules).
+### Step 2: Add the source data
+
+The seven CSV files go into `data/raw_csv/`:
+
+```
+data/raw_csv/
+├── sis_students.csv
+├── lms_course_activity.csv
+├── attendance_records.csv
+├── gradebook_assessments.csv
+├── financial_erp_records.csv
+├── behavior_discipline_records.csv
+└── admissions_applications.csv
+```
+
+> The CSVs are AI-generated test data. Keep real student data out of the repository and add `data/` to `.gitignore`.
+
+### Step 3: Configure
+
+Set these as Airflow Variables, or as environment variables of the same name:
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `SCHOOL_RAW_DATA_DIR` | `/opt/airflow/data/raw_csv` | Folder with the 7 CSV exports |
+| `SCHOOL_DW_CONN_STRING` | `sqlite:////opt/airflow/data/school_dw.db` | SQLAlchemy connection string of the warehouse |
+
+Example for PostgreSQL:
+
+```bash
+export SCHOOL_DW_CONN_STRING=postgresql+psycopg2://user:password@localhost:5432/school_dw
+```
+
+### Step 4: Install and start Airflow
+
+Copy `airflow_dags/*.py` into your Airflow `dags/` folder, then:
+
+```bash
+pip install apache-airflow pandas sqlalchemy psycopg2-binary
+airflow standalone
+```
+
+Open **http://localhost:8080**. With Astro or Docker, use the equivalent start command of your setup.
+
+### Step 5: Run the pipeline
+
+Only the extract DAG needs a manual trigger. The transform and load DAGs start automatically through Assets.
+
+```bash
+airflow dags trigger school_data_extract_bronze
+```
+
+### Step 6: Start the backend and dashboard
+
+```bash
+# Backend (http://localhost:8000/docs)
+cd backend
+pip install -r requirements.txt
+export DATABASE_URL=$SCHOOL_DW_CONN_STRING
+uvicorn app.main:app --reload
+
+# Dashboard (separate terminal)
+cd frontend
+npm install
+npm run dev
+```
+
+> To run the API without Airflow, `python load_school_data.py` loads the CSVs through the same cleaning logic in one synchronous step.
 
 ---
 
 ## 🔧 Pipeline Layers
 
-### Silver — cleaning operations
+### DAG overview
 
-Every bronze table passes through the same cleaning pipeline before data reaches gold:
+| DAG | ID | Trigger | Responsibility |
+|---|---|---|---|
+| Extract | `school_data_extract_bronze` | `@daily` | Land the 7 raw sources in Bronze, untouched |
+| Transform | `school_data_transform_silver` | All 7 `bronze://` assets updated | Clean, deduplicate, conform, quarantine orphans |
+| Load | `school_data_load_gold` | All 7 `silver://` assets updated | Build dimensions and fact tables |
 
-| Operation | Method | Reason |
+The SIS task runs first in the transform DAG, because its cleaned student IDs are the reference for the orphan check of the other six sources.
+
+### Silver: cleaning operations
+
+| Problem | Helper (`common.py`) | Method |
 |---|---|---|
-| **Deduplication** | `ROW_NUMBER() OVER (PARTITION BY pk ORDER BY loaded_at DESC)` | CSV re-exports introduce duplicate rows per entity |
-| **Empty string → NULL** | `NULLIF(col, '')` before every `::TYPE` cast | Ingest stores everything as TEXT; empty strings crash type casts |
-| **NULL imputation** | `COALESCE(value, category_median, 0)` | Product dimensions use per-category medians so ML features are always populated |
-| **Type casting** | `::TIMESTAMP`, `::NUMERIC(12,2)`, `::INT` | Applied after the `NULLIF` guard to prevent runtime cast errors |
-| **Standardisation** | `UPPER(TRIM(...))` on city/state · `LOWER(TRIM(...))` on categories | Prevents broken `GROUP BY` from mixed-case data (`"SP"` vs `"sp"`) |
-| **Ordering** | `ORDER BY` on natural key ascending | Reduces sort overhead in downstream window functions and joins |
+| Inconsistent student IDs | `normalize_student_id()` | Extract the digits, zero-pad to `STUxxxxx` |
+| Mixed date formats | `normalize_date()` | Try Excel serial numbers and 5 text formats, output ISO 8601 |
+| Casing and whitespace | `clean_text()`, `standardize_category()` | Trim, collapse spaces, match against canonical vocabularies |
+| Exact and near duplicates | `deduplicate()` | Keep the row with the fewest missing values per key |
+| Orphan references | `flag_orphans()` | Split rows whose student is absent from the SIS into audit tables |
+| Missing values | (design decision) | Preserved as NULL and flagged, not imputed |
 
-### Gold — ML-ready features
+### Injected data problems in the test data
 
-The gold fact tables include derived feature columns designed for ML workloads:
+| Problem category | Fields affected |
+|---|---|
+| Inconsistent ID formats | 6,182 |
+| Mixed date formats | 10,308 |
+| Casing and whitespace | 9,746 |
+| Missing values | 10,500 |
+| Exact duplicates (records) | 648 |
+| Near duplicates (records) | 380 |
+| Orphan references (records) | 180 |
 
-| Feature | Table | Description |
-|---|---|---|
-| `fulfilment_days` | `fact_orders` | Days from purchase to delivery |
-| `approval_hours` | `fact_orders` | Hours from purchase to payment approval |
-| `delivery_delta_days` | `fact_orders` | Estimated minus actual delivery (negative = late) |
-| `delivered_on_time` | `fact_orders` | Boolean — delivered before estimated date |
-| `is_high_instalment` | `fact_order_payments` | Flag for orders with > 6 payment instalments |
-| `avg_review_score` | `fact_seller_performance` | Monthly rolling review average per seller |
-| `on_time_pct` | `fact_seller_performance` | Monthly on-time delivery rate per seller |
+### Idempotent runs
+
+Every run replaces the previous snapshot of each table, so a repeated trigger does not duplicate records. The `silver_*_rejected` tables therefore show only the latest run. An append-only audit history is a possible extension.
 
 ---
 
 ## 📊 Data Model
 
-### DAG schedules
-
-| DAG | ID | Schedule | Runs after |
-|---|---|---|---|
-| Bronze ingest | `01_bronze_ingest` | `0 1 * * *` | — |
-| Silver clean | `02_silver_clean` | `0 3 * * *` | Bronze |
-| Gold model | `03_gold_model` | `0 5 * * *` | Silver |
-| Quality checks | `04_quality_checks` | `0 7 * * *` | Gold |
-
 ### Dimension tables
 
-| Table | Grain | Primary key | Notable columns |
-|---|---|---|---|
-| `gold.dim_customers` | 1 row per unique customer | `customer_key` | `city`, `state`, `order_account_count` |
-| `gold.dim_products` | 1 row per product | `product_key` | `category`, `weight_g`, `volumetric_weight_kg` |
-| `gold.dim_sellers` | 1 row per seller | `seller_key` | `city`, `state` |
-| `gold.dim_dates` | 1 row per calendar day | `date_key` | `year`, `quarter`, `month_name`, `is_weekend`, `is_public_holiday`, `fiscal_period` |
+| Table | Grain | Notes |
+|---|---|---|
+| `dim_student` | 1 row per student | From the cleaned SIS table |
+| `dim_course` | 1 row per course | Union of LMS and Gradebook courses |
+| `dim_term` | 1 row per academic term | Standardised against a canonical term list |
+| `dim_date` | 1 row per calendar day | Calendar attributes for time-series reporting |
 
 ### Fact tables
 
 | Table | Grain | Key measures |
 |---|---|---|
-| `gold.fact_orders` | 1 row per order | `revenue`, `freight_revenue`, `gross_revenue`, `fulfilment_days`, `delivered_on_time`, `review_score` |
-| `gold.fact_order_payments` | 1 row per order × payment type × instalments | `total_amount`, `installments`, `avg_instalment_amount`, `is_high_instalment` |
-| `gold.fact_seller_performance` | 1 row per seller × month | `total_revenue`, `total_orders`, `avg_review_score`, `on_time_pct`, `avg_fulfilment_days` |
+| `fact_attendance` | 1 row per student per day | Attendance status |
+| `fact_course_activity` | 1 row per student per course | Completion, status |
+| `fact_grades` | 1 row per student per assessment | Score, letter grade, course key |
+| `fact_financial` | 1 row per financial record | Fees, discounts, payments, balance |
+| `fact_behavior` | 1 row per incident | Severity, action taken |
+| `fact_admissions` | 1 row per application | Decision, source, term |
 
-### Power BI views
+All facts link to the dimensions through surrogate keys.
 
-The `public` schema exposes thin views over every gold table. Power BI's PostgreSQL navigator surfaces `public` by default — no schema configuration required.
+### Quality and audit tables
+
+| Table | Content |
+|---|---|
+| `silver_<source>_rejected` | Quarantined orphan rows, with `_rejection_reason` |
+| `silver_data_quality_log` | Row counts and issue counts per source for the latest run |
+
+To inspect them:
 
 ```sql
-public.dim_customers            →  gold.dim_customers
-public.dim_products             →  gold.dim_products
-public.dim_sellers              →  gold.dim_sellers
-public.dim_dates                →  gold.dim_dates
-public.fact_orders              →  gold.fact_orders
-public.fact_order_payments      →  gold.fact_order_payments
-public.fact_seller_performance  →  gold.fact_seller_performance
+\dt silver_*rejected
+SELECT * FROM silver_attendance_records_rejected LIMIT 20;
+SELECT * FROM silver_data_quality_log;
 ```
+
+---
+
+## 🌐 Backend API
+
+A FastAPI service reads the Gold layer and exposes it as authenticated REST/JSON endpoints.
+
+| Area | Examples |
+|---|---|
+| Auth | `POST /api/auth/login`, `GET /api/auth/me` |
+| Overview | `/api/overview/kpis` |
+| Students | `/api/students/list` |
+| Academics | `/api/academics/subject-stats` |
+| Attendance | `/api/attendance/monthly-trends` |
+| Finance | `/api/finance/fee-types` |
+| Courses | `/api/courses/popularity` |
+| Behaviour | `/api/behavior/summary` |
+| Admissions | `/api/admissions/term-trends` |
+
+- **Security:** JWT bearer tokens, bcrypt password hashing, CORS enabled for the React app
+- **Docs:** Swagger UI at `/docs`, ReDoc at `/redoc`
+- **At-risk rules:** thresholds are configurable (`AT_RISK_ATTENDANCE_THRESHOLD`, default `0.75`, and `AT_RISK_HIGH_SEVERITY_COUNT`, default `2`)
+
+---
+
+## 🖥 Frontend Dashboard
+
+A React and TypeScript single-page application with a lavender, navy and sky-blue theme (light by default, with a dark option).
+
+| View | Shows |
+|---|---|
+| Overview | KPI cards, GPA trajectory, grade distribution, priority at-risk ledger |
+| Academics | Honour roll, pass rate, subject mastery radar, subject ledger |
+| Attendance | Attendance KPIs, truancy-risk chart, chronic absenteeism roster |
+| Financial | Revenue and expense summary, budget utilisation, overdue accounts |
+| Courses | Course popularity and sentiment views |
+| Student directory | Searchable, filterable roster with a profile drill-down |
+
+The dashboard logs in through `/api/auth/login`, keeps the JWT and sends it as a Bearer token. Recharts draws the charts. The theme is defined in `index.css` with CSS variables, and the active theme is set through the `data-theme` attribute on `<html>`.
+
+---
+
+## 🔌 BI Tool Integration
+
+The Gold layer is a conventional star schema, so standard BI tools can use it without going through the dashboard.
+
+**1. Direct database connection (recommended).** Point Power BI, Metabase, Tableau or Looker Studio at the warehouse with a read-only database role:
+
+```
+Host:     <postgres host>
+Database: <warehouse database>
+Tables:   dim_* and fact_*
+Auth:     read-only role (do not reuse the pipeline credentials)
+```
+
+**2. REST/JSON through the API.** For tools with a web or JSON connector, use the same endpoints as the dashboard with a bearer token. This suits users who should see only curated, aggregated data.
 
 ---
 
 ## 📁 Project Structure
 
 ```
-ecommerce-pipeline/
+unified-school-data-pipeline/
 │
-├── 📄 Dockerfile                         Astro Runtime image (generated by astro dev init)
-├── 📄 .env                               Warehouse credentials — gitignored
-├── 📄 requirements.txt                   Python dependencies
-├── 📄 docker-compose.warehouse.yml       PostgreSQL 15 warehouse on port 5433
+├── 📁 airflow_dags/
+│   ├── common.py                  Shared config and cleaning helpers
+│   ├── extract_dag.py             Raw CSVs → Bronze
+│   ├── transform_dag.py           Bronze → Silver
+│   ├── load_dag.py                Silver → Gold star schema
+│   └── README.md
 │
-├── 📁 .astro/                            Astro CLI project config
+├── 📁 backend/                    FastAPI service
+│   ├── app/
+│   │   ├── api/                   One router per reporting domain
+│   │   ├── core/                  JWT and password hashing
+│   │   ├── db/                    SQLAlchemy engine and session
+│   │   ├── etl/                   Cleaning helpers (ported from common.py)
+│   │   ├── models/                Gold-layer ORM models
+│   │   ├── schemas/               Pydantic response models
+│   │   ├── config.py
+│   │   └── main.py
+│   ├── load_school_data.py        Synchronous CSV → Gold loader
+│   └── requirements.txt
 │
-├── 📁 dags/
-│   ├── 01_bronze_ingest.py               Load CSVs → bronze via psycopg2 COPY
-│   ├── 02_silver_clean.py                Execute sql/silver/*.sql scripts
-│   ├── 03_gold_model.py                  Execute sql/gold/*.sql scripts
-│   └── 04_quality_checks.py             Validate gold layer — fails loudly on breach
+├── 📁 frontend/                   React + TypeScript dashboard
+│   └── src/
+│       ├── pages/                 Overview, Academic, Attendance, Financial, ...
+│       ├── components/            Sidebar, Header, KpiCard, modals
+│       ├── api/client.ts          API calls
+│       └── index.css              Theme and design system
 │
-├── 📁 sql/
-│   ├── silver/
-│   │   ├── 00_create_schemas.sql         CREATE SCHEMA bronze / silver / gold
-│   │   ├── 01_orders.sql                 Dedup + NULLIF casts + derived fulfilment cols
-│   │   ├── 02_order_items.sql            Dedup + price cast + line_total
-│   │   ├── 03_customers.sql              Dedup + UPPER(TRIM()) geography
-│   │   ├── 04_products.sql               Dedup + per-category median imputation
-│   │   └── 05_sellers_payments_reviews.sql
-│   └── gold/
-│       ├── 01_dimensions.sql             dim_* tables + PKs + indexes
-│       ├── 02_facts.sql                  fact_* tables + ML features
-│       └── 03_powerbi_views.sql          public.* views for Power BI
-│
-├── 📁 include/
-│   └── data/                             Olist CSVs — gitignored
-│
-├── 📁 plugins/                           Custom Airflow plugins
-├── 📁 config/                            Airflow connections / variables
-├── 📁 tests/                             DAG integrity and unit tests
-│
-├── 📁 backend/                           FastAPI REST API  ← next phase
-└── 📁 frontend/                          React + Recharts dashboard  ← next phase
+└── 📁 data/raw_csv/               The 7 source CSVs (gitignored)
 ```
 
 ---
 
 ## 💻 Commands Reference
 
-### Astro CLI — daily workflow
-
 | Command | Description |
 |---|---|
-| `astro dev start` | Start Airflow (webserver, scheduler, triggerer) |
-| `astro dev stop` | Stop all Airflow containers |
-| `astro dev restart` | Rebuild Docker image and restart — required after editing `requirements.txt` |
-| `astro dev logs` | Stream live scheduler and webserver logs |
-| `astro dev parse` | Validate all DAG files for import errors without starting containers |
-| `astro dev run dags trigger <dag_id>` | Manually trigger a DAG by its ID |
-
-### Running tests
-
-```bash
-pip install pytest
-pytest tests/
-```
+| `airflow dags list` | Confirm the three DAGs are registered |
+| `airflow dags trigger school_data_extract_bronze` | Start the full Bronze → Silver → Gold chain |
+| `airflow dags test school_data_transform_silver` | Run one DAG once without the scheduler |
+| `python load_school_data.py` | Load the CSVs into the warehouse without Airflow |
+| `uvicorn app.main:app --reload` | Start the API with auto-reload |
+| `npm run dev` | Start the dashboard dev server |
 
 ---
 
@@ -371,32 +384,49 @@ pytest tests/
 
 | Layer | Technology |
 |---|---|
-| Orchestration | Apache Airflow 2.8 · Astronomer Astro CLI |
-| Warehouse | PostgreSQL 15 |
-| Ingestion | Python · pandas 2.1 · psycopg2 COPY |
-| Transformation | SQL executed via `PostgresHook.get_conn()` |
-| BI | Power BI Desktop |
-| Containerisation | Docker · Astro Runtime (based on Python 3.12) |
+| Orchestration | Apache Airflow 3.x (DAGs, Assets) |
+| Processing | Python, pandas |
+| Warehouse | PostgreSQL (production), SQLite (local), SQLAlchemy |
+| Backend | FastAPI, SQLAlchemy ORM, Pydantic v2 |
+| Auth | JWT (python-jose), bcrypt (passlib) |
+| Frontend | React, TypeScript, Recharts, lucide-react |
+| BI | Direct SQL or REST/JSON (Power BI, Metabase, Tableau) |
+| Testing | FastAPI `TestClient`, Airflow `DagBag` parse validation |
+
+---
+
+## ⚠️ Known Limitations
+
+- The pipeline was validated with **synthetic data**, not live student records. Real deployments need their cleaning rules re-validated.
+- Quarantined (orphan) records are kept for manual review, not corrected automatically.
+- Missing values stay as NULL, so reports must handle them.
+- The `silver_*_rejected` tables hold only the latest run.
+- `fact_grades.course_key` and `fact_admissions.student_key` can be NULL for records without a matching dimension row.
+- The dashboard has not been evaluated with real users.
 
 ---
 
 ## 🗺 Roadmap
 
-- [x] Bronze ingest — raw CSV loading with audit timestamps
-- [x] Silver clean — deduplication, type casting, null handling, standardisation
-- [x] Gold model — star schema with ML-ready feature columns
-- [x] Quality checks — automated validation gate before BI refresh
-- [x] Power BI integration — public schema views
-- [ ] FastAPI backend — metrics, trends, and pipeline status endpoints
-- [ ] React dashboard — KPI cards, charts, pipeline run monitor
-- [ ] dbt integration — replace raw SQL files with versioned dbt models
-- [ ] CI/CD — GitHub Actions for DAG linting, parsing, and test runs
+- [x] Bronze extract with audit columns
+- [x] Silver transform: IDs, dates, text, duplicates, orphans
+- [x] Gold star schema with 4 dimensions and 6 facts
+- [x] Asset-based chaining of the three DAGs
+- [x] FastAPI backend with JWT authentication
+- [x] React dashboard with a light/dark theme
+- [x] BI access through read-only SQL
+- [ ] Automated data-quality monitoring and alerting
+- [ ] Incremental (change-data-capture) ingestion
+- [ ] Append-only audit history for rejected records
+- [ ] dbt models in place of Python transformations
+- [ ] CI/CD with GitHub Actions (DAG parsing, tests, linting)
+- [ ] Usability testing with school administrators
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests are welcome. For major changes please open an issue first to discuss what you would like to change. Please make sure to update tests as appropriate.
+Pull requests are welcome. For major changes, please open an issue first to discuss the change, and update the tests as appropriate.
 
 ---
 
@@ -408,6 +438,6 @@ Pull requests are welcome. For major changes please open an issue first to discu
 
 <div align="center">
 
-Built with the [Olist Brazilian E-Commerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) public dataset
+Built as a project-based thesis at JAMK University of Applied Sciences · Test data generated with AI assistance
 
 </div>
